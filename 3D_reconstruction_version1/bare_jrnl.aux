@@ -51,10 +51,6 @@
 \citation{IEEEexample:paisitkriangkrai2015effective}
 \citation{IEEEexample:zhao2017contextually}
 \citation{IEEEexample:he2017multi}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces An overview of proposed urban 3D modelling framework. The inputs of our system are multi-channel images. Semantic segmentation that extracts building areas from aerial images is the first step. After it, we generate the point cloud according to the DSM. Based on the point cloud, the 3D reconstruction is implemented.}}{2}{figure.2}}
-\newlabel{2}{{2}{2}{An overview of proposed urban 3D modelling framework. The inputs of our system are multi-channel images. Semantic segmentation that extracts building areas from aerial images is the first step. After it, we generate the point cloud according to the DSM. Based on the point cloud, the 3D reconstruction is implemented}{figure.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {I-A}}Paper Organization}{2}{subsection.1.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{2}{section.2}}
 \citation{IEEEexample:Long_2015_CVPR}
 \citation{IEEEexample:liu2017dense}
 \citation{IEEEexample:paisitkriangkrai2015effective}
@@ -62,15 +58,19 @@
 \citation{IEEEexample:audebert2017deep}
 \citation{IEEEexample:kampffmeyer2017urban}
 \citation{IEEEexample:hoffman2016learning}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces An overview of proposed urban 3D modelling framework. The inputs of our system are multi-channel images. Semantic segmentation that extracts building areas from aerial images is the first step. After it, we generate the point cloud according to the DSM. Based on the point cloud, the 3D reconstruction is implemented.}}{2}{figure.2}}
+\newlabel{2}{{2}{2}{An overview of proposed urban 3D modelling framework. The inputs of our system are multi-channel images. Semantic segmentation that extracts building areas from aerial images is the first step. After it, we generate the point cloud according to the DSM. Based on the point cloud, the 3D reconstruction is implemented}{figure.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {I-A}}Paper Organization}{2}{subsection.1.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{2}{section.2}}
 \@writefile{toc}{\contentsline {section}{\numberline {III}Hierarchically Fused Fully Convolutional Network}{3}{section.3}}
 \newlabel{Sec:HF-FCN}{{III}{3}{Hierarchically Fused Fully Convolutional Network\relax }{section.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Network Architecture}{3}{subsection.3.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Network Training}{3}{subsection.3.2}}
 \@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces The receptive field and the stride size of VGG16 net}}{3}{table.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Overall architecture of HF-FCN. The action of VGG16 network is extracting features from various layers. All feature maps from various layers merge into a feature map which eliminating redundancy in the same semantics and resolution. In Level 2, 13 feature maps are up-sampled and cropped to the same size of input. Finally the cropped feature maps fuse into a prediction result. All fusion operations used in HF-FCN are 1$\times $1 convolution. The input channel could be 3, 4 or 5 for RGB, DSM, nDSM. $\times $2 means 2 times of upper sampling. U1\_1 means the upsampling of F1\_1, and so forth. }}{4}{figure.3}}
 \newlabel{3}{{3}{4}{Overall architecture of HF-FCN. The action of VGG16 network is extracting features from various layers. All feature maps from various layers merge into a feature map which eliminating redundancy in the same semantics and resolution. In Level 2, 13 feature maps are up-sampled and cropped to the same size of input. Finally the cropped feature maps fuse into a prediction result. All fusion operations used in HF-FCN are 1$\times $1 convolution. The input channel could be 3, 4 or 5 for RGB, DSM, nDSM. $\times $2 means 2 times of upper sampling. U1\_1 means the upsampling of F1\_1, and so forth}{figure.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces (a) Input aerial image. (b-g) Feature maps generated from U1\_1, U1\_2, U2\_2, U3\_3, U4\_3, U5\_3, respectively. (h) Predicted labelling map}}{4}{figure.4}}
 \newlabel{4}{{4}{4}{(a) Input aerial image. (b-g) Feature maps generated from U1\_1, U1\_2, U2\_2, U3\_3, U4\_3, U5\_3, respectively. (h) Predicted labelling map\relax }{figure.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Network Training}{4}{subsection.3.2}}
 \newlabel{loss}{{1}{4}{Network Training\relax }{equation.3.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {IV}Experiments}{4}{section.4}}
 \newlabel{Sec:Exp}{{IV}{4}{Experiments\relax }{section.4}{}}
@@ -98,9 +98,11 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The relaxed precision-recall curves from different methods with two slack paramters, (a) $\rho $ = 0; (b) $\rho $ = 3. All curves of our model are located above others.}}{6}{figure.7}}
 \newlabel{7}{{7}{6}{The relaxed precision-recall curves from different methods with two slack paramters, (a) $\rho $ = 0; (b) $\rho $ = 3. All curves of our model are located above others}{figure.7}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Performance comparison between HF-FCN variants on Massachusetts test set.}}{6}{table.5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Vaihingen dataset}{6}{subsection.5.2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The relaxed precision-recall curves from HF-FCN variants with two slack paramters. The biggest gap occurs between HF-FCN16s and HF-FCN8s, which indicates the most additional information coming from middle layers.}}{6}{figure.8}}
 \newlabel{8}{{8}{6}{The relaxed precision-recall curves from HF-FCN variants with two slack paramters. The biggest gap occurs between HF-FCN16s and HF-FCN8s, which indicates the most additional information coming from middle layers}{figure.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Vaihingen dataset}{6}{subsection.5.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Prediction results of HF-FCN, HF-FCN4s, HF-FCN8s and HF-FCN16s. The yellow box shows the continuous refinement of the tiny buildings. The red and blue boxes show the mutual promotion and contradiction between different layers.}}{6}{figure.9}}
+\newlabel{9}{{9}{6}{Prediction results of HF-FCN, HF-FCN4s, HF-FCN8s and HF-FCN16s. The yellow box shows the continuous refinement of the tiny buildings. The red and blue boxes show the mutual promotion and contradiction between different layers}{figure.9}{}}
 \citation{IEEEexample:zhou20112}
 \citation{IEEEexample:audebert2017deep}
 \citation{IEEEexample:marmanis2016semantic}
@@ -110,24 +112,21 @@
 \citation{IEEEexample:unknown}
 \@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces (a) input images. (b) Results of Mnih-CNN+CRF. (c) Results of Satio\discretionary {-}{}{}multi\discretionary {-}{}{}MA\&CIS. (d) Results of FCN4s . (e) Results of SegNet. (f) Our results. TP are shown in green, FP are shown in blue and FN are in red.}}{7}{figure.10}}
 \newlabel{10}{{10}{7}{(a) input images. (b) Results of Mnih-CNN+CRF. (c) Results of Satio\-multi\-MA\&CIS. (d) Results of FCN4s . (e) Results of SegNet. (f) Our results. TP are shown in green, FP are shown in blue and FN are in red}{figure.10}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Prediction results of HF-FCN, HF-FCN4s, HF-FCN8s and HF-FCN16s. The yellow box shows the continuous refinement of the tiny buildings. The red and blue boxes show the mutual promotion and contradiction between different layers.}}{7}{figure.9}}
-\newlabel{9}{{9}{7}{Prediction results of HF-FCN, HF-FCN4s, HF-FCN8s and HF-FCN16s. The yellow box shows the continuous refinement of the tiny buildings. The red and blue boxes show the mutual promotion and contradiction between different layers}{figure.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Potsdam dataset}{7}{subsection.5.3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Results of HF-FCN variants on Vaihingen dataset. (a) (b) shows the precision, recall and F1\_score of validation set and test set of Vaihingen dataset respectively.}}{7}{figure.11}}
 \newlabel{11}{{11}{7}{Results of HF-FCN variants on Vaihingen dataset. (a) (b) shows the precision, recall and F1\_score of validation set and test set of Vaihingen dataset respectively}{figure.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Potsdam dataset}{7}{subsection.5.3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Results of HF-FCN variants on Potsdam dataset. (a) (b) shows the precision, recall and F1\_score of validation set and test set of Potsdam dataset respectively.}}{7}{figure.12}}
 \newlabel{12}{{12}{7}{Results of HF-FCN variants on Potsdam dataset. (a) (b) shows the precision, recall and F1\_score of validation set and test set of Potsdam dataset respectively}{figure.12}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces Performance comparison of the results of different inputs on Vaihigen data set}}{8}{table.6}}
+\@writefile{lot}{\contentsline {table}{\numberline {VII}{\ignorespaces Performance comparison of the results of different inputs on Potsdam data set}}{8}{table.7}}
 \@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Prediction results on Vaihingen dataset. (a) (b) (c) shows results of the 3-channel input, 4-channel input and 5-channel input of Vaihingen dataset respectively. Here, TP are shown in green, FP are shown in blue and FN are in red.}}{8}{figure.13}}
 \newlabel{13}{{13}{8}{Prediction results on Vaihingen dataset. (a) (b) (c) shows results of the 3-channel input, 4-channel input and 5-channel input of Vaihingen dataset respectively. Here, TP are shown in green, FP are shown in blue and FN are in red}{figure.13}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{8}{section.6}}
+\newlabel{Sec:Con}{{VI}{8}{Conclusion\relax }{section.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Results of different methods. (a) is input image, (b)(d)(g) are results of \cite  {IEEEexample:audebert2017deep}, (c) is result of \cite  {IEEEexample:marmanis2016semantic}, (f) is result of \cite  {IEEEexample:unknown}, (g) is our result.}}{8}{figure.14}}
 \newlabel{14}{{14}{8}{Results of different methods. (a) is input image, (b)(d)(g) are results of \cite {IEEEexample:audebert2017deep}, (c) is result of \cite {IEEEexample:marmanis2016semantic}, (f) is result of \cite {IEEEexample:unknown}, (g) is our result}{figure.14}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces The 3D modelling of Veihingen dataset. The single building model and its corresponding optical patch were shown together.}}{8}{figure.15}}
 \newlabel{15}{{15}{8}{The 3D modelling of Veihingen dataset. The single building model and its corresponding optical patch were shown together}{figure.15}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Prediction results on potsdam dataset. (a) (b) (c) shows results of the 3-channel input, 4-channel input and 5-channel input of Vaihingen dataset respectively. Here, TP are shown in green, FP are shown in blue and FN are in red.}}{8}{figure.16}}
-\newlabel{16}{{16}{8}{Prediction results on potsdam dataset. (a) (b) (c) shows results of the 3-channel input, 4-channel input and 5-channel input of Vaihingen dataset respectively. Here, TP are shown in green, FP are shown in blue and FN are in red}{figure.16}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{8}{section.6}}
-\newlabel{Sec:Con}{{VI}{8}{Conclusion\relax }{section.6}{}}
 \bibstyle{IEEEtran}
 \bibdata{IEEEexample}
 \bibcite{IEEEexample:huertas1988detecting}{1}
@@ -151,11 +150,12 @@
 \bibcite{IEEEexample:Long_2015_CVPR}{19}
 \bibcite{IEEEexample:badrinarayanan2017segnet}{20}
 \bibcite{IEEEexample:hoffman2016learning}{21}
-\@writefile{lot}{\contentsline {table}{\numberline {VII}{\ignorespaces Performance comparison of the results of different inputs on Potsdam data set}}{9}{table.7}}
+\bibcite{IEEEexample:marmanis2016semantic}{22}
+\bibcite{IEEEexample:unknown}{23}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Prediction results on potsdam dataset. (a) (b) (c) shows results of the 3-channel input, 4-channel input and 5-channel input of Vaihingen dataset respectively. Here, TP are shown in green, FP are shown in blue and FN are in red.}}{9}{figure.16}}
+\newlabel{16}{{16}{9}{Prediction results on potsdam dataset. (a) (b) (c) shows results of the 3-channel input, 4-channel input and 5-channel input of Vaihingen dataset respectively. Here, TP are shown in green, FP are shown in blue and FN are in red}{figure.16}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Results of different methods. The second column is the results of using only the FCN with CIR. Pairwise CRF fusion shows the result of fusing FCN-8s\_CIR with LiDAR data in a pairwise CRF. Higher-order CRF are used to generate the results shown in third column. Our results are shown in last colunm.}}{9}{figure.17}}
 \newlabel{17}{{17}{9}{Results of different methods. The second column is the results of using only the FCN with CIR. Pairwise CRF fusion shows the result of fusing FCN-8s\_CIR with LiDAR data in a pairwise CRF. Higher-order CRF are used to generate the results shown in third column. Our results are shown in last colunm}{figure.17}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces The 3D modelling of Potsdam dataset. The single building model and its corresponding optical patch were shown together.}}{9}{figure.18}}
 \newlabel{18}{{18}{9}{The 3D modelling of Potsdam dataset. The single building model and its corresponding optical patch were shown together}{figure.18}{}}
 \@writefile{toc}{\contentsline {section}{References}{9}{section*.1}}
-\bibcite{IEEEexample:marmanis2016semantic}{22}
-\bibcite{IEEEexample:unknown}{23}
