@@ -15,6 +15,7 @@
 \usepackage{multirow}
 \usepackage{bm}
 \usepackage{array}
+\usepackage{subfigure}
 \usepackage[colorlinks,
             linkcolor=red,
             anchorcolor=black,
@@ -23,6 +24,20 @@
             \makeatletter
 \newcommand{\rmnum}[1]{\romannumeral #1}
 \newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+
+ 
+
+
+\newcommand{\comments}[1]{}
+\newcommand{\cxj}[1]{\textcolor{red}{(xuejin:#1)}}
+\newcommand{\xjmd}[1]{\textcolor{blue}{#1}}
+\newcommand{\vo}{\hat{\mathbf{v}}}
+\newcommand{\vn}{\mathbf{v}}
+\newcommand{\vset}{\mathbb{V}}
+
+
+
+
 \makeatother
 %\usepackage[justification=centering]{caption}
 \begin{document}
@@ -40,8 +55,8 @@
 %
 
 \author{Feiyu Qin,
-        Xuejin Chen,
-       Tongcun Zuo}% <-this % stops a space
+       Tongcun Zuo,
+       Xuejin Chen}% <-this % stops a space
 %\thanks{M. Shell was with the Department
 %of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta,
 %GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this % stops a space
@@ -49,8 +64,8 @@
 %\thanks{Manuscript received April 19, 2005; revised August 26, 2015.}}
 
 % The paper headers
-\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
-{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+%\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
+%{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
 \maketitle
 
 \input{Abstract.tex}
