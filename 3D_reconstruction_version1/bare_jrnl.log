@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.22)  16 JAN 2018 14:52
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.22)  16 JAN 2018 15:11
 entering extended mode
 **bare_jrnl.tex
-(G:\3D_reconstruction_version1\bare_jrnl.tex
+(D:\Git\3D_reconstruction_version1\bare_jrnl.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
-(G:\3D_reconstruction_version1\IEEEtran.cls
+(D:\Git\3D_reconstruction_version1\IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -396,7 +396,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip55
 )
-(G:\3D_reconstruction_version1\bare_jrnl.aux)
+(D:\Git\3D_reconstruction_version1\bare_jrnl.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
@@ -450,12 +450,12 @@ LaTeX Info: Redefining \ref on input line 41.
 LaTeX Info: Redefining \pageref on input line 41.
 LaTeX Info: Redefining \nameref on input line 41.
 
-(G:\3D_reconstruction_version1\bare_jrnl.out)
-(G:\3D_reconstruction_version1\bare_jrnl.out)
+(D:\Git\3D_reconstruction_version1\bare_jrnl.out)
+(D:\Git\3D_reconstruction_version1\bare_jrnl.out)
 \@outlinefile=\write3
 
-(G:\3D_reconstruction_version1\Abstract.tex)
-(G:\3D_reconstruction_version1\Intro.tex
+(D:\Git\3D_reconstruction_version1\Abstract.tex)
+(D:\Git\3D_reconstruction_version1\Intro.tex
 Package epstopdf Info: Source file: <Figures/challenge.eps>
 (epstopdf)                    date: 2018-01-03 17:16:22
 (epstopdf)                    size: 2582238 bytes
@@ -477,9 +477,9 @@ ine 12.
  [1{C:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
 
 
- <G:/3D_reconstruction_version1/Figures/challenge-eps-converted-to.pdf>]) (G:\3
-D_reconstruction_version1\RelatedWork.tex
-[2]) (G:\3D_reconstruction_version1\HF-FCN.tex
+ <D:/Git/3D_reconstruction_version1/Figures/challenge-eps-converted-to.pdf>])
+(D:\Git\3D_reconstruction_version1\RelatedWork.tex [2])
+(D:\Git\3D_reconstruction_version1\HF-FCN.tex
 Package epstopdf Info: Source file: <Figures/Fusion_Operation.eps>
 (epstopdf)                    date: 2018-01-15 15:36:12
 (epstopdf)                    size: 803266 bytes
@@ -499,8 +499,8 @@ File: Figures/Fusion_Operation-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figures/Fusion_Operation-eps-converted-to.pdf used on 
 input line 12.
 (pdftex.def)             Requested size: 241.84842pt x 254.29759pt.
- [3 <G:/3D_reconstruction_version1/Figures/Fusion_Operation-eps-converted-to.pd
-f>]
+ [3 <D:/Git/3D_reconstruction_version1/Figures/Fusion_Operation-eps-converted-t
+o.pdf>]
 Package epstopdf Info: Source file: <Figures/network_architecture.eps>
 (epstopdf)                    date: 2018-01-14 17:22:04
 (epstopdf)                    size: 1033470 bytes
@@ -541,12 +541,13 @@ Package pdftex.def Info: Figures/feature_maps-eps-converted-to.pdf used on inpu
 t line 68.
 (pdftex.def)             Requested size: 247.53888pt x 140.12485pt.
 )
-(G:\3D_reconstruction_version1\Experiments.tex
+(D:\Git\3D_reconstruction_version1\Experiments.tex
 
 LaTeX Warning: Citation `table:dataset-composition' on page 4 undefined on inpu
 t line 15.
 
-[4 <G:/3D_reconstruction_version1/Figures/feature_maps-eps-converted-to.pdf>]
+[4 <D:/Git/3D_reconstruction_version1/Figures/feature_maps-eps-converted-to.pdf
+>]
 Underfull \vbox (badness 1430) has occurred while \output is active []
 
 Package epstopdf Info: Source file: <Figures/datasets.eps>
@@ -570,9 +571,10 @@ ne 43.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5 <G:/3D_reconstruction_version1/Figures/network_architecture-eps-converted-t
-o.pdf> <G:/3D_reconstruction_version1/Figures/datasets-eps-converted-to.pdf>])
-(G:\3D_reconstruction_version1\Results.tex
+ [5 <D:/Git/3D_reconstruction_version1/Figures/network_architecture-eps-convert
+ed-to.pdf> <D:/Git/3D_reconstruction_version1/Figures/datasets-eps-converted-to
+.pdf>])
+(D:\Git\3D_reconstruction_version1\Results.tex
 Package epstopdf Info: Source file: <Figures/vairants.eps>
 (epstopdf)                    date: 2018-01-03 17:16:22
 (epstopdf)                    size: 754518 bytes
@@ -596,7 +598,7 @@ Overfull \hbox (4.27174pt too wide) in paragraph at lines 31--51
  [][] 
  []
 
-[6 <G:/3D_reconstruction_version1/Figures/vairants-eps-converted-to.pdf>]
+[6 <D:/Git/3D_reconstruction_version1/Figures/vairants-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Figures/HF-FCN-variant-PR.eps>
 (epstopdf)                    date: 2018-01-03 17:16:22
 (epstopdf)                    size: 1323142 bytes
@@ -759,14 +761,14 @@ Package pdftex.def Info: Figures/Vaihingen_compared_results-eps-converted-to.pd
 f used on input line 145.
 (pdftex.def)             Requested size: 247.53888pt x 137.95166pt.
 
-[7 <G:/3D_reconstruction_version1/Figures/HF-FCN-variant-PR-eps-converted-to.pd
-f> <G:/3D_reconstruction_version1/Figures/HF-FCN_variants_result-eps-converted-
-to.pdf> <G:/3D_reconstruction_version1/Figures/weights-eps-converted-to.pdf>]
-[8 <G:/3D_reconstruction_version1/Figures/mass_visi_result-eps-converted-to.pdf
-> <G:/3D_reconstruction_version1/Figures/vaihingen_variants-eps-converted-to.pd
-f> <G:/3D_reconstruction_version1/Figures/Potsdam_variants-eps-converted-to.pdf
-> <G:/3D_reconstruction_version1/Figures/Vaihingen3_4_5in-eps-converted-to.pdf>
-]
+[7 <D:/Git/3D_reconstruction_version1/Figures/HF-FCN-variant-PR-eps-converted-t
+o.pdf> <D:/Git/3D_reconstruction_version1/Figures/HF-FCN_variants_result-eps-co
+nverted-to.pdf> <D:/Git/3D_reconstruction_version1/Figures/weights-eps-converte
+d-to.pdf>] [8 <D:/Git/3D_reconstruction_version1/Figures/mass_visi_result-eps-c
+onverted-to.pdf> <D:/Git/3D_reconstruction_version1/Figures/vaihingen_variants-
+eps-converted-to.pdf> <D:/Git/3D_reconstruction_version1/Figures/Potsdam_varian
+ts-eps-converted-to.pdf> <D:/Git/3D_reconstruction_version1/Figures/Vaihingen3_
+4_5in-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Figures/Potsdam3_4_5in.eps>
 (epstopdf)                    date: 2018-01-03 17:16:22
 (epstopdf)                    size: 55711250 bytes
@@ -806,7 +808,7 @@ Package pdftex.def Info: Figures/Potsdam_compared_results-eps-converted-to.pdf
 used on input line 196.
 (pdftex.def)             Requested size: 247.53888pt x 103.26645pt.
 )
-(G:\3D_reconstruction_version1\Application.tex
+(D:\Git\3D_reconstruction_version1\Application.tex
 Package epstopdf Info: Source file: <Figures/Vaihigen_3Dmodelling.eps>
 (epstopdf)                    date: 2018-01-03 17:16:22
 (epstopdf)                    size: 2114806 bytes
@@ -847,20 +849,20 @@ Package pdftex.def Info: Figures/potsdam_models-eps-converted-to.pdf used on in
 put line 14.
 (pdftex.def)             Requested size: 247.53888pt x 106.90776pt.
 )
-(G:\3D_reconstruction_version1\Conclusion.tex [9 <G:/3D_reconstruction_version1
-/Figures/Vaihingen_compared_results-eps-converted-to.pdf> <G:/3D_reconstruction
-_version1/Figures/Potsdam3_4_5in-eps-converted-to.pdf> <G:/3D_reconstruction_ve
-rsion1/Figures/Potsdam_compared_results-eps-converted-to.pdf> <G:/3D_reconstruc
-tion_version1/Figures/Vaihigen_3Dmodelling-eps-converted-to.pdf>])
-(G:\3D_reconstruction_version1\bare_jrnl.bbl [10 <G:/3D_reconstruction_version1
-/Figures/potsdam_models-eps-converted-to.pdf>])
+(D:\Git\3D_reconstruction_version1\Conclusion.tex [9 <D:/Git/3D_reconstruction_
+version1/Figures/Vaihingen_compared_results-eps-converted-to.pdf> <D:/Git/3D_re
+construction_version1/Figures/Potsdam3_4_5in-eps-converted-to.pdf> <D:/Git/3D_r
+econstruction_version1/Figures/Potsdam_compared_results-eps-converted-to.pdf> <
+D:/Git/3D_reconstruction_version1/Figures/Vaihigen_3Dmodelling-eps-converted-to
+.pdf>]) (D:\Git\3D_reconstruction_version1\bare_jrnl.bbl [10 <D:/Git/3D_reconst
+ruction_version1/Figures/potsdam_models-eps-converted-to.pdf>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
  [11
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
 
-(G:\3D_reconstruction_version1\bare_jrnl.aux)
+(D:\Git\3D_reconstruction_version1\bare_jrnl.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 78.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 78.
 Package rerunfilecheck Info: File `bare_jrnl.out' has not changed.
@@ -872,7 +874,7 @@ LaTeX Warning: There were undefined references.
  ) 
 Here is how much of TeX's memory you used:
  7107 strings out of 495354
- 110221 string characters out of 3183858
+ 110345 string characters out of 3183858
  238497 words of memory out of 3000000
  10022 multiletter control sequences out of 15000+200000
  52251 words of font info for 105 fonts, out of 3000000 for 9000
@@ -895,7 +897,7 @@ b><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/CTEX/MiKTeX/font
 s/type1/urw/times/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb>
 <C:/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/CTEX/MiKTeX/fonts/type1/ur
 w/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (11 pages, 9349642 bytes).
+Output written on bare_jrnl.pdf (11 pages, 9349714 bytes).
 PDF statistics:
  709 PDF objects out of 1000 (max. 8388607)
  95 named destinations out of 1000 (max. 500000)
