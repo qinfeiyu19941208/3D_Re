@@ -1,4 +1,10 @@
 \section{Conclusion}
 \label{Sec:Con}
- In this paper, we propose a complete system for efficient 3D city modelling from large-scale aerial images via deep learning. A novel CNN architecture, HF-FCN, combines hierarchical semantic layers and multi-scale feature representation to implement final building detection. We design a fusion branch to combine the feature maps stage by stage. And the resulting HF-FCN method shows significant improvements over several previous methods. Distinct from the previous deeplearning based methods, we utilize the multi-scale inherent information within the CNN and get fine detail detection results. Unlike existing 3D  reconstruction methods, our proposed approach relies on the HF-FCN to efficiently extract the area of buildings to build the 3D models of the geospatial objects. Finally, our study suggests that even with the powerful semantic expressive ability of CNNs and their good robustness to scale, it is still critical to address multi-scale problems utilizing hierarchical feature maps encoded in CNNs.
+ In this paper, an efficient building detection approach is proposed and have a further application in building reconstruction.
+ Using proposed feature fusion operations, a novel CNN architecture is presented for building extraction, named HF-FCN.
+ Unlike previous non-deep-learning algorithms, our method relies on a CNN for feature extraction which is more robust and efficient to the different scales of buildings.
+ On the other hand, distinct from the previous deeplearning based methods, we utilize the multi-scale inherent information within the CNN and refine the details by a fusion manner stage by stage.
+ In addition, an application of 3D building reconstruction depend on the segmentation results is implemented.
+ Compared to the existing 3D reconstruction methods, our proposed approach greatly accelerates the part of building extraction. 
+ Finally, our study suggests that even with the powerful semantic expressive ability of CNNs and their good robustness to scale, it is still critical to address multi-scale problems utilizing hierarchical feature maps encoded in CNNs.
 
