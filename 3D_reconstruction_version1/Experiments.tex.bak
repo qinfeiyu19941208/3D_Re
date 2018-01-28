@@ -12,7 +12,7 @@ Massachusetts dataset consists of 151 aerial images of the Boston area which cov
 The resolution of each image is $1500\times 1500$ with the spacial resolution of 1 meter per pixel. And the images are composed of red, green and blue channels.
 This dataset is built by Mnih while ground-truth is produced by Saito et al.
 The dataset is split into three parts,  a training set of 137 images, a test set of 10 images and validation set of 4 images.
-To train the network, we create a set of image tiles for training and validation. The detailed description is shown in Table~\cite{table:xxxx}.
+To train the network, we create a set of image tiles for training and validation by sliding a ${256\times256}$ window with 64 stride from right to left, top to bottom. The detailed description is shown in Table \ref{table:dataset-composition}.
 
 \paragraph{Vaihingen dataset}
 %
@@ -30,12 +30,12 @@ We split the dataset into training, validation and test sets in a proportion of 
 
 
 Data augmentation is made on the Vaihingen dataset and the Potsdam dataset.
-One reason is that methods using dataset a do not extend the data.
+One reason is that methods using dataset ${a)}$ do not extend the data.
 Hence, to make a fair comparison with other methods, we also do not extend it.
-Another reason is the data quantity of dataset b and c is not enough which may lead to training of our network inadequately.
-Therefore, some data augmentation operations are made in dataset b and c including data rotation and mirror flipping.
-Components of the datasets are shown in Table~\ref{table:dataset-composition}.
-Fig.\ref{fig:dataset_sample} \cxj{5} shows the sampled patches of dataset a, b, c.
+Another reason is that the data quantity of dataset ${b)}$ and ${c)}$ is not enough which may lead to inadequate training.
+Therefore, some measures of data augmentation are made in dataset ${b)}$ and ${c)}$ including data rotation and mirror flipping.
+Components of the datasets are listed in Table~\ref{table:dataset-composition}.
+Meanwhile, some sampled patches of dataset ${a}$, ${b}$, ${c}$ are shown in Fig.~\ref{fig:dataset_sample}\cxj{5}.
 
 
 \begin{figure}
@@ -58,9 +58,10 @@ Bands & R,G,B & IR,R,G,DSM & IR,R,G,B,DSM\\ \hline
 %Training set & \tabincell{c}{1,3,5,7,13,\\17,21,23,26,32,37} &\tabincell{c}{2\_10,3\_10,3\_11,3\_12,\\4\_11,4\_12,5\_10,5\_12,\\6\_8,6\_8,6\_10,6\_11,\\6\_12,7\_7,7\_9,7\_11,7\_12}\\ \hline
 Training images &137 & 11 & 17\\ \hline
 Training patches&75938 &115088 &85000\\ \hline
-%validation set & 11,28,34 &2\_11,4\_10,5\_11,7\_10\\ \hline
+Training patch size& 256$\times$256 & 256$\times$256 & 256$\times$256\\ \hline
 Validation images & 4 & 3 & 4\\ \hline
 validation patches &2500 & 28376 &25000 \\\hline
+Validation patch size & 256$\times$256 & 256$\times$256 & 256$\times$256\\ \hline
 %Test set & 15,30 &2\_12,6\_7,7\_8 \\ \hline
 Test images & 10 & 2 & 3\\ \hline
 \end{tabular}
@@ -69,7 +70,7 @@ Test images & 10 & 2 & 3\\ \hline
 
 
 \subsection{Training Settings}
-HF-FCN is trained on dataset a firstly owing to large amounts of training data. The pre-trained VGG16 Net model is used to finetune our HF-FCN. We use the stochastic gradient descent algorithm with the learning rate divided by 10 for each 8000 iterations to train our network. The drop-out ratio is set to 0.5 which avoids overfitting. When the HF-FCN converges on the dataset a, we transfer it to the other datasets. All experiments in this paper are performed using the deep learning framework Caffe and trained on a single NVIDIA Titan 12GB GPU. Besides, the hyper-parameters are listed in Table~\ref{table:Train-Parameter} \cxj{\Rmnum{3}}.
+HF-FCN is trained on dataset a firstly owing to large amounts of training data. The pre-trained VGG16 Net model is used to finetune our HF-FCN. We use the stochastic gradient descent algorithm with the learning rate divided by 10 for each 8000 iterations to train our network. The drop-out ratio is set to 0.5 which avoids overfitting. When the HF-FCN converges on the dataset ${a)}$, we transfer it to the other datasets. All experiments in this paper are performed using the deep learning framework Caffe and trained on a single NVIDIA Titan 12GB GPU. Besides, the hyper-parameters are listed in Table~\ref{table:Train-Parameter} \cxj{\Rmnum{3}}.
 
 \begin{table}
 \centering
@@ -91,7 +92,8 @@ weight\_decay & 0.02& 0.005 & 0.005\\ \hline
 \end{table}
 
 \subsection{Evaluation Metrics}
-Several evaluation metrics are adopted in our work. For dataset a, the most common metrics are correctness (precision) and completeness (recall). The stantdard precision and recall scores ($\rho$=0) and the relaxed precision and recall scores with $\rho$=3 are used to evaluate the prediction results. Here the relaxed precision means the predicted pixels are within $\rho$ pixels of a true pixel while the relaxed recall is the true pixels are within $\rho$ pixels of a predicted pixel. Moreover, the time cost is used to measure the efficiency of our HF-FCN. For dataset b and c, we use correctness, completeness and F1 score as evaluation metrics.
+Several evaluation metrics are adopted in our work. For dataset ${a)}$, the most common metrics are correctness (precision) and completeness (recall).
+The stantdard ($\rho$=0) and relaxed ($\rho$=3) precision and recall scores are used to evaluate the prediction results. Here the relaxed precision means the predicted pixels are within $\rho$ pixels of a true pixel while the relaxed recall is the true pixels are within $\rho$ pixels of a predicted pixel. Moreover, the time cost is used to measure the efficiency of our HF-FCN. For dataset ${b)}$ and ${c)}$, we use correctness, completeness and F1 score as evaluation metrics.
 
 
 \begin{equation}

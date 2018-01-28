@@ -1,0 +1,79 @@
+\documentclass[journal]{IEEEtran}
+
+\ifCLASSINFOpdf
+\else
+\fi
+
+%\hyphenation{op-tical net-works semi-conduc-tor}
+
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{indentfirst}
+\usepackage{cite}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{multicolumn}
+\usepackage{bm}
+\usepackage{array}
+\usepackage{subfigure}
+\usepackage[colorlinks,
+            linkcolor=red,
+            anchorcolor=black,
+            citecolor=green
+            ]{hyperref}
+            \makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+
+
+\newcommand{\comments}[1]{}
+\newcommand{\cxj}[1]{\textcolor{red}{(xuejin:#1)}}
+\newcommand{\xjmd}[1]{\textcolor{blue}{#1}}
+\newcommand{\vo}{\hat{\mathbf{v}}}
+\newcommand{\vn}{\mathbf{v}}
+\newcommand{\vset}{\mathbb{V}}
+
+
+
+
+\makeatother
+%\usepackage[justification=centering]{caption}
+\begin{document}
+
+\title{Efficient Building Detection for Large-scale Urban Remote Sensing}
+%
+%
+% author names and IEEE memberships
+% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
+% a structure at a ~ so this keeps an author's name from being broken across
+% two lines.
+% use \thanks{} to gain access to the first footnote area
+% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
+% was not built to handle multiple paragraphs
+%
+\author{Feiyu Qin,
+       Tongcun Zuo,
+       Xuejin Chen}% <-this % stops a space
+%\thanks{M. Shell was with the Department
+%of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta,
+%GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this % stops a space
+%\thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
+%\thanks{Manuscript received April 19, 2005; revised August 26, 2015.}}
+
+% The paper headers
+%\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
+%{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+\maketitle
+\input{Abstract.tex}
+%\IEEEpeerreviewmaketitle
+\input{Intro.tex}
+\input{RelatedWork.tex}
+\input{HF-FCN.tex}
+\input{Experiments.tex}
+\input{Results.tex}
+\input{Application.tex}
+\input{Conclusion.tex}
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEexample}
+\end{document}

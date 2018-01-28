@@ -1,13 +1,14 @@
 \section{Results and Discussion}
 \label{Sec:Res}
 
-In this section, the proposed method using dataset a, b, c are compared to the recent non-deep-learning algorithms, such as Minh-CNN\cite{IEEEexample:mnih2013machine}, Satio-multi~\cite{IEEEexample:saito2016multiple} and Context~\cite{IEEEexample:audebert2017deep}.
+In this section, the proposed method using dataset ${a)}$, ${b)}$, ${c)}$ are compared to the recent non-deep-learning algorithms, such as Minh-CNN\cite{IEEEexample:mnih2013machine}, Satio-multi~\cite{IEEEexample:saito2016multiple} and Context~\cite{IEEEexample:audebert2017deep}.
 %
 Furthermore, it is also compared with some recent deep-learning based approaches, including FCN~\cite{IEEEexample:Long_2015_CVPR}, SegNet~\cite{IEEEexample:badrinarayanan2017segnet}, Deeplab~\cite{IEEEexample:chen2016deeplab} and U-Net~\cite{IEEEexample:ronneberger2015u}.\cxj{What else?}
-Moreover for HF-FCN itself, we expect to investigate the effects of extracted information from different layers on the final prediction.
-Thus, some variants which combine different up-sampling feature maps from Level 2 are proposed with details shown in Fig.~\ref{fig:Variants}.
-In Fig.~\ref{fig:Variants}, we also compare our variants with the FCN to illustrate the differences between these two types of variants.
-In addition, in order to find a better backbone network, we try the VGG16 Net and ResNet. The details are shown below.
+Moreover, for HF-FCN itself, we expect to investigate which kind of information extracted from feature extractors and how the effects of extracted information on the final prediction.
+Thus, some upsampled feature maps ${\left\{U_k\right\}}$ are presented. 
+And several variants of HF-FCN which combine different up-sampling feature maps from Part 2 are proposed.
+They are shown in Fig.~\ref{fig:feature_maps} and Fig.~\ref{fig:Variants}, respectively.
+In addition, we also tried different feature extractor networks, VGG16 Net and ResNet. The details are shown below.
 \cxj{What about to change the backbone network?}
 
 \begin{figure}[t]
@@ -20,13 +21,15 @@ In addition, in order to find a better backbone network, we try the VGG16 Net an
 
 \subsection{Massachusetts dataset}
 On the Massachusetts dataset, our method is compared to both the non-deep-learning algorithms and deep-learning based approaches. Table~\ref{table:Mass-results}\cxj{4} present the quantitative analysis. A standard and relaxed precision and recall are amply to make a comparison.
-From the result, our method shows obvious superiority in terms of speed and precision. When comparing with Satio\-multi\-MA\&CIS, the standard and relaxed recall of our method are $5.5\%$ and $1.3\%$ higher than it. Meanwhile, the time cost is reduced from 67.84s to 1.07s and the speed is promoted about 63 times.
+From the result, our method shows obvious superiority in terms of speed and precision. When comparing with Satio\-multi\-MA\&CIS~\cite{IEEEexample:saito2016multiple}, the standard and relaxed recall of our method are $5.5\%$ and $1.3\%$ higher than it. Meanwhile, the time cost is reduced from 67.84s to 1.07s and the speed is promoted about 63 times.
+Compared with U-Net~\cite{IEEEexample:ronneberger2015u}, the speed is promoted about 3 times and recall is a little higher.
 These significant improvements demonstrate that HF-FCN achieves best performance in effectiveness and efficiency.
 
 Extensive comparisons are made between HF-FCN and other mainstream methods in semantic segmentation domain. The quantitative and visual results are shown in Table~\ref{table:Mass-results} and Fig.~\ref{fig:Mass-visi-result}, respectively. On the charts, we can see that our method better performance in speed and precision. And the details and integrity of the building are well preserved by our method.
 \begin{table}
 \centering
-\caption {Correctness at breakeven of HF-FCN v.s. \cite{IEEEexample:mnih2013machine}\cite{IEEEexample:saito2016multiple}\cite{IEEEexample:alshehhi2017simultaneous} on Massachusetts test set. Cost time is computed in the same computer with a single NVIDIA Titan 12GB GPU}
+\caption {Correctness at breakeven of HF-FCN v.s. \cite{IEEEexample:mnih2013machine}\cite{IEEEexample:saito2016multiple}\cite{IEEEexample:alshehhi2017simultaneous}\cite{IEEEexample:Long_2015_CVPR}\cite{IEEEexample:badrinarayanan2017segnet}
+\cite{IEEEexample:ronneberger2015u}\cite{IEEEexample:chen2016deeplab}on Massachusetts test set. Cost time is computed in the same computer with a single NVIDIA Titan 12GB GPU}
 \label{table:Mass-results}
 \begin{tabular}{cccc}
 \hline
@@ -39,25 +42,49 @@ Satio-multi-MA\&CIS \cite{IEEEexample:saito2016multiple}&0.9509&0.7872&67.84\\
 Alshehhi-GAP+seg \cite{IEEEexample:alshehhi2017simultaneous}&0.955&{--}&{--} \\ \hline
 FCN\_4s\cite{IEEEexample:Long_2015_CVPR}&0.839&0.6147&4.20\\
 SegNet\cite{IEEEexample:badrinarayanan2017segnet}&0.7710&0.5675&2.39\\
-U-Net\cite{IEEEexample:ronneberger2015u}& 0.9638& 0.8357& 3.165\\
-DeepLab\_V2\cite{IEEEexample:chen2016deeplab}&0.9620&0.7575&1.89\\ \hline
-HF-FCN(VGG16 Net)&0.9643&0.8424&1.07\\
+U-Net\cite{IEEEexample:ronneberger2015u}& $\bm{0.9638}$& $\bm{0.8357}$& 3.165\\
+DeepLab\_V2\cite{IEEEexample:chen2016deeplab}&0.9620&0.7575&$\bm{1.89}$\\ \hline
+HF-FCN(VGG16 Net)&$\bm{0.9643}$& $\bm{0.8424}$ &1.07\\
+HF-FCN(VGG+data aug)&{--}&{--}&{--}\\
 HF-FCN(ResNet)&0.9588&0.8175&2.42\\
 HF-FCN16s &0.9330&0.7233&0.85\\
 HF-FCN8s &0.9643&0.8171&0.93\\
-HF-FCN4s &0.9632&0.8394&0.99\\
+HF-FCN4s &0.9632&0.8394&$\bm{0.99}$\\
 \hline
 \end{tabular}
 \end{table}
 
-To explore the effects of the feature maps generated from each conv layer on the final result, variants of HF-FCN which are counterpart of FCN are designed.
-Unlike FCN, a fusion operation rather than summation are leveraged to build our HF-FCN 16s, 8s, 4s. Fig.~\ref{fig:Variants} shows the constrast diagram.
-The performance of these variants are shown in Fig.~\ref{fig:Mass-variants-PR}, Fig.~\ref{fig:Mass-variants-visi} and Table~\ref{table:Mass-results}\cxj{Figure 8, Figure 9 and Table \Rmnum{5}}.
-From the disgrams, we get the following conclusions. First, the prediction result obtained from the last layer gets a coarse result, which loses much of location information that are mainly encoded in the shallow feature maps. Second, the largest gap presented between HF-FCN16s and HF-FCN8s about 9{\%} in recall rates, it may suggest that the most information supplement to the HF-FCN is got in middle layers. Third, the PR curves of HF-FCN4s and HF-FCN almost coincide. It illustrates the low-level information has little effect on the prediction results. Forth, with the addition of the shallow feature map, the network is more distinct for the segmentation of tiny buildings, which solves the problem of easy adhesion to adjacent buildings. Since, all the conv layers contained useful hierarchical information that is critical to the final prediction.
+To explore which kinds of information extracted by hierarchical fusion operation in Part 2. 
+Some upsampled feature maps ${\left\{U_1,U_2,U_3,U_7,U_{10},U_{13}\right\}}$ are shown in Fig.~\ref{fig:feature_maps}. 
+The U1\_1 (${U_1}$) in Fig.~\ref{fig:feature_maps}(b) means the upsampled feature maps from F1\_1 (${F_1}$) which are feature maps generated from conv1\_1 in VGG16 Net.
+Due to small receptive field of conv1\_1 and conv1\_2, they extract low-level features like edges. 
+And the U1\_2 (${U_2}$) looks like an over-segmentation which groups pixels with similar color or texture into a subregion.
+With the deepening of the network, in the U2\_1 (${U_3}$), as Fig.~\ref{fig:feature_maps}(d) shows, shape information is augmented.
+And from the U3\_3 (${U_7}$), we can see that regions with significantly varying appearance are merged into an integrated building by considering high-level features.
+In U4\_3 (${U_{10}}$) and U5\_3 ($U_{13}$), more semantic information of rooftop is got, which can distinguish the rooftop and the roads with similar color and deal with the problem caused by shadow. 
+The final prediction results are shown in Fig.~\ref{fig:feature_maps}(h).
+
+Secondly, to explore the effects of the feature maps generated from each feature extract stage ${\left\{F_k\right\}}$ on the final result, variants of HF-FCN which are counterpart of FCN are designed.
+Fig.~\ref{fig:Variants} shows the constrast diagram of variants of FCN and HF-FCN.
+Unlike FCN, a fusion operation rather than summation are leveraged to build our HF-FCN 16s, 8s and 4s. 
+The performance of HF-FCN variants are shown in Fig.~\ref{fig:Mass-variants-PR}, Fig.~\ref{fig:Mass-variants-visi} and Table~\ref{table:Mass-results}\cxj{Figure 8, Figure 9 and Table \Rmnum{5}}.
+From the disgrams, we can get the following conclusions easily. First, The prediction result obtained from the last layer gets a coarse result, which loses much of location information that are mainly encoded in the shallow feature maps. Second, the largest gap presented between HF-FCN16s and HF-FCN8s about 9{\%} in recall rates, it may suggest that the most information supplement to the HF-FCN is got in middle layers. Third, the PR curves of HF-FCN4s and HF-FCN almost coincide. It illustrates the low-level information has little effect on the prediction results. Forth, with the addition of the shallow feature map, the network is more distinct for the segmentation of tiny buildings, which solves the problem of easy adhesion to adjacent buildings. Since, all the conv layers contained useful hierarchical information that is critical to the final prediction.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=8.7cm]{Figures/feature_maps.eps}
+\caption{(a) Input aerial image. (b-g) Feature maps of U1\_1, U1\_2, U2\_2, U3\_3, U4\_3, U5\_3, respectively. (h) Predicted label map. All the images are normalized to the range of ${0-255}$.}
+\label{fig:feature_maps}
+\end{center}
+\end{figure}
 
 
-In the end, we want to prove that our fusion operations learn the connections between features. Connection weights are shown in Fig.~\ref{fig:Mass-weights}. The weights are not the same, which means that fusion operation have effect on feature combination. From the Fig.~\ref{fig:Mass-weights} (f), we can arrive at the conclusion that the different layers have virous effect on the final result. For example, the U1\_1 has little effect on the prediction while the U3\_2 and U4\_3 have bigger role on the final prediction. It also in accordance with our experimental results that middle layers provide more information.
-\cxj{Weight for what? to fuse feature map? The distribution does not make too much sense. } 
+In the end, we want to prove that our fusion operations learn the connections between features. The connection weights of F1\_1, F4\_1 and Part 3 are shown in Fig.~\ref{fig:Mass-weights}. 
+The weights are not the same, which means that fusion operations have effect on feature combination. 
+From the Fig.~\ref{fig:Mass-weights} (a) to Fig.~\ref{fig:Mass-weights} (c), the range of weights increases gradually. And from the Fig.~\ref{fig:Mass-weights} (c), we can arrive at the conclusion that the different layers have virous effects on the final result. 
+For example, the U1\_1 has little effect on the prediction while the U3\_2 and U4\_3 have bigger role on the final prediction. 
+It also in accordance with our experimental results that middle layers provide more information.
+\cxj{Weight for what? to fuse feature map? The distribution does not make too much sense. }
 
 \begin{figure}
 \centering
@@ -83,7 +110,7 @@ In the end, we want to prove that our fusion operations learn the connections be
 \begin{figure}
 \centering
 \includegraphics[width=9cm]{Figures/weights.eps}
-\caption{(a) is weights learned by F1\_1, (b) is weights learned by F2\_1, (c) is weights learned by F3\_1, (d) is weights learned by F4\_1, (e) is weights learned by F5\_1, (f) is weights learned by Level 2.}
+\caption{(a) is weights learned by F1\_1, (b) is weights learned by F4\_1, (c) is weights learned by Part 3.}
 \label{fig:Mass-weights}
 \end{figure}
 
@@ -93,31 +120,38 @@ On Vaihingen dataset, three experiments are undertaken to explore the effects of
 \cxj{Do you compare with others?}
 
 
-\begin{table*}[htbp]
-\caption {Performance comparison of the results of different inputs on Vaihigen data set. \cxj{What are the numbers in the Img column?}}
+\begin{table}[htbp]
+\caption {Performance comparison of the results of different inputs and methods on Vaihigen data set. \cxj{What are the numbers in the Img column?}}
 \label{table:vaihigen-3-4-5in-comp}
 \centering
-\begin{tabular}{p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}}
+\begin{tabular}{p{0.5cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}}
 \hline
-&\multirow{2}{*}{Img}&\multicolumn{3}{c}{3\_in: IR, R, G} &\multicolumn{3}{|c|}{4\_in: IR, R, G, nDSM}&\multicolumn{3}{c}{5\_in: IR, R, G, DSM, nDSM}\\
-\cline{3-11}
-&& Pre &Rec & F1 &Pre &Rec &F1&Pre &Rec &F1\\
+%&\multirow{2}{*}{Img}&\multicolumn{3}{c}{3\_in: IR, R, G} &\multicolumn{3}{|c|}{4\_in: IR, R, G, nDSM}&\multicolumn{3}{c}{5\_in: IR, R, G, DSM, nDSM}\\
+&&Pre&Rec&F1\\
 \hline
-\multirow{3}{*}{Val}&11&0.911&0.906&0.909&0.936&0.900&0.917&0.890&0.900&0.900\\
-&28&0.94&0.875&0.906&0.96&0.792&0.868&0.952&0.823&0.883\\
-&34&0.965&0.899&0.930&0.987&0.902&0.942&0.972&0.918&0.944\\
-&Ave&0.939&0.894&$\bm{0.915}$&0.961&0.865&0.909&0.939&0.880&0.907\\
+\multirow{2}{*}{Val}&3\_in&0.939&0.894&$\bm{0.915}$\\
+&4\_in&0.96&0.865&0.909\\
+&5\_in&0.939&0.880&0.907\\
 \hline
-\multirow{2}{*}{Test}&15&0.918&0.930&0.924&0.883&0.917&0.9&0.833&0.931&0.88\\
-&30&0.921&0.929&0.926&0.931&0.827&0.876&0.875&0.877&0.876\\
-&Ave&0.919&0.930&$\bm{0.925}$&0.907&0.872&0.888&0.858&0.900&0.878\\
+\multirow{2}{*}{Test}&3\_in&0.919&0.930&$\bm{0.925}$\\
+&4\_in&0.907&0.872&0.888\\
+&5\_in&0.858&0.900&0.878\\
+\hline\hline
+\multicolumn{2}{c|}{FCN\_4s\cite{IEEEexample:Long_2015_CVPR}}&{--}&{--}&{--}\\
+\multicolumn{2}{c|}{SegNet\cite{IEEEexample:badrinarayanan2017segnet}}&{--}&{--}&{--}\\
+\multicolumn{2}{c|}{U-Net\cite{IEEEexample:ronneberger2015u}}&{--}&{--}&{--}\\
+\multicolumn{2}{c|}{DeepLab\_V2\cite{IEEEexample:chen2016deeplab}}&{--}&{--}&{--}\\
+\hline \hline
+\multicolumn{2}{c|}{HF-FCN16s}&{0.886}&{0.854}&{0.870}\\
+\multicolumn{2}{c|}{HF-FCN8s}&{0.911}&{0.864}&{0.887}\\
+\multicolumn{2}{c|}{HF-FCN4s}&{0.910}&{0.861}&{0.885}\\
 \hline
 \end{tabular}
-\end{table*}
+\end{table}
 
 We compare with some other methods which use the same dataset. The detail comparison results are shown in Fig.~\ref{fig:Vaihingen-compared-others}. From a visual perspective, our method gets a much more refined roof region, both on continuity of labels and integrity of structural.
 
-The results of diverse variants are shown in Fig.~\ref{fig:Vaihingen-variants}. The HF-FCN\_1 in Fig.~\ref{fig:Vaihingen-variants} indicates that the last conv layer in Level 2 does not use the previous trained model to initialize. And HF-FCN means that the whole layers use the pre-trained model to initialize. From the curves, the performance of HF-FCN exceeds the variants and gets a excellent result. Additionally, using the pre-trained weights of Level 2 has a significance in the final results.
+The results of diverse variants are shown in Fig.~\ref{fig:Vaihingen-variants}. The HF-FCN\_1 in Fig.~\ref{fig:Vaihingen-variants} indicates that the last conv layer in Part 3 does not use the previous trained model to initialize. And HF-FCN means that the whole layers use the pre-trained model to initialize. From the curves, the performance of HF-FCN exceeds the variants and gets a excellent result. Additionally, using the pre-trained weights of Part 3 has a significance in the final results.
 
 \begin{figure}
 \centering
@@ -149,14 +183,14 @@ The results of diverse variants are shown in Fig.~\ref{fig:Vaihingen-variants}. 
 
 
 \subsection{Potsdam dataset}
- The same experiments are implemented on Potsdam dataset. First, We utilize DSM and IR information as extra inputs based on the RGB input. The specific quantitative evaluation and intuitive visual prediction results are shown in Table~\ref{table:Potsdam-3-4-5in-comp} and Fig.~\ref{fig:Potsdam-3-4-5in-visi}. In the validation process, the 4-channel input gets better overall performance. Meanwhile, the 5-channel input seems perform better in the course of testing. From the visual results, the 5-channel input network gets lower error detection rate which is shown on the image with small blue areas. And from the 3-channel input to 5-channel input, the F1 score increases from 0.879 to 0.891 on the validation set and increases 0.031 on the test set. It indicate that the other information of geographical feature have a certain effect on the final result.
- 
- We compare HF-FCN with other methods using the Potsdam dataset. Some qualitative results are shown in Fig.~\ref{fig:Potsdam-compared-others}. 
- From the figure, we can easily see that HF-FCN got more remarkable segmentation results. And edges and structure of buildings are preserved better.
- 
- As done on Vaihingen dataset, contrast experiments of HF-FCN variants are implemented. The performance curve of HF-FCN variants are shown in Fig.~\ref{fig:Potsdam-variants}.
- The HF-FCN\_1 in Fig.~\ref{fig:Potsdam-variants} indicates that the last conv layer in Level 2 does not use the previous trained model to initialize. And HF-FCN means that the whole layers use the pre-trained model to initialize. Initialization of parameters has a greater promotion on the final results.
+ The same experiments are implemented on Potsdam dataset. Firstly, we utilize DSM and IR information as extra inputs based on the RGB input. The specific quantitative evaluation and intuitive visual prediction results are shown in Table~\ref{table:Potsdam-3-4-5in-comp} and Fig.~\ref{fig:Potsdam-3-4-5in-visi}. In the validation process, the 4-channel input gets better overall performance. Meanwhile, the 5-channel input seems perform better in the course of testing. From the visual results, the 5-channel input network gets lower error detection rate which is shown on the image with small blue areas. And from the 3-channel input to 5-channel input, the F1 score increases from 0.879 to 0.891 on the validation set and increases 0.031 on the test set. It indicate that the other information of geographical feature have a certain effect on the final result.
 
+ We compare HF-FCN with other methods using the Potsdam dataset. Some qualitative results are shown in Fig.~\ref{fig:Potsdam-compared-others}.
+ From the figure, we can easily see that HF-FCN got more remarkable segmentation results. And edges and structure of buildings are preserved better.
+
+ As done on Vaihingen dataset, contrast experiments of HF-FCN variants are implemented. The performance curve of HF-FCN variants are shown in Fig.~\ref{fig:Potsdam-variants}.
+ The HF-FCN\_1 in Fig.~\ref{fig:Potsdam-variants} indicates that the last conv layer in Part 3 does not use the previous trained model to initialize. And HF-FCN means that the whole layers use the pre-trained model to initialize. Initialization of parameters has a greater promotion on the final results.
+\begin{comment}
 \begin{table*}[htbp]
     \caption {Performance comparison of the results of different inputs on Potsdam data set}
     \label{table:Potsdam-3-4-5in-comp}
@@ -183,7 +217,36 @@ The results of diverse variants are shown in Fig.~\ref{fig:Vaihingen-variants}. 
    \end{tabular}
    \end{center}
    \end{table*}
+\end{comment}
 
+\begin{table}[htbp]
+\caption {Performance comparison of the results of different inputs and methods on Potsdam data set} 
+\label{table:Potsdam-3-4-5in-comp}
+\centering
+\begin{tabular}{p{0.5cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}}
+\hline
+%&\multirow{2}{*}{Img}&\multicolumn{3}{c}{3\_in: IR, R, G} &\multicolumn{3}{|c|}{4\_in: IR, R, G, nDSM}&\multicolumn{3}{c}{5\_in: IR, R, G, DSM, nDSM}\\
+&&Pre&Rec&F1\\
+\hline
+\multirow{2}{*}{Val}&3\_in&0.937&0.851&0.879\\
+&4\_in&0.937&$\bm{0.872}$&$\bm{0.894}$\\
+&5\_in&$\bm{0.944}$&0.864&0.891\\
+\hline
+\multirow{2}{*}{Test}&3\_in&0.922&0.900&0.910\\
+&4\_in&0.937&0.935&0.936\\
+&5\_in&$\bm{0.940}$&$\bm{0.943}$&$\bm{0.941}$\\
+\hline\hline
+\multicolumn{2}{c|}{FCN\_4s\cite{IEEEexample:Long_2015_CVPR}}&{--}&{--}&{--}\\
+\multicolumn{2}{c|}{SegNet\cite{IEEEexample:badrinarayanan2017segnet}}&{--}&{--}&{--}\\
+\multicolumn{2}{c|}{U-Net\cite{IEEEexample:ronneberger2015u}}&{--}&{--}&{--}\\
+\multicolumn{2}{c|}{DeepLab\_V2\cite{IEEEexample:chen2016deeplab}}&{--}&{--}&{--}\\
+\hline \hline
+\multicolumn{2}{c|}{HF-FCN16s}&{0.849}&{0.857}&{0.851}\\
+\multicolumn{2}{c|}{HF-FCN8s}&{0.846}&{0.831}&{0.838}\\
+\multicolumn{2}{c|}{HF-FCN4s}&{0.851}&{0.839}&{0.844}\\
+\hline
+\end{tabular}
+\end{table}
 \begin{figure}
 \centering
 \includegraphics[width=8.7cm]{Figures/Potsdam3_4_5in.eps}

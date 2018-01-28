@@ -180,6 +180,11 @@ O.~Ronneberger, P.~Fischer, and T.~Brox, ``U-net: Convolutional networks for
   Image Computing and Computer-Assisted Intervention}.\hskip 1em plus 0.5em
   minus 0.4em\relax Springer, 2015, pp. 234--241.
 
+\bibitem{IEEEexample:lin2017feature}
+T.-Y. Lin, P.~Doll{\'a}r, R.~Girshick, K.~He, B.~Hariharan, and S.~Belongie,
+  ``Feature pyramid networks for object detection,'' in \emph{CVPR}, vol.~1,
+  no.~2, 2017, p.~4.
+
 \bibitem{IEEEexample:marmanis2016semantic}
 D.~Marmanis, J.~D. Wegner, S.~Galliani, K.~Schindler, M.~Datcu, and U.~Stilla,
   ``Semantic segmentation of aerial images with an ensemble of cnss,''

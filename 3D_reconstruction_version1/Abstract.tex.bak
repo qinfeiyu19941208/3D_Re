@@ -1,0 +1,21 @@
+\begin{abstract}
+Extracting buildings from remote sensing images plays an important role in urban applications (e.g., urban planning and digital city).
+%
+However, this task is quite difficult due to the great diversity of buildings and similarities between buildings and other categories.
+%
+Recent approaches have attempted to harness the capabilities of deep learning techniques for building extraction.
+%
+In this paper, we propose a robust method which extracts buildings from large-scale remote sensing images efficiently. And we further build 3D models for extracted building areas.
+%
+Learning low-level appearance information and high-level semantic information are equally important since buildings in remote images possess various scales and aspect ratios.
+%
+Hence, in order to make full use of the information extracted from each layer, we propose a simple but effective hierarchical fusion operation which fuses the feature maps between channels stage by stage.
+%
+In this paper, we present a novel network named hierarchical fused fully convolution network(HF-FCN). The experiments on several available remote sensing image datasets show that our method achieves state-of-the-art performance. In addition, we combine the segmented building area and available corresponding Digital Surface Model (DSM) map to generate the 3D models of test scene, which as part of our application.
+%
+\cxj{Problem: Over-emphasized the buidling detection part, without clearly describe the scope of this paper and the relationship between detection and reconstruction. }
+\end{abstract}
+% Note that keywords are not normally used for peerreview papers.
+\begin{IEEEkeywords}
+building extraction, hierarchical fusion operation, Hierarchically Fused Fully Convolutional Network (HF-FCN), 3D city modelling
+\end{IEEEkeywords}
