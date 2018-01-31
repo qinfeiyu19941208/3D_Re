@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.22)  29 JAN 2018 00:19
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.22)  31 JAN 2018 11:35
 entering extended mode
 **bare_jrnl.tex
 (D:\Git\3D_Re\3D_reconstruction_version1\bare_jrnl.tex
@@ -497,7 +497,7 @@ s-converted-to.pdf Figures/Fusion_Operation.eps>
 (epstopdf)             \includegraphics on input line 12.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Fusion_Operation-eps-converted-to.pdf, id=198, 320.19624pt x 366.36874
+<Figures/Fusion_Operation-eps-converted-to.pdf, id=199, 320.19624pt x 366.36874
 pt>
 File: Figures/Fusion_Operation-eps-converted-to.pdf Graphic file (type pdf)
  <use Figures/Fusion_Operation-eps-converted-to.pdf>
@@ -519,7 +519,7 @@ Package epstopdf Info: Source file: <Figures/Conv_Deconv.eps>
 verted-to.pdf Figures/Conv_Deconv.eps>
 (epstopdf)             \includegraphics on input line 42.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/Conv_Deconv-eps-converted-to.pdf, id=201, 153.57375pt x 99.37125pt>
+<Figures/Conv_Deconv-eps-converted-to.pdf, id=202, 153.57375pt x 99.37125pt>
 File: Figures/Conv_Deconv-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/Conv_Deconv-eps-converted-to.pdf>
@@ -545,7 +545,7 @@ Package epstopdf Info: Source file: <Figures/datasets.eps>
 ted-to.pdf Figures/datasets.eps>
 (epstopdf)             \includegraphics on input line 43.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/datasets-eps-converted-to.pdf, id=236, 394.47375pt x 150.5625pt>
+<Figures/datasets-eps-converted-to.pdf, id=237, 394.47375pt x 150.5625pt>
 File: Figures/datasets-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/datasets-eps-converted-to.pdf>
@@ -924,7 +924,7 @@ b><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/CTEX/MiKTeX/font
 s/type1/public/amsfonts/cm/cmsy9.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmb
 8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/CTEX/MiKTeX/fonts/
 type1/urw/times/utmr8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (11 pages, 9133755 bytes).
+Output written on bare_jrnl.pdf (11 pages, 9133802 bytes).
 PDF statistics:
  716 PDF objects out of 1000 (max. 8388607)
  100 named destinations out of 1000 (max. 500000)

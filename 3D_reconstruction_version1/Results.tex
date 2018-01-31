@@ -5,7 +5,7 @@ In this section, the proposed method using dataset ${a)}$, ${b)}$, ${c)}$ are co
 %
 Furthermore, it is also compared with some recent deep-learning based approaches, including FCN~\cite{IEEEexample:Long_2015_CVPR}, SegNet~\cite{IEEEexample:badrinarayanan2017segnet}, Deeplab~\cite{IEEEexample:chen2016deeplab} and U-Net~\cite{IEEEexample:ronneberger2015u}.\cxj{What else?}
 Moreover, for HF-FCN itself, we expect to investigate which kind of information extracted from feature extractors and how the effects of extracted information on the final prediction.
-Thus, some upsampled feature maps ${\left\{U_k\right\}}$ are presented. 
+Thus, some upsampled feature maps ${\left\{U_k\right\}}$ are presented.
 And several variants of HF-FCN which combine different up-sampling feature maps from Part 2 are proposed.
 They are shown in Fig.~\ref{fig:feature_maps} and Fig.~\ref{fig:Variants}, respectively.
 In addition, we also tried different feature extractor networks, VGG16 Net and ResNet. The details are shown below.
@@ -54,19 +54,19 @@ HF-FCN4s &0.9632&0.8394&$\bm{0.99}$\\
 \end{tabular}
 \end{table}
 
-To explore which kinds of information extracted by hierarchical fusion operation in Part 2. 
-Some upsampled feature maps ${\left\{U_1,U_2,U_3,U_7,U_{10},U_{13}\right\}}$ are shown in Fig.~\ref{fig:feature_maps}. 
+To explore which kinds of information extracted by hierarchical fusion operation in Part 2.
+Some upsampled feature maps ${\left\{U_1,U_2,U_3,U_7,U_{10},U_{13}\right\}}$ are shown in Fig.~\ref{fig:feature_maps}.
 The U1\_1 (${U_1}$) in Fig.~\ref{fig:feature_maps}(b) means the upsampled feature maps from F1\_1 (${F_1}$) which are feature maps generated from conv1\_1 in VGG16 Net.
-Due to small receptive field of conv1\_1 and conv1\_2, they extract low-level features like edges. 
+Due to small receptive field of conv1\_1 and conv1\_2, they extract low-level features like edges.
 And the U1\_2 (${U_2}$) looks like an over-segmentation which groups pixels with similar color or texture into a subregion.
 With the deepening of the network, in the U2\_1 (${U_3}$), as Fig.~\ref{fig:feature_maps}(d) shows, shape information is augmented.
 And from the U3\_3 (${U_7}$), we can see that regions with significantly varying appearance are merged into an integrated building by considering high-level features.
-In U4\_3 (${U_{10}}$) and U5\_3 ($U_{13}$), more semantic information of rooftop is got, which can distinguish the rooftop and the roads with similar color and deal with the problem caused by shadow. 
+In U4\_3 (${U_{10}}$) and U5\_3 ($U_{13}$), more semantic information of rooftop is got, which can distinguish the rooftop and the roads with similar color and deal with the problem caused by shadow.
 The final prediction results are shown in Fig.~\ref{fig:feature_maps}(h).
 
 Secondly, to explore the effects of the feature maps generated from each feature extract stage ${\left\{F_k\right\}}$ on the final result, variants of HF-FCN which are counterpart of FCN are designed.
 Fig.~\ref{fig:Variants} shows the constrast diagram of variants of FCN and HF-FCN.
-Unlike FCN, a fusion operation rather than summation are leveraged to build our HF-FCN 16s, 8s and 4s. 
+Unlike FCN, a fusion operation rather than summation are leveraged to build our HF-FCN 16s, 8s and 4s.
 The performance of HF-FCN variants are shown in Fig.~\ref{fig:Mass-variants-PR}, Fig.~\ref{fig:Mass-variants-visi} and Table~\ref{table:Mass-results}\cxj{Figure 8, Figure 9 and Table \Rmnum{5}}.
 From the disgrams, we can get the following conclusions easily. First, The prediction result obtained from the last layer gets a coarse result, which loses much of location information that are mainly encoded in the shallow feature maps. Second, the largest gap presented between HF-FCN16s and HF-FCN8s about 9{\%} in recall rates, it may suggest that the most information supplement to the HF-FCN is got in middle layers. Third, the PR curves of HF-FCN4s and HF-FCN almost coincide. It illustrates the low-level information has little effect on the prediction results. Forth, with the addition of the shallow feature map, the network is more distinct for the segmentation of tiny buildings, which solves the problem of easy adhesion to adjacent buildings. Since, all the conv layers contained useful hierarchical information that is critical to the final prediction.
 
@@ -79,10 +79,10 @@ From the disgrams, we can get the following conclusions easily. First, The predi
 \end{figure}
 
 
-In the end, we want to prove that our fusion operations learn the connections between features. The connection weights of F1\_1, F4\_1 and Part 3 are shown in Fig.~\ref{fig:Mass-weights}. 
-The weights are not the same, which means that fusion operations have effect on feature combination. 
-From the Fig.~\ref{fig:Mass-weights} (a) to Fig.~\ref{fig:Mass-weights} (c), the range of weights increases gradually. And from the Fig.~\ref{fig:Mass-weights} (c), we can arrive at the conclusion that the different layers have virous effects on the final result. 
-For example, the U1\_1 has little effect on the prediction while the U3\_2 and U4\_3 have bigger role on the final prediction. 
+In the end, we want to prove that our fusion operations learn the connections between features. The connection weights of F1\_1, F4\_1 and Part 3 are shown in Fig.~\ref{fig:Mass-weights}.
+The weights are not the same, which means that fusion operations have effect on feature combination.
+From the Fig.~\ref{fig:Mass-weights} (a) to Fig.~\ref{fig:Mass-weights} (c), the range of weights increases gradually. And from the Fig.~\ref{fig:Mass-weights} (c), we can arrive at the conclusion that the different layers have virous effects on the final result.
+For example, the U1\_1 has little effect on the prediction while the U3\_2 and U4\_3 have bigger role on the final prediction.
 It also in accordance with our experimental results that middle layers provide more information.
 \cxj{Weight for what? to fuse feature map? The distribution does not make too much sense. }
 
@@ -137,10 +137,10 @@ On Vaihingen dataset, three experiments are undertaken to explore the effects of
 &4\_in&0.907&0.872&0.888\\
 &5\_in&0.858&0.900&0.878\\
 \hline\hline
-\multicolumn{2}{c|}{FCN\_4s\cite{IEEEexample:Long_2015_CVPR}}&{--}&{--}&{--}\\
+\multicolumn{2}{c|}{FCN\_4s\cite{IEEEexample:Long_2015_CVPR}}&{0.871}&{0.884}&{0.878}\\
 \multicolumn{2}{c|}{SegNet\cite{IEEEexample:badrinarayanan2017segnet}}&{--}&{--}&{--}\\
 \multicolumn{2}{c|}{U-Net\cite{IEEEexample:ronneberger2015u}}&{--}&{--}&{--}\\
-\multicolumn{2}{c|}{DeepLab\_V2\cite{IEEEexample:chen2016deeplab}}&{--}&{--}&{--}\\
+\multicolumn{2}{c|}{DeepLab\_V2\cite{IEEEexample:chen2016deeplab}}&{0.926}&{0.881}&{0.903}\\
 \hline \hline
 \multicolumn{2}{c|}{HF-FCN16s}&{0.886}&{0.854}&{0.870}\\
 \multicolumn{2}{c|}{HF-FCN8s}&{0.911}&{0.864}&{0.887}\\
@@ -220,7 +220,7 @@ The results of diverse variants are shown in Fig.~\ref{fig:Vaihingen-variants}. 
 \end{comment}
 
 \begin{table}[htbp]
-\caption {Performance comparison of the results of different inputs and methods on Potsdam data set} 
+\caption {Performance comparison of the results of different inputs and methods on Potsdam data set}
 \label{table:Potsdam-3-4-5in-comp}
 \centering
 \begin{tabular}{p{0.5cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}}
