@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.22)  1 FEB 2018 11:34
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.22)  1 FEB 2018 18:06
 entering extended mode
 **bare_jrnl.tex
 (D:\Git\3D_Re\3D_reconstruction_version1\bare_jrnl.tex
@@ -497,7 +497,7 @@ s-converted-to.pdf Figures/Fusion_Operation.eps>
 (epstopdf)             \includegraphics on input line 12.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Fusion_Operation-eps-converted-to.pdf, id=199, 320.19624pt x 366.36874
+<Figures/Fusion_Operation-eps-converted-to.pdf, id=197, 320.19624pt x 366.36874
 pt>
 File: Figures/Fusion_Operation-eps-converted-to.pdf Graphic file (type pdf)
  <use Figures/Fusion_Operation-eps-converted-to.pdf>
@@ -519,7 +519,7 @@ Package epstopdf Info: Source file: <Figures/Conv_Deconv.eps>
 verted-to.pdf Figures/Conv_Deconv.eps>
 (epstopdf)             \includegraphics on input line 42.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/Conv_Deconv-eps-converted-to.pdf, id=202, 153.57375pt x 99.37125pt>
+<Figures/Conv_Deconv-eps-converted-to.pdf, id=200, 153.57375pt x 99.37125pt>
 File: Figures/Conv_Deconv-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/Conv_Deconv-eps-converted-to.pdf>
@@ -573,12 +573,13 @@ File: Figures/vairants-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figures/vairants-eps-converted-to.pdf used on input li
 ne 16.
 (pdftex.def)             Requested size: 221.93158pt x 239.00919pt.
- [6 <D:/Git/3D_Re/3D_reconstruction_version1/Figures/vairants-eps-converted-to.
-pdf>]
+
 Overfull \hbox (4.27174pt too wide) in paragraph at lines 34--55
  [][] 
  []
 
+[6 <D:/Git/3D_Re/3D_reconstruction_version1/Figures/vairants-eps-converted-to.p
+df>]
 
 LaTeX Warning: File `Figures/feature_maps.eps' not found on input line 75.
 
@@ -591,7 +592,7 @@ Package epstopdf Info: Source file: <Figures/feature_maps.eps>
 nverted-to.pdf Figures/feature_maps.eps>
 (epstopdf)             \includegraphics on input line 75.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/feature_maps-eps-converted-to.pdf, id=328, 562.1pt x 318.18875pt>
+<Figures/feature_maps-eps-converted-to.pdf, id=329, 562.1pt x 318.18875pt>
 File: Figures/feature_maps-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/feature_maps-eps-converted-to.pdf>
@@ -613,7 +614,7 @@ ps-converted-to.pdf Figures/HF-FCN-variant-PR.eps>
 (epstopdf)             \includegraphics on input line 91.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/HF-FCN-variant-PR-eps-converted-to.pdf, id=333, 598.235pt x 247.92625p
+<Figures/HF-FCN-variant-PR-eps-converted-to.pdf, id=334, 598.235pt x 247.92625p
 t>
 File: Figures/HF-FCN-variant-PR-eps-converted-to.pdf Graphic file (type pdf)
  <use Figures/HF-FCN-variant-PR-eps-converted-to.pdf>
@@ -635,7 +636,7 @@ ult-eps-converted-to.pdf Figures/HF-FCN_variants_result.eps>
 (epstopdf)             \includegraphics on input line 98.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/HF-FCN_variants_result-eps-converted-to.pdf, id=334, 520.94624pt x 151
+<Figures/HF-FCN_variants_result-eps-converted-to.pdf, id=335, 520.94624pt x 151
 .56625pt>
 File: Figures/HF-FCN_variants_result-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -658,7 +659,7 @@ s-converted-to.pdf Figures/mass_visi_result.eps>
 (epstopdf)             \includegraphics on input line 105.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/mass_visi_result-eps-converted-to.pdf, id=335, 534.99875pt x 203.76125
+<Figures/mass_visi_result-eps-converted-to.pdf, id=336, 534.99875pt x 203.76125
 pt>
 File: Figures/mass_visi_result-eps-converted-to.pdf Graphic file (type pdf)
  <use Figures/mass_visi_result-eps-converted-to.pdf>
@@ -676,7 +677,7 @@ ed-to.pdf Figures/weights.eps>
 (epstopdf)             \includegraphics on input line 112.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/weights-eps-converted-to.pdf, id=336, 234.8775pt x 75.28125pt>
+<Figures/weights-eps-converted-to.pdf, id=337, 234.8775pt x 75.28125pt>
 File: Figures/weights-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/weights-eps-converted-to.pdf>
@@ -690,7 +691,8 @@ Overfull \hbox (4.0748pt too wide) in paragraph at lines 112--113
 
 [7 <D:/Git/3D_Re/3D_reconstruction_version1/Figures/feature_maps-eps-converted-
 to.pdf> <D:/Git/3D_Re/3D_reconstruction_version1/Figures/HF-FCN-variant-PR-eps-
-converted-to.pdf>]
+converted-to.pdf> <D:/Git/3D_Re/3D_reconstruction_version1/Figures/HF-FCN_varia
+nts_result-eps-converted-to.pdf>]
 
 LaTeX Warning: File `Figures/vaihingen_variants.eps' not found on input line 15
 8.
@@ -705,7 +707,7 @@ eps-converted-to.pdf Figures/vaihingen_variants.eps>
 (epstopdf)             \includegraphics on input line 158.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/vaihingen_variants-eps-converted-to.pdf, id=388, 597.23125pt x 227.851
+<Figures/vaihingen_variants-eps-converted-to.pdf, id=400, 597.23125pt x 227.851
 26pt>
 File: Figures/vaihingen_variants-eps-converted-to.pdf Graphic file (type pdf)
  <use Figures/vaihingen_variants-eps-converted-to.pdf>
@@ -727,7 +729,7 @@ s-converted-to.pdf Figures/Potsdam_variants.eps>
 (epstopdf)             \includegraphics on input line 165.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Potsdam_variants-eps-converted-to.pdf, id=389, 592.2125pt x 245.91875p
+<Figures/Potsdam_variants-eps-converted-to.pdf, id=401, 592.2125pt x 245.91875p
 t>
 File: Figures/Potsdam_variants-eps-converted-to.pdf Graphic file (type pdf)
  <use Figures/Potsdam_variants-eps-converted-to.pdf>
@@ -748,7 +750,7 @@ pdf>
 s-converted-to.pdf Figures/Vaihingen3_4_5in.eps>
 (epstopdf)             \includegraphics on input line 174.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/Vaihingen3_4_5in-eps-converted-to.pdf, id=390, 232.87pt x 208.78pt>
+<Figures/Vaihingen3_4_5in-eps-converted-to.pdf, id=402, 232.87pt x 208.78pt>
 File: Figures/Vaihingen3_4_5in-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/Vaihingen3_4_5in-eps-converted-to.pdf>
@@ -770,7 +772,7 @@ results-eps-converted-to.pdf Figures/Vaihingen_compared_results.eps>
 (epstopdf)             \includegraphics on input line 181.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vaihingen_compared_results-eps-converted-to.pdf, id=391, 385.44pt x 21
+<Figures/Vaihingen_compared_results-eps-converted-to.pdf, id=403, 385.44pt x 21
 4.8025pt>
 File: Figures/Vaihingen_compared_results-eps-converted-to.pdf Graphic file (typ
 e pdf)
@@ -780,9 +782,9 @@ f used on input line 181.
 (pdftex.def)             Requested size: 247.53888pt x 137.95166pt.
 
 [8 <D:/Git/3D_Re/3D_reconstruction_version1/Figures/mass_visi_result-eps-conver
-ted-to.pdf> <D:/Git/3D_Re/3D_reconstruction_version1/Figures/HF-FCN_variants_re
-sult-eps-converted-to.pdf> <D:/Git/3D_Re/3D_reconstruction_version1/Figures/wei
-ghts-eps-converted-to.pdf>]
+ted-to.pdf> <D:/Git/3D_Re/3D_reconstruction_version1/Figures/weights-eps-conver
+ted-to.pdf> <D:/Git/3D_Re/3D_reconstruction_version1/Figures/vaihingen_variants
+-eps-converted-to.pdf>]
 
 LaTeX Warning: File `Figures/Potsdam3_4_5in.eps' not found on input line 225.
 
@@ -796,7 +798,7 @@ converted-to.pdf Figures/Potsdam3_4_5in.eps>
 (epstopdf)             \includegraphics on input line 225.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Potsdam3_4_5in-eps-converted-to.pdf, id=468, 511.9125pt x 364.36125pt>
+<Figures/Potsdam3_4_5in-eps-converted-to.pdf, id=479, 511.9125pt x 364.36125pt>
 File: Figures/Potsdam3_4_5in-eps-converted-to.pdf Graphic file (type pdf)
 <use Figures/Potsdam3_4_5in-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Potsdam3_4_5in-eps-converted-to.pdf used on in
@@ -817,7 +819,7 @@ sults-eps-converted-to.pdf Figures/Potsdam_compared_results.eps>
 (epstopdf)             \includegraphics on input line 232.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Potsdam_compared_results-eps-converted-to.pdf, id=469, 490.83376pt x 2
+<Figures/Potsdam_compared_results-eps-converted-to.pdf, id=480, 490.83376pt x 2
 04.765pt>
 File: Figures/Potsdam_compared_results-eps-converted-to.pdf Graphic file (type 
 pdf)
@@ -841,7 +843,7 @@ g-eps-converted-to.pdf Figures/Vaihigen_3Dmodelling.eps>
 (epstopdf)             \includegraphics on input line 7.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vaihigen_3Dmodelling-eps-converted-to.pdf, id=473, 491.8375pt x 237.88
+<Figures/Vaihigen_3Dmodelling-eps-converted-to.pdf, id=484, 491.8375pt x 237.88
 875pt>
 File: Figures/Vaihigen_3Dmodelling-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -863,7 +865,7 @@ converted-to.pdf Figures/potsdam_models.eps>
 (epstopdf)             \includegraphics on input line 14.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/potsdam_models-eps-converted-to.pdf, id=474, 434.62375pt x 187.70125pt
+<Figures/potsdam_models-eps-converted-to.pdf, id=485, 434.62375pt x 187.70125pt
 >
 File: Figures/potsdam_models-eps-converted-to.pdf Graphic file (type pdf)
  <use Figures/potsdam_models-eps-converted-to.pdf>
@@ -872,17 +874,15 @@ put line 14.
 (pdftex.def)             Requested size: 247.53888pt x 106.90776pt.
 )
 (D:\Git\3D_Re\3D_reconstruction_version1\Conclusion.tex [9 <D:/Git/3D_Re/3D_rec
-onstruction_version1/Figures/vaihingen_variants-eps-converted-to.pdf> <D:/Git/3
-D_Re/3D_reconstruction_version1/Figures/Potsdam_variants-eps-converted-to.pdf> 
-<D:/Git/3D_Re/3D_reconstruction_version1/Figures/Vaihingen3_4_5in-eps-converted
--to.pdf> <D:/Git/3D_Re/3D_reconstruction_version1/Figures/Vaihingen_compared_re
-sults-eps-converted-to.pdf>])
-(D:\Git\3D_Re\3D_reconstruction_version1\bare_jrnl.bbl [10 <D:/Git/3D_Re/3D_rec
-onstruction_version1/Figures/Potsdam3_4_5in-eps-converted-to.pdf> <D:/Git/3D_Re
-/3D_reconstruction_version1/Figures/Potsdam_compared_results-eps-converted-to.p
-df> <D:/Git/3D_Re/3D_reconstruction_version1/Figures/Vaihigen_3Dmodelling-eps-c
-onverted-to.pdf> <D:/Git/3D_Re/3D_reconstruction_version1/Figures/potsdam_model
-s-eps-converted-to.pdf>])
+onstruction_version1/Figures/Potsdam_variants-eps-converted-to.pdf> <D:/Git/3D_
+Re/3D_reconstruction_version1/Figures/Vaihingen3_4_5in-eps-converted-to.pdf> <D
+:/Git/3D_Re/3D_reconstruction_version1/Figures/Vaihingen_compared_results-eps-c
+onverted-to.pdf>]) (D:\Git\3D_Re\3D_reconstruction_version1\bare_jrnl.bbl
+[10 <D:/Git/3D_Re/3D_reconstruction_version1/Figures/Potsdam3_4_5in-eps-convert
+ed-to.pdf> <D:/Git/3D_Re/3D_reconstruction_version1/Figures/Potsdam_compared_re
+sults-eps-converted-to.pdf> <D:/Git/3D_Re/3D_reconstruction_version1/Figures/Va
+ihigen_3Dmodelling-eps-converted-to.pdf> <D:/Git/3D_Re/3D_reconstruction_versio
+n1/Figures/potsdam_models-eps-converted-to.pdf>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
  [11
 
@@ -902,11 +902,11 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  7116 strings out of 495354
  110597 string characters out of 3183858
- 218190 words of memory out of 3000000
+ 217496 words of memory out of 3000000
  10026 multiletter control sequences out of 15000+200000
  52251 words of font info for 105 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,11n,28p,1181b,458s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,11n,28p,1055b,458s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/CTEX/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmbx8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex
 10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/CTEX/M
@@ -924,7 +924,7 @@ b><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/CTEX/MiKTeX/font
 s/type1/public/amsfonts/cm/cmsy9.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmb
 8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/CTEX/MiKTeX/fonts/
 type1/urw/times/utmr8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (11 pages, 9133903 bytes).
+Output written on bare_jrnl.pdf (11 pages, 9133505 bytes).
 PDF statistics:
  716 PDF objects out of 1000 (max. 8388607)
  100 named destinations out of 1000 (max. 500000)
