@@ -13,7 +13,6 @@
 \usepackage{verbatim}
 \usepackage{amsmath}
 \usepackage{multirow}
-\usepackage{multicolumn}
 \usepackage{bm}
 \usepackage{array}
 \usepackage{subfigure}
@@ -23,6 +22,7 @@
             citecolor=green
             ]{hyperref}
             \makeatletter
+\captionsetup{belowskip=-10pt}
 \newcommand{\rmnum}[1]{\romannumeral #1}
 \newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
 

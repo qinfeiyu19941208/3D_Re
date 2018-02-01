@@ -137,10 +137,10 @@ On Vaihingen dataset, three experiments are undertaken to explore the effects of
 &4\_in&0.907&0.872&0.888\\
 &5\_in&0.858&0.900&0.878\\
 \hline\hline
-\multicolumn{2}{c|}{FCN\_4s\cite{IEEEexample:Long_2015_CVPR}}&{--}&{--}&{--}\\
+\multicolumn{2}{c|}{FCN\_4s\cite{IEEEexample:Long_2015_CVPR}}&{0.871}&{0.884}&{0.878}\\
 \multicolumn{2}{c|}{SegNet\cite{IEEEexample:badrinarayanan2017segnet}}&{--}&{--}&{--}\\
 \multicolumn{2}{c|}{U-Net\cite{IEEEexample:ronneberger2015u}}&{--}&{--}&{--}\\
-\multicolumn{2}{c|}{DeepLab\_V2\cite{IEEEexample:chen2016deeplab}}&{0.921}&{0.742}&{0.821}\\
+\multicolumn{2}{c|}{DeepLab\_V2\cite{IEEEexample:chen2016deeplab}}&{0.926}&{0.881}&{0.903}\\
 \hline \hline
 \multicolumn{2}{c|}{HF-FCN16s}&{0.886}&{0.854}&{0.870}\\
 \multicolumn{2}{c|}{HF-FCN8s}&{0.911}&{0.864}&{0.887}\\
@@ -180,7 +180,6 @@ The results of diverse variants are shown in Fig.~\ref{fig:Vaihingen-variants}. 
 \caption{Results of different methods. (a) is input image, (b)(d)(g) are results of \cite{IEEEexample:audebert2017deep}, (c) is result of \cite{IEEEexample:marmanis2016semantic}, (f) is result of \cite{IEEEexample:unknown}, (g) is our result. The blue and yellow frames show some details between these methods.}
 \label{fig:Vaihingen-compared-others}
 \end{figure}
-
 
 \subsection{Potsdam dataset}
  The same experiments are implemented on Potsdam dataset. Firstly, we utilize DSM and IR information as extra inputs based on the RGB input. The specific quantitative evaluation and intuitive visual prediction results are shown in Table~\ref{table:Potsdam-3-4-5in-comp} and Fig.~\ref{fig:Potsdam-3-4-5in-visi}. In the validation process, the 4-channel input gets better overall performance. Meanwhile, the 5-channel input seems perform better in the course of testing. From the visual results, the 5-channel input network gets lower error detection rate which is shown on the image with small blue areas. And from the 3-channel input to 5-channel input, the F1 score increases from 0.879 to 0.891 on the validation set and increases 0.031 on the test set. It indicate that the other information of geographical feature have a certain effect on the final result.

@@ -26,7 +26,9 @@ The Part 2 in Fig.~\ref{fig:Fusion-Operation} can be written as:
     \ U_{k}=Crop(UpSample_n(Conv(\left\{F_{k}\right\})))
 \end{equation}
 
-where ${\left\{F_{k}\right\}}$ is extracted feature maps from Part 1, ${k:\Omega \to\left\{1,\ldots,K\right\}}$. The first step is a ${1\times1}$ conv operation among the channels of feature maps in the same group.
+where ${\left\{F_{k}\right\}}$ is extracted feature maps from Part 1, ${k:\Omega \to\left\{1,\ldots,K\right\}}$. 
+
+The first step is a ${1\times1}$ conv operation among the channels of feature maps in the same group.
 ${Y = Conv(\left\{X\right\})}$ is defined as:
 \begin{equation}
     \label{Conv}
@@ -39,7 +41,7 @@ ${Y = Conv(\left\{X\right\})}$ is defined as:
 \centering
 \includegraphics[width=8.5cm]{Figures/Conv_Deconv.eps}
 \caption{A diagram of convolution and transposed convolution. The traditional convolution and transposed convolution are shown in the left and right column, respectively.
- The input of convolution is $4\time4$, the output is $2\time2$ and the kernel is $3\time3$. And the transposed convolution is the opposite.}
+ The input of convolution is ${4\times4}$, the output is ${2\times2}$ and the kernel is ${3\times3}$. And the transposed convolution is the opposite.}
 \label{fig:Deconv}
 \end{figure}
 
@@ -64,10 +66,10 @@ The output of ${Conv\left\{F_{k}\right\}}$ are upsmapled by a transposed convolu
 
 where ${x}$, ${y}$ are flattened vector of input and output. The ${W_1^T}$ is a sparse matrix whose non-zeros elements are weights of deconvolutional kernels. 
 Fig.~\ref{fig:Deconv}(b) shows a diagram of transposed conv.
-For Fig.~\ref{fig:Deconv}(b), ${x}$ is 4-dimensional vector (the input ${X}$ of transpose conv is a ${4\times4}$ patch), ${y}$ is a 16-dimensional vector and ${W_1^T}$ is a matrix of ${4\times16}$. 
+For Fig.~\ref{fig:Deconv}(b), ${x}$ is 4-dimensional vector (the input ${X}$ of transpose conv is a ${2\times2}$ patch), ${y}$ is a 16-dimensional vector and ${W_1^T}$ is a matrix of ${4\times16}$. 
 
 The ${W_1^T}$ of transposed conv layers of different groups are learned separately. It means that the transposed conv layers recovery semantic information from hierarchical feature maps. 
-The crop operation in Part 2 is just a center alignment crop which cuts the superfluous boundary of upsampled feature maps.
+The ${Crop(\left\{X \right\})}$ operation in Part 2 is just a center alignment crop which cuts the superfluous boundary of upsampled feature maps. The output ${\left\{U_k\right\}}$, ${k:\Omega \to\left\{1,\ldots,K\right\}}$ of Part 2 has the same resolution with input ${X}$.
 
  
 \textbf{Part 3} Part 3 is the second fusion stage which aims to fuse the cropped feature maps from Part 2. 
@@ -78,7 +80,7 @@ The expression of the Part 3 is as follows:
     \label{fature_selection}
     \ Y= Conv(\left\{U_k\right\})
 \end{equation}
-where ${Y}$ is output feature map. ${\left\{U_k\right\}}$ is input of Part 3 and output of Part 2, where ${k:\Omega \to\left\{1,\ldots,K\right\}}$ and ${K}$ is the number of cropped feature maps.
+where ${Y}$ is output feature map. ${\left\{U_k\right\}}$ is input of Part 3 and output of Part 2.
 
 
 In order to get a probability map of input ${X}$, the output ${Y}$ of Part 3 is normalized by a sigmoid function:
@@ -92,8 +94,8 @@ If the pixel ${x(i,j)}$ belongs to a roftop, the output ${P(i,j)\approx1}$.
 \subsection{Network Training}
 
 The ground truth $G$ in our dataset is labeled by 0 or 1 to indicate whether a pixel belongs to a roof or not. \cxj{only roof? or part of the building including facades?}
-When a remote sensing image ${X}$ is inputted into the network, the output is a prediction probability map $P(X;W)$ of roof, where $W$ denotes all the parameters that learned by HF-FCN.
-We use the sigmoid cross-entropy loss function formulated as:
+When a remote sensing image ${X}$ is inputted into the network, the output is a prediction probability map $P(X;W)$ of roof, where $W$ denotes all the parameters that learned by HF-FCN including first part, Part 2 and 3.
+We use the sigmoid cross-entropy loss function to penalize each position on the prediction map formulated as:
 \begin{small}
 \begin{equation}
      \label{loss}
