@@ -44,8 +44,8 @@ FCN\_4s\cite{IEEEexample:Long_2015_CVPR}&0.839&0.6147&4.20\\
 SegNet\cite{IEEEexample:badrinarayanan2017segnet}&0.7710&0.5675&2.39\\
 U-Net\cite{IEEEexample:ronneberger2015u}& $\bm{0.9638}$& $\bm{0.8357}$& 3.165\\
 DeepLab\_V2\cite{IEEEexample:chen2016deeplab}&0.9620&0.7575&$\bm{1.89}$\\ \hline
-HF-FCN(VGG16 Net)&$\bm{0.9643}$& $\bm{0.8424}$ &1.07\\
-HF-FCN(VGG+data aug)&{--}&{--}&{--}\\
+HF-FCN(VGG16 Net)&0.9643& $\bm{0.8424}$ &1.07\\
+HF-FCN(VGG+data aug)&$\bm{0.9650}$&0.8357&1.38\\
 HF-FCN(ResNet)&0.9588&0.8175&2.42\\
 HF-FCN16s &0.9330&0.7233&0.85\\
 HF-FCN8s &0.9643&0.8171&0.93\\
@@ -133,12 +133,12 @@ On Vaihingen dataset, three experiments are undertaken to explore the effects of
 &4\_in&0.96&0.865&0.909\\
 &5\_in&0.939&0.880&0.907\\
 \hline
-\multirow{2}{*}{Test}&3\_in&0.919&0.930&$\bm{0.925}$\\
+\multirow{2}{*}{Test}&3\_in&$\bm{0.919}$&$\bm{0.930}$&$\bm{0.925}$\\
 &4\_in&0.907&0.872&0.888\\
 &5\_in&0.858&0.900&0.878\\
 \hline\hline
 \multicolumn{2}{c|}{FCN\_4s\cite{IEEEexample:Long_2015_CVPR}}&{0.871}&{0.884}&{0.878}\\
-\multicolumn{2}{c|}{SegNet\cite{IEEEexample:badrinarayanan2017segnet}}&{--}&{--}&{--}\\
+\multicolumn{2}{c|}{SegNet\cite{IEEEexample:badrinarayanan2017segnet}}&{0.917}&{0.861}&{0.887}\\
 \multicolumn{2}{c|}{U-Net\cite{IEEEexample:ronneberger2015u}}&{--}&{--}&{--}\\
 \multicolumn{2}{c|}{DeepLab\_V2\cite{IEEEexample:chen2016deeplab}}&{0.926}&{0.881}&{0.903}\\
 \hline \hline
@@ -168,6 +168,8 @@ The results of diverse variants are shown in Fig.~\ref{fig:Vaihingen-variants}. 
 \end{figure}
 
 \begin{figure}
+\setlength{\abovecaptionskip}{-10pt}
+\setlength{\belowcaptionskip}{-10pt}
 \centering
 \includegraphics[width=8.7cm]{Figures/Vaihingen3_4_5in.eps}
 \caption{Prediction results on Vaihingen dataset. (a) (b) (c) shows results of the 3-channel input, 4-channel input and 5-channel input of Vaihingen dataset respectively. Here, TP are shown in green, FP are shown in blue and FN are in red.}
@@ -189,34 +191,6 @@ The results of diverse variants are shown in Fig.~\ref{fig:Vaihingen-variants}. 
 
  As done on Vaihingen dataset, contrast experiments of HF-FCN variants are implemented. The performance curve of HF-FCN variants are shown in Fig.~\ref{fig:Potsdam-variants}.
  The HF-FCN\_1 in Fig.~\ref{fig:Potsdam-variants} indicates that the last conv layer in Part 3 does not use the previous trained model to initialize. And HF-FCN means that the whole layers use the pre-trained model to initialize. Initialization of parameters has a greater promotion on the final results.
-\begin{comment}
-\begin{table*}[htbp]
-    \caption {Performance comparison of the results of different inputs on Potsdam data set}
-    \label{table:Potsdam-3-4-5in-comp}
-    \begin{center}
-    \begin{tabular}{p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}|p{1.1cm}<{\centering}}
-     \hline
-    &\multirow{2}{*}{Img}&\multicolumn{3}{c}{3\_in:RGB} &\multicolumn{3}{|c|}{4\_in:RGB,IR}&\multicolumn{3}{c}{5\_in:RGB,IR,nDSM}\\
-     \cline{3-11}
-    && Pre &Rec & F1 &Pre &Rec &F1&Pre &Rec &F1\\
-    \hline\hline
-    \multirow{4}{*}{Val}&2\_11&0.917&0.950&0.933&0.917&0.978&0.946&0.934&0.976&0.954\\
-    &4\_10&0.937&0.945&0.941&0.926&0.943&0.936&0.947&0.946&0.946\\
-    &5\_11&0.930&0.972&0.950&0.959&0.975&0.966&0.956&0.977&0.967\\
-    &7\_10&0.964&0.536&0.689&0.950&0.590&0.728&0.939&0.554&0.697\\
-    \cline{2-11}
-    &{Average}&0.937&0.851&0.879&0.937&$\bm{0.872}$&$\bm{0.894}$&$\bm{0.944}$&0.864&0.891\\
-    \hline\hline
-    \multirow{3}{*}{Test}&2\_12&0.897&0.868&0.882&0.920&0.959&0.939&0.944&0.965&0.955\\
-    &6\_7&0.894&0.902&0.898&0.915&0.909&0.912&0.901&0.918&0.909\\
-    &7\_8&0.975&0.929&0.951&0.977&0.950&0.957&0.976&0.946&0.960\\
-    \cline{2-11}
-    &{Average}&0.922&0.900&0.910&0.937&0.935&0.936&$\bm{0.940}$&$\bm{0.943}$&$\bm{0.941}$\\
-    \hline\hline
-   \end{tabular}
-   \end{center}
-   \end{table*}
-\end{comment}
 
 \begin{table}[htbp]
 \caption {Performance comparison of the results of different inputs and methods on Potsdam data set}
@@ -235,10 +209,10 @@ The results of diverse variants are shown in Fig.~\ref{fig:Vaihingen-variants}. 
 &4\_in&0.937&0.935&0.936\\
 &5\_in&$\bm{0.940}$&$\bm{0.943}$&$\bm{0.941}$\\
 \hline\hline
-\multicolumn{2}{c|}{FCN\_4s\cite{IEEEexample:Long_2015_CVPR}}&{--}&{--}&{--}\\
-\multicolumn{2}{c|}{SegNet\cite{IEEEexample:badrinarayanan2017segnet}}&{--}&{--}&{--}\\
-\multicolumn{2}{c|}{U-Net\cite{IEEEexample:ronneberger2015u}}&{--}&{--}&{--}\\
-\multicolumn{2}{c|}{DeepLab\_V2\cite{IEEEexample:chen2016deeplab}}&{--}&{--}&{--}\\
+\multicolumn{2}{c|}{FCN\_4s\cite{IEEEexample:Long_2015_CVPR}}&{0.827}&{0.774}&{0.796}\\
+\multicolumn{2}{c|}{SegNet\cite{IEEEexample:badrinarayanan2017segnet}}&{0.648}&{0.773}&{0.687}\\
+\multicolumn{2}{c|}{U-Net\cite{IEEEexample:ronneberger2015u}}&$\bm{0.924}$&{0.705}&{0.799}\\
+\multicolumn{2}{c|}{DeepLab\_V2\cite{IEEEexample:chen2016deeplab}}&{0.901}&$\bm{0.876}$&$\bm{0.887}$\\
 \hline \hline
 \multicolumn{2}{c|}{HF-FCN16s}&{0.849}&{0.857}&{0.851}\\
 \multicolumn{2}{c|}{HF-FCN8s}&{0.846}&{0.831}&{0.838}\\

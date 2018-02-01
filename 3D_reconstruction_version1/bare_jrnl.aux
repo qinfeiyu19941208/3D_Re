@@ -101,7 +101,6 @@
 \newlabel{fig:dataset_sample}{{4}{5}{Sample patches on the three datasets (a) Massachusetts dataset (b) Vaihingen dataset (c) Potsdam dataset\relax }{figure.4}{}}
 \@writefile{toc}{\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {IV-A}0b}Vaihingen dataset}{5}{paragraph.4.1.0.2}}
 \@writefile{toc}{\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {IV-A}0c}Potsdam dataset}{5}{paragraph.4.1.0.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Training Settings}{5}{subsection.4.2}}
 \citation{IEEEexample:mnih2013machine}
 \citation{IEEEexample:saito2016multiple}
 \citation{IEEEexample:audebert2017deep}
@@ -131,11 +130,12 @@
 \newlabel{table:dataset-composition}{{I}{6}{Composition of dataset\relax }{table.1}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Parameters for Network Training}}{6}{table.2}}
 \newlabel{table:Train-Parameter}{{II}{6}{Parameters for Network Training\relax }{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Training Settings}{6}{subsection.4.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Evaluation Metrics}{6}{subsection.4.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Results and Discussion}{6}{section.5}}
-\newlabel{Sec:Res}{{V}{6}{Results and Discussion\relax }{section.5}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces HF-FCN variants. The feature maps generated from final group are fused into a coarse result, which is HF-FCN16s. The variant called HF-FCN8s concatenates the feature maps from the last 2 groups with the same fusion operation, and so on.}}{6}{figure.5}}
 \newlabel{fig:Variants}{{5}{6}{HF-FCN variants. The feature maps generated from final group are fused into a coarse result, which is HF-FCN16s. The variant called HF-FCN8s concatenates the feature maps from the last 2 groups with the same fusion operation, and so on}{figure.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Results and Discussion}{6}{section.5}}
+\newlabel{Sec:Res}{{V}{6}{Results and Discussion\relax }{section.5}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Massachusetts dataset}{6}{subsection.5.1}}
 \@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Correctness at breakeven of HF-FCN v.s. \cite  {IEEEexample:mnih2013machine}\cite  {IEEEexample:saito2016multiple}\cite  {IEEEexample:alshehhi2017simultaneous}\cite  {IEEEexample:Long_2015_CVPR}\cite  {IEEEexample:badrinarayanan2017segnet} \cite  {IEEEexample:ronneberger2015u}\cite  {IEEEexample:chen2016deeplab}on Massachusetts test set. Cost time is computed in the same computer with a single NVIDIA Titan 12GB GPU}}{7}{table.3}}
 \newlabel{table:Mass-results}{{III}{7}{Correctness at breakeven of HF-FCN v.s. \cite {IEEEexample:mnih2013machine}\cite {IEEEexample:saito2016multiple}\cite {IEEEexample:alshehhi2017simultaneous}\cite {IEEEexample:Long_2015_CVPR}\cite {IEEEexample:badrinarayanan2017segnet} \cite {IEEEexample:ronneberger2015u}\cite {IEEEexample:chen2016deeplab}on Massachusetts test set. Cost time is computed in the same computer with a single NVIDIA Titan 12GB GPU\relax }{table.3}{}}
@@ -143,8 +143,7 @@
 \newlabel{fig:feature_maps}{{6}{7}{(a) Input aerial image. (b-g) Feature maps of U1\_1, U1\_2, U2\_2, U3\_3, U4\_3, U5\_3, respectively. (h) Predicted label map. All the images are normalized to the range of ${0-255}$}{figure.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The relaxed precision-recall curves from HF-FCN variants with two slack paramters. The biggest gap occurs between HF-FCN16s and HF-FCN8s, which indicates the most additional information coming from middle layers.}}{7}{figure.7}}
 \newlabel{fig:Mass-variants-PR}{{7}{7}{The relaxed precision-recall curves from HF-FCN variants with two slack paramters. The biggest gap occurs between HF-FCN16s and HF-FCN8s, which indicates the most additional information coming from middle layers}{figure.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Prediction results of HF-FCN, HF-FCN4s, HF-FCN8s and HF-FCN16s. The yellow box shows the continuous refinement of the tiny buildings. The red and blue boxes show the mutual promotion and contradiction between different layers.}}{7}{figure.8}}
-\newlabel{fig:Mass-variants-visi}{{8}{7}{Prediction results of HF-FCN, HF-FCN4s, HF-FCN8s and HF-FCN16s. The yellow box shows the continuous refinement of the tiny buildings. The red and blue boxes show the mutual promotion and contradiction between different layers}{figure.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Vaihingen dataset}{7}{subsection.5.2}}
 \citation{IEEEexample:Long_2015_CVPR}
 \citation{IEEEexample:badrinarayanan2017segnet}
 \citation{IEEEexample:ronneberger2015u}
@@ -157,19 +156,20 @@
 \citation{IEEEexample:unknown}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces (a) input images. (b) Results of Mnih-CNN+CRF. (c) Results of Satio\discretionary {-}{}{}multi\discretionary {-}{}{}MA\&CIS. (d) Results of FCN4s . (e) Results of SegNet. (f) Results of DeepLab\_V2. (g) Results of U-Net. (h) Our results. TP are shown in green, FP are shown in blue and FN are in red.}}{8}{figure.9}}
 \newlabel{fig:Mass-visi-result}{{9}{8}{(a) input images. (b) Results of Mnih-CNN+CRF. (c) Results of Satio\-multi\-MA\&CIS. (d) Results of FCN4s . (e) Results of SegNet. (f) Results of DeepLab\_V2. (g) Results of U-Net. (h) Our results. TP are shown in green, FP are shown in blue and FN are in red}{figure.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Prediction results of HF-FCN, HF-FCN4s, HF-FCN8s and HF-FCN16s. The yellow box shows the continuous refinement of the tiny buildings. The red and blue boxes show the mutual promotion and contradiction between different layers.}}{8}{figure.8}}
+\newlabel{fig:Mass-variants-visi}{{8}{8}{Prediction results of HF-FCN, HF-FCN4s, HF-FCN8s and HF-FCN16s. The yellow box shows the continuous refinement of the tiny buildings. The red and blue boxes show the mutual promotion and contradiction between different layers}{figure.8}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces (a) is weights learned by F1\_1, (b) is weights learned by F4\_1, (c) is weights learned by Part 3.}}{8}{figure.10}}
 \newlabel{fig:Mass-weights}{{10}{8}{(a) is weights learned by F1\_1, (b) is weights learned by F4\_1, (c) is weights learned by Part 3}{figure.10}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Vaihingen dataset}{8}{subsection.5.2}}
 \@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Performance comparison of the results of different inputs and methods on Vaihigen data set. \leavevmode {\color  {red}(xuejin:What are the numbers in the Img column?)}}}{8}{table.4}}
 \newlabel{table:vaihigen-3-4-5in-comp}{{IV}{8}{Performance comparison of the results of different inputs and methods on Vaihigen data set. \cxj {What are the numbers in the Img column?}\relax }{table.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Results of HF-FCN variants on Vaihingen dataset. (a) (b) shows the precision, recall and F1\_score of validation set and test set of Vaihingen dataset respectively.\leavevmode {\color  {red}(xuejin:Bigger font)}}}{8}{figure.11}}
-\newlabel{fig:Vaihingen-variants}{{11}{8}{Results of HF-FCN variants on Vaihingen dataset. (a) (b) shows the precision, recall and F1\_score of validation set and test set of Vaihingen dataset respectively.\cxj {Bigger font}\relax }{figure.11}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Potsdam dataset}{8}{subsection.5.3}}
 \citation{IEEEexample:Long_2015_CVPR}
 \citation{IEEEexample:badrinarayanan2017segnet}
 \citation{IEEEexample:ronneberger2015u}
 \citation{IEEEexample:chen2016deeplab}
 \citation{IEEEexample:zhou20112}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Results of HF-FCN variants on Vaihingen dataset. (a) (b) shows the precision, recall and F1\_score of validation set and test set of Vaihingen dataset respectively.\leavevmode {\color  {red}(xuejin:Bigger font)}}}{9}{figure.11}}
+\newlabel{fig:Vaihingen-variants}{{11}{9}{Results of HF-FCN variants on Vaihingen dataset. (a) (b) shows the precision, recall and F1\_score of validation set and test set of Vaihingen dataset respectively.\cxj {Bigger font}\relax }{figure.11}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Results of HF-FCN variants on Potsdam dataset. (a) (b) shows the precision, recall and F1\_score of validation set and test set of Potsdam dataset respectively.}}{9}{figure.12}}
 \newlabel{fig:Potsdam-variants}{{12}{9}{Results of HF-FCN variants on Potsdam dataset. (a) (b) shows the precision, recall and F1\_score of validation set and test set of Potsdam dataset respectively}{figure.12}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Prediction results on Vaihingen dataset. (a) (b) (c) shows results of the 3-channel input, 4-channel input and 5-channel input of Vaihingen dataset respectively. Here, TP are shown in green, FP are shown in blue and FN are in red.}}{9}{figure.13}}

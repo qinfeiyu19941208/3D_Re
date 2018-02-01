@@ -29,13 +29,17 @@ We split the dataset into training, validation and test sets in a proportion of 
 
 
 
-Data augmentation is made on the Vaihingen dataset and the Potsdam dataset.
-One reason is that methods using dataset ${a)}$ do not extend the data.
-Hence, to make a fair comparison with other methods, we also do not extend it.
-Another reason is that the data quantity of dataset ${b)}$ and ${c)}$ is not enough which may lead to inadequate training.
-Therefore, some measures of data augmentation are made in dataset ${b)}$ and ${c)}$ including data rotation and mirror flipping.
-Components of the datasets are listed in Table~\ref{table:dataset-composition}.
-Meanwhile, some sampled patches of dataset ${a)}$, ${b)}$, ${c)}$ are shown in Fig.~\ref{fig:dataset_sample}\cxj{5}.
+Some measures of data augmentation including data rotation and mirror flipping are made on the three datasets.
+Due to the other methods using dataset ${a)}$ do not extend the dataset, so the predict results on the original and extensible dataset $a)$ are both presented to make a fair comparison.
+Besides, the data quantity of dataset ${b)}$ and ${c)}$ is not enough to make a adequate training, so we used the extensible dataset as our training set directly.
+The components of the datasets are listed in Table~\ref{table:dataset-composition}.
+And some sampled patches of dataset ${a)}$, ${b)}$, ${c)}$ are shown in Fig.~\ref{fig:dataset_sample}.
+The characteristics and challenges of the three datasets are:
+\begin{itemize}
+ \item The dataset ${a)}$ has a lot of intensive buildings, which causes great difficulties for the separation of buildings.
+ \item There is an obvious shadow occlusion in dataset ${b)}$ which may lead to a wrong segmentation in the part of the shadowed roodtop.
+ \item Large intra class differences and small inter class differences are presented in dataset ${c)}$. One building consists of several materials while the roads and buildings are the similar colour. 
+\end{itemize}
 
 
 \begin{figure}

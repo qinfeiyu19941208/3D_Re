@@ -8,7 +8,7 @@ Moreover, for HF-FCN itself, we expect to investigate which kind of information 
 Thus, some upsampled feature maps ${\left\{U_k\right\}}$ are presented.
 And several variants of HF-FCN which combine different up-sampling feature maps from Part 2 are proposed.
 They are shown in Fig.~\ref{fig:feature_maps} and Fig.~\ref{fig:Variants}, respectively.
-In addition, we also tried different feature extractor networks, VGG16 Net and ResNet. The details are shown below.
+In addition, we also tried different feature extractor networks (Part 1), VGG16 Net and ResNet. The details are shown below.
 \cxj{What about to change the backbone network?}
 
 \begin{figure}[t]
@@ -22,10 +22,11 @@ In addition, we also tried different feature extractor networks, VGG16 Net and R
 \subsection{Massachusetts dataset}
 On the Massachusetts dataset, our method is compared to both the non-deep-learning algorithms and deep-learning based approaches. Table~\ref{table:Mass-results}\cxj{4} present the quantitative analysis. A standard and relaxed precision and recall are amply to make a comparison.
 From the result, our method shows obvious superiority in terms of speed and precision. When comparing with Satio\-multi\-MA\&CIS~\cite{IEEEexample:saito2016multiple}, the standard and relaxed recall of our method are $5.5\%$ and $1.3\%$ higher than it. Meanwhile, the time cost is reduced from 67.84s to 1.07s and the speed is promoted about 63 times.
-Compared with U-Net~\cite{IEEEexample:ronneberger2015u}, the speed is promoted about 3 times and recall is a little higher.
-These significant improvements demonstrate that HF-FCN achieves best performance in effectiveness and efficiency.
+These significant improvements demonstrate that HF-FCN achieves better performance in effectiveness and efficiency.
 
-Extensive comparisons are made between HF-FCN and other mainstream methods in semantic segmentation domain. The quantitative and visual results are shown in Table~\ref{table:Mass-results} and Fig.~\ref{fig:Mass-visi-result}, respectively. On the charts, we can see that our method better performance in speed and precision. And the details and integrity of the building are well preserved by our method.
+Extensive comparisons are made between HF-FCN and other mainstream methods in semantic segmentation domain. The quantitative and visual results are shown in Table~\ref{table:Mass-results} and Fig.~\ref{fig:Mass-visi-result}, respectively. 
+Compared with U-Net~\cite{IEEEexample:ronneberger2015u}, the speed is promoted about 3 times and recall is a little higher. 
+From the visual results, our method preserve the details and integrity of the building better than others.
 \begin{table}
 \centering
 \caption {Correctness at breakeven of HF-FCN v.s. \cite{IEEEexample:mnih2013machine}\cite{IEEEexample:saito2016multiple}\cite{IEEEexample:alshehhi2017simultaneous}\cite{IEEEexample:Long_2015_CVPR}\cite{IEEEexample:badrinarayanan2017segnet}
@@ -54,7 +55,7 @@ HF-FCN4s &0.9632&0.8394&$\bm{0.99}$\\
 \end{tabular}
 \end{table}
 
-To explore which kinds of information extracted by hierarchical fusion operation in Part 2.
+In addition, to explore which kinds of information extracted by hierarchical fusion operation in Part 2.
 Some upsampled feature maps ${\left\{U_1,U_2,U_3,U_7,U_{10},U_{13}\right\}}$ are shown in Fig.~\ref{fig:feature_maps}.
 The U1\_1 (${U_1}$) in Fig.~\ref{fig:feature_maps}(b) means the upsampled feature maps from F1\_1 (${F_1}$) which are feature maps generated from conv1\_1 in VGG16 Net.
 Due to small receptive field of conv1\_1 and conv1\_2, they extract low-level features like edges.
@@ -67,8 +68,10 @@ The final prediction results are shown in Fig.~\ref{fig:feature_maps}(h).
 Secondly, to explore the effects of the feature maps generated from each feature extract stage ${\left\{F_k\right\}}$ on the final result, variants of HF-FCN which are counterpart of FCN are designed.
 Fig.~\ref{fig:Variants} shows the constrast diagram of variants of FCN and HF-FCN.
 Unlike FCN, a fusion operation rather than summation are leveraged to build our HF-FCN 16s, 8s and 4s.
-The performance of HF-FCN variants are shown in Fig.~\ref{fig:Mass-variants-PR}, Fig.~\ref{fig:Mass-variants-visi} and Table~\ref{table:Mass-results}\cxj{Figure 8, Figure 9 and Table \Rmnum{5}}.
-From the disgrams, we can get the following conclusions easily. First, The prediction result obtained from the last layer gets a coarse result, which loses much of location information that are mainly encoded in the shallow feature maps. Second, the largest gap presented between HF-FCN16s and HF-FCN8s about 9{\%} in recall rates, it may suggest that the most information supplement to the HF-FCN is got in middle layers. Third, the PR curves of HF-FCN4s and HF-FCN almost coincide. It illustrates the low-level information has little effect on the prediction results. Forth, with the addition of the shallow feature map, the network is more distinct for the segmentation of tiny buildings, which solves the problem of easy adhesion to adjacent buildings. Since, all the conv layers contained useful hierarchical information that is critical to the final prediction.
+The PR curves, prediction results and quantitative results of HF-FCN variants are shown in Fig.~\ref{fig:Mass-variants-PR}, Fig.~\ref{fig:Mass-variants-visi} and Table~\ref{table:Mass-results} respectively. \cxj{Figure 8, Figure 9 and Table \Rmnum{5}}.
+From the disgrams, we can get the following conclusions easily. 
+First, The prediction result obtained from the last layer gets a coarse result, which loses much of location information that are mainly encoded in the shallow feature maps. Second, the largest gap presented between HF-FCN16s and HF-FCN8s about 9{\%} in recall rates, it may suggest that the most information supplement to the HF-FCN is got in middle layers. Third, the PR curves of HF-FCN4s and HF-FCN almost coincide. It illustrates the low-level information has little effect on the prediction results. Forth, with the addition of the shallow feature map, the network is more distinct for the segmentation of tiny buildings, which solves the problem of easy adhesion to adjacent buildings. 
+Since, all the feature maps contained useful hierarchical information that is critical to the final prediction.
 
 \begin{figure}
 \begin{center}
@@ -79,7 +82,7 @@ From the disgrams, we can get the following conclusions easily. First, The predi
 \end{figure}
 
 
-In the end, we want to prove that our fusion operations learn the connections between features. The connection weights of F1\_1, F4\_1 and Part 3 are shown in Fig.~\ref{fig:Mass-weights}.
+In the end, we want to prove that our fusion operations learn the connections between feature maps. The connection weights of F1\_1, F4\_1 and Part 3 are shown in Fig.~\ref{fig:Mass-weights}.
 The weights are not the same, which means that fusion operations have effect on feature combination.
 From the Fig.~\ref{fig:Mass-weights} (a) to Fig.~\ref{fig:Mass-weights} (c), the range of weights increases gradually. And from the Fig.~\ref{fig:Mass-weights} (c), we can arrive at the conclusion that the different layers have virous effects on the final result.
 For example, the U1\_1 has little effect on the prediction while the U3\_2 and U4\_3 have bigger role on the final prediction.
