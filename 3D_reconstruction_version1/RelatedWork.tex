@@ -6,7 +6,7 @@ Building extraction is one of the most fundamental problems in remote sensing do
 As time goes by, many research achievements have sprung up.
 We roughly divide these methods into three groups: one is based on the shape prior, another is based on the energy function and machine learning third. Meanwhile, the methods of machine learning could be divide into two parts: one is shallow networks and the other is deep learning methods.
 Here we briefly review some representative methods that have evolved in the past decades in the different groups respectively.
-Moreover, some related work which are popular in compute vision domain similar to our task are also introduced.
+Moreover, several related work which are popular in compute vision domain similar to our task are also introduced.
 \cxj{More related work on city modeling/urban modeling. Maybe facade modeling.}
 
 
@@ -22,7 +22,7 @@ Later, Izadi and Saeedi\cite{IEEEexample:izadi2012three} presented a complete sy
 In the stage of extracting buildings, a tree consisting of intersection points of lines was created and refined according to the found hypotheses.
 The sun azimuth and elevation angles were used to estimate the height with existing shadows afterwards.
 In recent years, very high resolution (VHR) optical satellite imagery could be obtained easily.
-Based on it, Wang et al~\cite{IEEEexample:wang2015efficient} proposed an efficient method for automatic rectangular building extraction by detecting line segments and grouping them based on path integrity and closed contour. The method depends on the clear remote sensing images and accurate line segmentation heavily.
+Based on it, Wang et al~\cite{IEEEexample:wang2015efficient} proposed an efficient method for automatic rectangular building extraction by detecting line segments and grouping them based on path integrity and closed contour. Nevertheless, the method depends on the clear remote sensing images and accurate line segmentation heavily.
 \cxj{If there are two authors, say A and B proposed.... if more than two authors, say A et al. ..}
 
 
@@ -88,8 +88,8 @@ But for building extraction task, the lost low-level and middle-level informatio
  We also explore the effect of different layers of features on the final result. The details of our idea will be described in the next section.
 
 
-The most related work are U-Net\cite{IEEEexample:ronneberger2015u} and FPN \cite{IEEEexample:lin2017feature}. They all exploited the information from different layers. Differ from the U-Net which simple concatenates the feature maps from encoder to decoder, we apply a fusion operation firstly to fuse the feature maps created in the same convolution layers in the path of encoder to get more richer features. 
-The main idea of FPN is leveraging the encoder part as a feature pyramid, with predictions made independently at all levels. During the top-down path of FPN, it only exploit the feature maps come from the each stage's last residual block, but we take advantage of the all feature maps from the each stage. Moreover, we upsample the feature maps from each stage to the same resolution of the input and apply a hierarchical fusion operation to fuse the upsampled feature maps to a final prediction instead of directly predicting from each stage. That is to say, we only make a prediction rather than multiple predictions.
+The most related work are U-Net\cite{IEEEexample:ronneberger2015u} and FPN \cite{IEEEexample:lin2017feature}. They both exploited the information from different layers. Differ from the U-Net which simple concatenated the feature maps from encoder to decoder, we apply a fusion operation firstly to fuse the feature maps created in the same convolution layers in the path of encoder to get more richer features.
+The main idea of FPN was leveraging the encoder part as a feature pyramid, with predictions made independently at all levels. During the top-down path of FPN, it only exploited the feature maps which were came from last residual block of each stage, but we take advantage of the all feature maps from the each stage. Moreover, we upsample the feature maps from each stage to the same resolution of the input and apply a hierarchical fusion operation to fuse the upsampled feature maps to a final prediction instead of directly predicting from each stage. That is to say, we only make a prediction rather than multiple predictions.
 
 
 
