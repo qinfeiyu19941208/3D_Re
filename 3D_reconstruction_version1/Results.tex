@@ -90,6 +90,9 @@ It also in accordance with our experimental results that middle layers provide m
 \cxj{Weight for what? to fuse feature map? The distribution does not make too much sense. }
 
 \begin{figure}
+\vspace{-0.2cm}
+\setlength{\abovecaptionskip}{-0cm}
+\setlength{\belowcaptionskip}{-1.5cm}  
 \centering
 \includegraphics[width=8.7cm]{Figures/HF-FCN-variant-PR.eps}
 \caption{The relaxed precision-recall curves from HF-FCN variants with two slack paramters. The biggest gap occurs between HF-FCN16s and HF-FCN8s, which indicates the most additional information coming from middle layers.}
@@ -97,6 +100,9 @@ It also in accordance with our experimental results that middle layers provide m
 \end{figure}
 
 \begin{figure}
+\vspace{-0cm}
+\setlength{\abovecaptionskip}{-0cm}  
+\setlength{\belowcaptionskip}{-1.5cm}  
 \centering
 \includegraphics[width=8.7cm]{Figures/HF-FCN_variants_result.eps}
 \caption{Prediction results of HF-FCN, HF-FCN4s, HF-FCN8s and HF-FCN16s. The yellow box shows the continuous refinement of the tiny buildings. The red and blue boxes show the mutual promotion and contradiction between different layers.}
@@ -104,6 +110,9 @@ It also in accordance with our experimental results that middle layers provide m
 \end{figure}
 
 \begin{figure*}
+\vspace{-0.5cm}
+\setlength{\abovecaptionskip}{-0cm}
+\setlength{\belowcaptionskip}{-1cm}  
 \centering
 \includegraphics[width=17cm,height = 7cm]{Figures/mass_visi_result.eps}
 \caption{(a) input images. (b) Results of Mnih-CNN+CRF. (c) Results of Satio\-multi\-MA\&CIS. (d) Results of FCN4s . (e) Results of SegNet. (f) Results of DeepLab\_V2. (g) Results of U-Net. (h) Our results. TP are shown in green, FP are shown in blue and FN are in red.}
@@ -111,6 +120,9 @@ It also in accordance with our experimental results that middle layers provide m
 \end{figure*}
 
 \begin{figure}
+\vspace{-0.2cm}
+\setlength{\abovecaptionskip}{-0cm}
+\setlength{\belowcaptionskip}{-1cm}  
 \centering
 \includegraphics[width=9cm]{Figures/weights.eps}
 \caption{(a) is weights learned by F1\_1, (b) is weights learned by F4\_1, (c) is weights learned by Part 3.}
@@ -157,6 +169,9 @@ We compare with some other methods which use the same dataset and several deep l
 The results of diverse variants are shown in Fig.~\ref{fig:Vaihingen-variants}. The HF-FCN\_1 in Fig.~\ref{fig:Vaihingen-variants} indicates that the last conv layer in Part 3 does not use the previous trained model to initialize. And HF-FCN means that the whole layers use the pre-trained model to initialize. From the curves, the performance of HF-FCN exceeds the variants and gets a excellent result. Additionally, using the pre-trained weights of Part 3 has a significance in the final results.
 
 \begin{figure}
+\vspace{-0.2cm}
+\setlength{\abovecaptionskip}{-0cm}
+\setlength{\belowcaptionskip}{-1cm}  
 \centering
 \includegraphics[width=8.7cm]{Figures/vaihingen_variants.eps}
 \caption{Results of HF-FCN variants on Vaihingen dataset. (a) (b) shows the precision, recall and F1\_score of validation set and test set of Vaihingen dataset respectively.\cxj{Bigger font}}
@@ -164,6 +179,9 @@ The results of diverse variants are shown in Fig.~\ref{fig:Vaihingen-variants}. 
 \end{figure}
 
 \begin{figure}
+\vspace{-0.2cm}
+\setlength{\abovecaptionskip}{-0cm}
+\setlength{\belowcaptionskip}{-1cm}  
 \centering
 \includegraphics[width=8.7cm]{Figures/Potsdam_variants.eps}
 \caption{Results of HF-FCN variants on Potsdam dataset. (a) (b) shows the precision, recall and F1\_score of validation set and test set of Potsdam dataset respectively.}
@@ -171,8 +189,9 @@ The results of diverse variants are shown in Fig.~\ref{fig:Vaihingen-variants}. 
 \end{figure}
 
 \begin{figure}
-\setlength{\abovecaptionskip}{-10pt}
-\setlength{\belowcaptionskip}{-10pt}
+\vspace{-0.2cm}
+\setlength{\abovecaptionskip}{-0cm}
+\setlength{\belowcaptionskip}{-1cm}  
 \centering
 \includegraphics[width=8.7cm]{Figures/Vaihingen3_4_5in.eps}
 \caption{Prediction results on Vaihingen dataset. (a) (b) (c) shows results of the 3-channel input, 4-channel input and 5-channel input of Vaihingen dataset respectively. Here, TP are shown in green, FP are shown in blue and FN are in red.}
@@ -180,6 +199,9 @@ The results of diverse variants are shown in Fig.~\ref{fig:Vaihingen-variants}. 
 \end{figure}
 
 \begin{figure}
+\vspace{-0.2cm}
+\setlength{\abovecaptionskip}{-0cm}
+\setlength{\belowcaptionskip}{-2cm}  
 \centering
 \includegraphics[width=8.7cm]{Figures/Vaihingen_compared_results.eps}
 \caption{Results of different methods. (a) is input image, (b)(d)(g) are results of \cite{IEEEexample:audebert2017deep}, (c) is result of \cite{IEEEexample:marmanis2016semantic}, (f) is result of \cite{IEEEexample:unknown}, (g) is our result. The blue and yellow frames show some details between these methods.}
@@ -223,7 +245,9 @@ The results of diverse variants are shown in Fig.~\ref{fig:Vaihingen-variants}. 
 \hline
 \end{tabular}
 \end{table}
+
 \begin{figure}
+\vspace{-0.2cm}
 \centering
 \includegraphics[width=8.7cm]{Figures/Potsdam3_4_5in.eps}
 \caption{Prediction results on potsdam dataset. (a) (b) (c) shows results of the 3-channel input, 4-channel input and 5-channel input of Vaihingen dataset respectively. Here, TP are shown in green, FP are shown in blue and FN are in red.}
@@ -231,8 +255,9 @@ The results of diverse variants are shown in Fig.~\ref{fig:Vaihingen-variants}. 
 \end{figure}
 
 \begin{figure}
+\vspace{-0.2cm}
 \centering
 \includegraphics[width=8.7cm]{Figures/Potsdam_compared_results.eps}
-\caption{Results of different methods. The second column is the results of using only the FCN with CIR. Pairwise CRF fusion shows the result of fusing FCN-8s\_CIR with LiDAR data in a pairwise CRF. Higher-order CRF are used to generate the results shown in third column. Our results are shown in last colunm.}
+\caption{Results of different methods. The second column is the results of using only the FCN with CIR(color-infrared image). Pairwise CRF fusion shows the result of fusing FCN-8s\_CIR with LiDAR data in a pairwise CRF. The results of using higher-order CRF\cite{IEEEexample:liu2017dense} as post processing are shown in third column. The last colunm shows our results.}
 \label{fig:Potsdam-compared-others}
 \end{figure}
