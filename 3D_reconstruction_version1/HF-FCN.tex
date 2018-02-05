@@ -8,6 +8,9 @@ Besides, Part 3 is a second stage of feature fusion.
 In Part 3, we take full advantage of the information extracted from the Part 2 by learning the connection weights between upsampled feature maps.
 
 \begin{figure}
+\vspace{-0.4cm}
+\setlength{\abovecaptionskip}{-0cm}
+\setlength{\belowcaptionskip}{-2cm} 
 \centering
 \includegraphics[width=8.5cm]{Figures/Fusion_Operation.eps}
 \caption{The first line shows the overview of our network. The second row shows the details of two kinds of fusion operation. One is a case where the input is not equal to the output and the other is the input equal to the output. Fk means the feature maps come from the kth layer. m for number of feature maps. n said the n times of up sampling.}
@@ -16,17 +19,18 @@ In Part 3, we take full advantage of the information extracted from the Part 2 b
 \cxj{Put overview here. Explain the main components of our methods.}
 \subsection{Network Architecture}
 
-\textbf{Part 1} The Part 1 is a bottom-up pathway, which generates the hierarchical feature maps from the network. With the increase of the field of perception, the extracted semantic information is gradually from the lower level to the high level. At the same time, the extracted information of image is from local to global. Each group of feature maps come from the same convolution(conv) layer contribute to the ${\left\{F_{k}\right\}}$ in Fig.~\ref{fig:Fusion-Operation}, where ${k:\Omega \to\left\{1,\ldots,K\right\}}$. And ${K}$ is the number of groups; for instance, ${K}$ is 13 for VGG16 Net. Specifically, for ResNets, we consider a ResBlock as a feature extractor that ${K}$ is 15.
+\textbf{Part 1} The Part 1 is a bottom-up pathway, which generates the hierarchical feature maps from the network. With the increase of the field of perception, the extracted semantic information is gradually from the lower level to the high level. At the same time, the extracted information of image is from local to global. Each group of feature maps come from the same feature extractor contribute to the ${\left\{F_{k}\right\}}$ in Fig.~\ref{fig:Fusion-Operation}, where ${k:\Omega \to\left\{1,\ldots,K\right\}}$. And ${K}$ is group number of feature maps; for instance, ${K}$ is 13 for VGG16 Net that we consider each
+convolution(conv) layer as a feature extractor. Specifically, for ResNets, we consider a ResBlock as a feature extractor that ${K}$ is 15.
 
-\textbf{Part 2} The Part 2 which fuses the feature maps of each group extracted from Part 1 via a set of hierarchical fusion operations. Due to the feature maps learned from same group including similar types of information, we fuse them into one feature map, which contains the richer features. The hierarchical fusion operation consists of three steps:
-A ${1\times1}$ conv layer first, deconvolutional (transposed convolution) layer second and crop operation third.
+\textbf{Part 2} The Part 2 which fuses the feature maps of each group extracted from Part 1 via a set of hierarchical fusion operations. Due to the feature maps learned from same group including similar types of information, we fuse them into one feature map, which contains richer information. The hierarchical fusion operation consists of three steps:
+A ${1\times1}$ conv layer first, a deconvolutional (transposed convolution) layer second and crop operation third.
 The Part 2 in Fig.~\ref{fig:Fusion-Operation} can be written as:
 \begin{equation}
     \label{fusion_1}
     \ U_{k}=Crop(UpSample_n(Conv(\left\{F_{k}\right\})))
 \end{equation}
 
-where ${\left\{F_{k}\right\}}$ is extracted feature maps from Part 1, ${k:\Omega \to\left\{1,\ldots,K\right\}}$.
+where ${\left\{F_{k}\right\}}$ is a set of extracted feature maps from Part 1, ${k:\Omega \to\left\{1,\ldots,K\right\}}$.
 
 The first step is a ${1\times1}$ conv operation among the channels of feature maps in the same group.
 ${Y = Conv(\left\{X\right\})}$ is defined as:
@@ -38,6 +42,9 @@ ${Y = Conv(\left\{X\right\})}$ is defined as:
  where ${M}$ is the number of the feature maps in ${\left\{X\right\}}$. The ${w_{m}}$ is the weight of conv kernels, ${m:\Omega \to\left\{1,\ldots,M\right\}}$.
 
 \begin{figure}
+\vspace{-0.4cm}
+\setlength{\abovecaptionskip}{-0cm}
+\setlength{\belowcaptionskip}{-2cm} 
 \centering
 \includegraphics[width=8.5cm]{Figures/Conv_Deconv.eps}
 \caption{A diagram of convolution and transposed convolution. The traditional convolution and transposed convolution are shown in the left and right column, respectively.
@@ -56,7 +63,7 @@ A diagram of conv operation is shown in Fig.~\ref{fig:Deconv}(a).
 For Fig.~\ref{fig:Deconv}(a), ${x}$ is a 16-dimensional vector (the input ${X}$ is a ${4\times4}$ patch), ${y}$ is a 4-dimensional vector and ${W}$ is a matrix of ${4\times16}$.
 
 
-The output of ${Conv\left\{F_{k}\right\}}$ are upsmapled by a transposed convolution which is written as ${Y = UpSample_n(X)}$, where ${n}$ means ${n}$ times up sampling. The ${n}$ in our network is determined by the size of input $X$ and output $Y$ which is equal to ${max\left\{\lceil Y.weight/X.weight\rceil , \lceil Y.height/X.height\rceil \right\}}$.  Contrary to conv operation, the transposed conv is a process of transforming the features of low dimension to high dimension. It can be written in a inverse form of conv operation:
+The output of ${Conv\left\{F_{k}\right\}}$ are upsmapled by a transposed convolution which is written as ${Y = UpSample_n(X)}$, where ${n}$ means ${n}$ times up sampling. The ${n}$ in our network is determined by the size of input $X$ and output $Y$ that is equal to ${max\left\{\lceil Y.weight/X.weight\rceil , \lceil Y.height/X.height\rceil \right\}}$. Contrary to conv operation, the transposed conv is a process of transforming the features of low dimension to high dimension. It can be written in a inverse form of conv operation:
 \begin{equation}
     \label{Conv_matrix}
     \ y = W_1^Tx
@@ -67,7 +74,7 @@ Fig.~\ref{fig:Deconv}(b) shows a diagram of transposed conv.
 For Fig.~\ref{fig:Deconv}(b), ${x}$ is 4-dimensional vector (the input ${X}$ of transpose conv is a ${2\times2}$ patch), ${y}$ is a 16-dimensional vector and ${W_1^T}$ is a matrix of ${4\times16}$.
 
 The ${W_1^T}$ of transposed conv layers of different groups are learned separately. It means that the transposed conv layers recovery semantic information from hierarchical feature maps.
-The ${Crop(\left\{X \right\})}$ operation in Part 2 is just a center alignment crop which cuts the superfluous boundary of upsampled feature maps. The output ${\left\{U_k\right\}}$, ${k:\Omega \to\left\{1,\ldots,K\right\}}$ of Part 2 has the same resolution with input ${X}$.
+The ${Crop(\left\{X \right\})}$ operation in Part 2 is just a center alignment crop which cuts the superfluous boundary of upsampled feature maps. The output ${\left\{U_k\right\}}$, ${k:\Omega \to\left\{1,\ldots,K\right\}}$ of Part 2 are in the same resolution of the network input.
 
 
 \textbf{Part 3} Part 3 is the second fusion stage which aims to fuse the cropped feature maps from Part 2.
@@ -81,7 +88,7 @@ The expression of the Part 3 is as follows:
 where ${Y}$ is output feature map. ${\left\{U_k\right\}}$ is input of Part 3 and output of Part 2.
 
 
-In order to get a probability map of input ${X}$, the output ${Y}$ of Part 3 is normalized by a sigmoid function:
+In order to get a probability map of input, the output ${Y}$ of Part 3 is normalized by a sigmoid function:
 \begin{equation}
     \label{Sigmoid}
     \ S(x) = \frac{1}{1+e^{-x}}

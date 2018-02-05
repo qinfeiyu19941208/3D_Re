@@ -1,17 +1,20 @@
 \section{Results and Discussion}
 \label{Sec:Res}
 
-In this section, the proposed method using dataset ${a)}$, ${b)}$, ${c)}$ are compared to the recent non-deep-learning algorithms, such as Minh-CNN\cite{IEEEexample:mnih2013machine}, Satio-multi~\cite{IEEEexample:saito2016multiple} and Context~\cite{IEEEexample:audebert2017deep}.
-%
-And it is also compared with some recent deep-learning based approaches, including FCN~\cite{IEEEexample:Long_2015_CVPR}, SegNet~\cite{IEEEexample:badrinarayanan2017segnet}, Deeplab~\cite{IEEEexample:chen2016deeplab} and U-Net~\cite{IEEEexample:ronneberger2015u}.\cxj{What else?}
+In this section, the proposed method using dataset ${a)}$, ${b)}$, ${c)}$ is not only compared to the recent non-deep-learning algorithms, such as Minh-CNN\cite{IEEEexample:mnih2013machine}, Satio-multi~\cite{IEEEexample:saito2016multiple} and Context~\cite{IEEEexample:audebert2017deep}, but also compared with some recent deep-learning based approaches, including FCN~\cite{IEEEexample:Long_2015_CVPR}, SegNet~\cite{IEEEexample:badrinarayanan2017segnet}, Deeplab~\cite{IEEEexample:chen2016deeplab} and U-Net~\cite{IEEEexample:ronneberger2015u}.\cxj{What else?}
 Moreover, for HF-FCN itself, we expect to investigate which kind of information extracted from feature extractors and how the effects of extracted information on the final prediction.
 Thus, some upsampled feature maps ${\left\{U_k\right\}}$ are presented.
 And several variants of HF-FCN which combine different up-sampling feature maps from Part 2 are proposed.
-They are shown in Fig.~\ref{fig:feature_maps} and Fig.~\ref{fig:Variants}, respectively.
-In addition, we also tried different feature extractor networks (Part 1), VGG16 Net and ResNet. The details are shown below.
+For dataset ${b)}$ and ${c)}$, multichannel information is provided.
+Hence, to explore the impact of other information on the results, a simple experiment is presented which concatenate different kinds of information as input of HF-FCN.
+In addition, different feature extractor networks are tried as our Part 1 network, including VGG16 Net and ResNet.
+The results and discussion of above mentioned experiments are shown below.
 \cxj{What about to change the backbone network?}
 
 \begin{figure}[t]
+\vspace{-0.2cm}
+\setlength{\abovecaptionskip}{-0cm}
+\setlength{\belowcaptionskip}{-1cm} 
 \begin{center}
 \includegraphics[width=7.8cm]{Figures/vairants.eps}
 \caption{FCN and HF-FCN variants. The feature maps generated from final group are fused into a coarse result, which is HF-FCN16s. The variant called HF-FCN8s concatenates the feature maps from the last 2 groups with the same fusion operation, and so on.}
@@ -20,14 +23,18 @@ In addition, we also tried different feature extractor networks (Part 1), VGG16 
 \end{figure}
 
 \subsection{Massachusetts dataset}
-On the Massachusetts dataset, our method is compared to both the non-deep-learning algorithms and deep-learning based approaches. Table~\ref{table:Mass-results}\cxj{4} present the quantitative analysis. A standard and relaxed precision and recall are amply to make a comparison.
-From the result, our method shows obvious superiority in terms of speed and precision. When comparing with Satio\-multi\-MA\&CIS~\cite{IEEEexample:saito2016multiple}, the standard and relaxed recall of our method are $5.5\%$ and $1.3\%$ higher than it. Meanwhile, the time cost is reduced from 67.84s to 1.07s and the speed is promoted about 63 times.
+On the Massachusetts dataset, both the non-deep-learning algorithms and deep-learning based approaches are compared with our method. 
+Table~\ref{table:Mass-results}\cxj{4} presents the quantitative analysis with a standard and relaxed precision and recall as evaluation criterions.
+The best results of our methods and others' methods are marked in bold. 
+From the view of result, our method shows obvious superiority in terms of speed and precision. When comparing with Satio-multi-MA\&CIS~\cite{IEEEexample:saito2016multiple}, the standard and relaxed recall of our method are $5.5\%$ and $1.3\%$ higher than it. Meanwhile, the time cost is reduced from 67.84s to 1.07s and the speed is promoted about 63 times.
 These significant improvements demonstrate that HF-FCN achieves better performance in effectiveness and efficiency.
 
-Extensive comparisons are made between HF-FCN and other mainstream methods in semantic segmentation domain. The quantitative and visual results are shown in Table~\ref{table:Mass-results} and Fig.~\ref{fig:Mass-visi-result}, respectively. 
+Extensive comparisons are made between HF-FCN and other semantic segmentation methods. The quantitative and visual results are shown in Table~\ref{table:Mass-results} and Fig.~\ref{fig:Mass-visi-result}, respectively.
 Compared with U-Net~\cite{IEEEexample:ronneberger2015u}, the speed is promoted about 3 times and recall is a little higher. 
 From the visual results, our method preserve the details and integrity of the building better than others.
 \begin{table}
+\vspace{-0.2cm}
+\setlength{\belowcaptionskip}{-1cm} 
 \centering
 \caption {Correctness at breakeven of HF-FCN v.s. \cite{IEEEexample:mnih2013machine}\cite{IEEEexample:saito2016multiple}\cite{IEEEexample:alshehhi2017simultaneous}\cite{IEEEexample:Long_2015_CVPR}\cite{IEEEexample:badrinarayanan2017segnet}
 \cite{IEEEexample:ronneberger2015u}\cite{IEEEexample:chen2016deeplab}on Massachusetts test set. Cost time is computed in the same computer with a single NVIDIA Titan 12GB GPU}
@@ -57,7 +64,7 @@ HF-FCN4s &0.9632&0.8394&$\bm{0.99}$\\
 
 In addition, to explore which kinds of information extracted by hierarchical fusion operation in Part 2.
 Some upsampled feature maps ${\left\{U_1,U_2,U_3,U_7,U_{10},U_{13}\right\}}$ are shown in Fig.~\ref{fig:feature_maps}.
-The U1\_1 (${U_1}$) in Fig.~\ref{fig:feature_maps}(b) means the upsampled feature maps from F1\_1 (${F_1}$) which are feature maps generated from conv1\_1 in VGG16 Net.
+The U1\_1 (${U_1}$) in Fig.~\ref{fig:feature_maps}(b) means the upsampled feature map from F1\_1 (${F_1}$) which are feature maps generated from conv1\_1 in VGG16 Net.
 Due to small receptive field of conv1\_1 and conv1\_2, they extract low-level features like edges.
 And the U1\_2 (${U_2}$) looks like an over-segmentation which groups pixels with similar color or texture into a subregion.
 With the deepening of the network, in the U2\_1 (${U_3}$), as Fig.~\ref{fig:feature_maps}(d) shows, shape information is augmented.
@@ -66,14 +73,19 @@ In U4\_3 (${U_{10}}$) and U5\_3 ($U_{13}$), more semantic information of rooftop
 The final prediction results are shown in Fig.~\ref{fig:feature_maps}(h).
 
 Secondly, to explore the effects of the feature maps generated from each feature extract stage ${\left\{F_k\right\}}$ on the final result, variants of HF-FCN which are counterpart of FCN are designed.
-Fig.~\ref{fig:Variants} shows the constrast diagram of variants of FCN and HF-FCN.
+Fig.~\ref{fig:Variants} shows the contrast diagram of variants of FCN and HF-FCN.
 Unlike FCN, a fusion operation rather than summation are leveraged to build our HF-FCN 16s, 8s and 4s.
-The PR curves, prediction results and quantitative results of HF-FCN variants are shown in Fig.~\ref{fig:Mass-variants-PR}, Fig.~\ref{fig:Mass-variants-visi} and Table~\ref{table:Mass-results} respectively. \cxj{Figure 8, Figure 9 and Table \Rmnum{5}}.
-From the disgrams, we can get the following conclusions easily. 
-First, The prediction result obtained from the last layer gets a coarse result, which loses much of location information that are mainly encoded in the shallow feature maps. Second, the largest gap presented between HF-FCN16s and HF-FCN8s about 9{\%} in recall rates, it may suggest that the most information supplement to the HF-FCN is got in middle layers. Third, the PR curves of HF-FCN4s and HF-FCN almost coincide. It illustrates the low-level information has little effect on the prediction results. Forth, with the addition of the shallow feature map, the network is more distinct for the segmentation of tiny buildings, which solves the problem of easy adhesion to adjacent buildings. 
+The precision-recall(PR) curves, prediction results and quantitative results of HF-FCN variants are shown in Fig.~\ref{fig:Mass-variants-PR}, Fig.~\ref{fig:Mass-variants-visi} and Table~\ref{table:Mass-results} respectively. \cxj{Figure 8, Figure 9 and Table \Rmnum{5}}.
+From the disgrams, we can get the following conclusions easily:
+\begin{itemize}
+ \item The prediction result obtained from the last layer gets a coarse result, which loses much of location information that are mainly encoded in the shallow feature maps. 
+ \item The largest gap presented between HF-FCN16s and HF-FCN8s about 9{\%} in recall rates, it may suggest that the most information supplement to the HF-FCN is got in middle layers.
+ \item The PR curves of HF-FCN4s and HF-FCN almost coincide. It illustrates the low-level information has little effect on the prediction results.
+ \item with the addition of the shallow feature map, the network is more distinct for the segmentation of tiny buildings, which solves the problem of easy adhesion to adjacent buildings.
+\end{itemize}
 Since, all the feature maps contained useful hierarchical information that is critical to the final prediction.
 
-\begin{figure}
+\begin{figure}  
 \begin{center}
 \includegraphics[width=8.7cm]{Figures/feature_maps.eps}
 \caption{(a) Input aerial image. (b-g) Feature maps of U1\_1, U1\_2, U2\_2, U3\_3, U4\_3, U5\_3, respectively. (h) Predicted label map. All the images are normalized to the range of ${0-255}$.}
@@ -84,25 +96,26 @@ Since, all the feature maps contained useful hierarchical information that is cr
 
 In the end, we want to prove that our fusion operations learn the connections between feature maps. The connection weights of F1\_1, F4\_1 and Part 3 are shown in Fig.~\ref{fig:Mass-weights}.
 The weights are not the same, which means that fusion operations have effect on feature combination.
-From the Fig.~\ref{fig:Mass-weights} (a) to Fig.~\ref{fig:Mass-weights} (c), the range of weights increases gradually. And from the Fig.~\ref{fig:Mass-weights} (c), we can arrive at the conclusion that the different layers have virous effects on the final result.
-For example, the U1\_1 has little effect on the prediction while the U3\_2 and U4\_3 have bigger role on the final prediction.
+From the Fig.~\ref{fig:Mass-weights} (a) to Fig.~\ref{fig:Mass-weights} (c), the range of weights increases gradually. 
+And from the Fig.~\ref{fig:Mass-weights} (c), we can arrive at the conclusion that the different layers have virous effects on the final result.
+For example, the U1\_1 has little effect on the prediction while the U3\_2 and U4\_3 play more important roles on the final prediction.
 It also in accordance with our experimental results that middle layers provide more information.
 \cxj{Weight for what? to fuse feature map? The distribution does not make too much sense. }
 
 \begin{figure}
 \vspace{-0.2cm}
 \setlength{\abovecaptionskip}{-0cm}
-\setlength{\belowcaptionskip}{-1.5cm}  
+\setlength{\belowcaptionskip}{-2cm}  
 \centering
 \includegraphics[width=8.7cm]{Figures/HF-FCN-variant-PR.eps}
-\caption{The relaxed precision-recall curves from HF-FCN variants with two slack paramters. The biggest gap occurs between HF-FCN16s and HF-FCN8s, which indicates the most additional information coming from middle layers.}
+\caption{The relaxed PR curves from HF-FCN variants with two slack parameters. The slack parameter $\rho$ on the left is 0. And $\rho$ = 3 on the right.}
 \label{fig:Mass-variants-PR}
 \end{figure}
 
 \begin{figure}
 \vspace{-0cm}
 \setlength{\abovecaptionskip}{-0cm}  
-\setlength{\belowcaptionskip}{-1.5cm}  
+\setlength{\belowcaptionskip}{-1cm}  
 \centering
 \includegraphics[width=8.7cm]{Figures/HF-FCN_variants_result.eps}
 \caption{Prediction results of HF-FCN, HF-FCN4s, HF-FCN8s and HF-FCN16s. The yellow box shows the continuous refinement of the tiny buildings. The red and blue boxes show the mutual promotion and contradiction between different layers.}
@@ -120,7 +133,7 @@ It also in accordance with our experimental results that middle layers provide m
 \end{figure*}
 
 \begin{figure}
-\vspace{-0.2cm}
+\vspace{-0.4cm}
 \setlength{\abovecaptionskip}{-0cm}
 \setlength{\belowcaptionskip}{-1cm}  
 \centering
@@ -130,7 +143,10 @@ It also in accordance with our experimental results that middle layers provide m
 \end{figure}
 
 \subsection{Vaihingen dataset}
-On Vaihingen dataset, three experiments are undertaken to explore the effects of different inputs, diverse variants and various methods. We utilize three kinds of combinations of image channels as inputs. The inputs of the 3 channels are IR, R, G and adding the nDSM(normalized Digital Surface Model) as the forth channel. Based on it, DSM is added and made up 5-channel input. We use three standards to make a more comprehensive evaluation. The evaluation results are shown in Table~\ref{table:vaihigen-3-4-5in-comp}, which illustrates that 3-channel input performed better than the other. The Rec and Pre in Table~\ref{table:vaihigen-3-4-5in-comp} means the recall and precision of prediction results. And F1 indicates the F1\_score of results. The number in bold shows the best results in validation and test set. Corresponding visual results are shown in Fig.~\ref{fig:Vaihingen-3-4-5in}.
+On Vaihingen dataset, three experiments are undertaken to explore the effects of different inputs, diverse variants and various methods. Three kinds of combinations of image channels are utilized as inputs. The inputs of the 3 channels are IR, R, G and adding the nDSM(normalized Digital Surface Model) as the forth channel. Based on it, DSM is added and made up 5-channel input. Three standards are used to make a more comprehensive evaluation. The evaluation results are shown in Table~\ref{table:vaihigen-3-4-5in-comp}, which illustrate that 3-channel input performed better than the others.
+The Rec and Pre in Table~\ref{table:vaihigen-3-4-5in-comp} means the recall and precision of prediction results. And F1 indicates the F1 score of results.
+The number in bold shows the best results of our methods and other methods. 
+Visual results of our methods with different kinds of input are shown in Fig.~\ref{fig:Vaihingen-3-4-5in}.
 
 \cxj{Do you compare with others?}
 
@@ -164,7 +180,11 @@ On Vaihingen dataset, three experiments are undertaken to explore the effects of
 \end{tabular}
 \end{table}
 
-We compare with some other methods which use the same dataset and several deep learning methods. The detail comparison results using the same dataset are shown in Fig.~\ref{fig:Vaihingen-compared-others}. From a visual perspective, our method gets a much more refined roof region, both on continuity of labels and integrity of structural. The quantitative results of deep learning methods are shown in Table~\ref{table:vaihigen-3-4-5in-comp}. Compared to DeepLab\_V2\cite{IEEEexample:chen2016deeplab}, the F1\_score of our method improves 2.2{\%}.
+Many experiments are done to compare with other methods, including methods using the same dataset and the other deep learning based methods. 
+The detail comparison results using the same dataset are shown in Fig.~\ref{fig:Vaihingen-compared-others}. 
+From a visual perspective, our method gets a much more refined roof region, both on continuity of labels and integrity of structural. 
+The quantitative results of deep learning methods are shown in Table~\ref{table:vaihigen-3-4-5in-comp}. 
+Compared to DeepLab\_V2\cite{IEEEexample:chen2016deeplab}, the F1 score of our method improves 2.2{\%}.
 
 The results of diverse variants are shown in Fig.~\ref{fig:Vaihingen-variants}. The HF-FCN\_1 in Fig.~\ref{fig:Vaihingen-variants} indicates that the last conv layer in Part 3 does not use the previous trained model to initialize. And HF-FCN means that the whole layers use the pre-trained model to initialize. From the curves, the performance of HF-FCN exceeds the variants and gets a excellent result. Additionally, using the pre-trained weights of Part 3 has a significance in the final results.
 
@@ -174,24 +194,24 @@ The results of diverse variants are shown in Fig.~\ref{fig:Vaihingen-variants}. 
 \setlength{\belowcaptionskip}{-1cm}  
 \centering
 \includegraphics[width=8.7cm]{Figures/vaihingen_variants.eps}
-\caption{Results of HF-FCN variants on Vaihingen dataset. (a) (b) shows the precision, recall and F1\_score of validation set and test set of Vaihingen dataset respectively.\cxj{Bigger font}}
+\caption{Results of HF-FCN variants on Vaihingen dataset. (a) (b) shows the precision, recall and F1 score of validation set and test set of Vaihingen dataset respectively.\cxj{Bigger font}}
 \label{fig:Vaihingen-variants}
 \end{figure}
 
 \begin{figure}
-\vspace{-0.2cm}
+\vspace{-0.4cm}
 \setlength{\abovecaptionskip}{-0cm}
-\setlength{\belowcaptionskip}{-1cm}  
+\setlength{\belowcaptionskip}{-2cm}  
 \centering
 \includegraphics[width=8.7cm]{Figures/Potsdam_variants.eps}
-\caption{Results of HF-FCN variants on Potsdam dataset. (a) (b) shows the precision, recall and F1\_score of validation set and test set of Potsdam dataset respectively.}
+\caption{Results of HF-FCN variants on Potsdam dataset. (a) (b) shows the precision, recall and F1 score of validation set and test set of Potsdam dataset respectively.}
 \label{fig:Potsdam-variants}
 \end{figure}
 
 \begin{figure}
-\vspace{-0.2cm}
+\vspace{-0.45cm}
 \setlength{\abovecaptionskip}{-0cm}
-\setlength{\belowcaptionskip}{-1cm}  
+\setlength{\belowcaptionskip}{-2cm}  
 \centering
 \includegraphics[width=8.7cm]{Figures/Vaihingen3_4_5in.eps}
 \caption{Prediction results on Vaihingen dataset. (a) (b) (c) shows results of the 3-channel input, 4-channel input and 5-channel input of Vaihingen dataset respectively. Here, TP are shown in green, FP are shown in blue and FN are in red.}
@@ -199,9 +219,8 @@ The results of diverse variants are shown in Fig.~\ref{fig:Vaihingen-variants}. 
 \end{figure}
 
 \begin{figure}
-\vspace{-0.2cm}
 \setlength{\abovecaptionskip}{-0cm}
-\setlength{\belowcaptionskip}{-2cm}  
+\setlength{\belowcaptionskip}{-1cm}  
 \centering
 \includegraphics[width=8.7cm]{Figures/Vaihingen_compared_results.eps}
 \caption{Results of different methods. (a) is input image, (b)(d)(g) are results of \cite{IEEEexample:audebert2017deep}, (c) is result of \cite{IEEEexample:marmanis2016semantic}, (f) is result of \cite{IEEEexample:unknown}, (g) is our result. The blue and yellow frames show some details between these methods.}
@@ -212,12 +231,13 @@ The results of diverse variants are shown in Fig.~\ref{fig:Vaihingen-variants}. 
  The same experiments are implemented on Potsdam dataset, including effects of different channels of input, comparing with other methods and results of diverse variants of HF-FCN. Firstly, we utilize nDSM and IR information as extra inputs based on the RGB input. The specific quantitative evaluation and intuitive visual prediction results are shown in Table~\ref{table:Potsdam-3-4-5in-comp} and Fig.~\ref{fig:Potsdam-3-4-5in-visi}. In the validation process, the 4-channel input including RGB, nDSM gets better overall performance. Meanwhile, the 5-channel input including RGB, nDSM and IR seems perform better in the course of testing. From the visual results, the 5-channel input network gets lower error detection rate which is shown on the image with small blue areas. And from the 3-channel input to 5-channel input, the F1 score increases from 0.879 to 0.891 on the validation set and increases 0.031 on the test set. It indicate that the other information of geographical feature have a certain effect on the final result.
 
  We compare HF-FCN with other methods using the Potsdam dataset and several deep learning methods. Some qualitative results of methods using Potsdam datast are shown in Fig.~\ref{fig:Potsdam-compared-others}.
- From the figure, we can easily see that HF-FCN got more remarkable segmentation results. And edges and structure of buildings are preserved better. The results of deep learning methods are shown in Table~\ref{table:Potsdam-3-4-5in-comp}. From the Table, the HF-FCN achieves the best result. And the F1\_score far higher than the others.  
+ From the figure, we can easily see that HF-FCN got more remarkable segmentation results. And edges and structure of buildings are preserved better. The results of deep learning methods are shown in Table~\ref{table:Potsdam-3-4-5in-comp}. From the Table, the HF-FCN achieves the best result. And the F1 score far higher than the others.  
 
  As done on Vaihingen dataset, contrast experiments of HF-FCN variants are implemented. The performance curve of HF-FCN variants are shown in Fig.~\ref{fig:Potsdam-variants}.
  The HF-FCN\_1 in Fig.~\ref{fig:Potsdam-variants} indicates that the last conv layer in Part 3 does not use the previous trained model to initialize. And HF-FCN means that the whole layers use the pre-trained model to initialize. Initialization of parameters has a greater promotion on the final results.
 
 \begin{table}[htbp]
+\vspace{-0.2cm} 
 \caption {Performance comparison of the results of different inputs and methods on Potsdam data set}
 \label{table:Potsdam-3-4-5in-comp}
 \centering
@@ -247,7 +267,9 @@ The results of diverse variants are shown in Fig.~\ref{fig:Vaihingen-variants}. 
 \end{table}
 
 \begin{figure}
-\vspace{-0.2cm}
+\vspace{-0cm} 
+\setlength{\abovecaptionskip}{-0cm}
+\setlength{\belowcaptionskip}{-2cm}  
 \centering
 \includegraphics[width=8.7cm]{Figures/Potsdam3_4_5in.eps}
 \caption{Prediction results on potsdam dataset. (a) (b) (c) shows results of the 3-channel input, 4-channel input and 5-channel input of Vaihingen dataset respectively. Here, TP are shown in green, FP are shown in blue and FN are in red.}
