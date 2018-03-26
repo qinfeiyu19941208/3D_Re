@@ -1,37 +1,40 @@
 \section{Results and Discussion}
 \label{Sec:Res}
 
-In this section, the proposed method using dataset ${a)}$, ${b)}$, ${c)}$ is not only compared to the recent non-deep-learning algorithms, such as Minh-CNN\cite{IEEEexample:mnih2013machine}, Satio-multi~\cite{IEEEexample:saito2016multiple} and Context~\cite{IEEEexample:audebert2017deep}, but also compared with some recent deep-learning based approaches, including FCN~\cite{IEEEexample:Long_2015_CVPR}, SegNet~\cite{IEEEexample:badrinarayanan2017segnet}, Deeplab~\cite{IEEEexample:chen2016deeplab} and U-Net~\cite{IEEEexample:ronneberger2015u}.\cxj{What else?}
-Moreover, for HF-FCN itself, we expect to investigate which kind of information extracted from feature extractors and how the effects of extracted information on the final prediction.
-Thus, some upsampled feature maps ${\left\{U_k\right\}}$ are presented.
+In this section, we compare the proposed method on the three datasets with two categories of methods, including recent non-deep-learning algorithms, such as Minh-CNN\cite{IEEEexample:mnih2013machine}, Satio-multi~\cite{IEEEexample:saito2016multiple} and Context~\cite{IEEEexample:audebert2017deep}, and deep-learning based approaches, including FCN~\cite{IEEEexample:Long_2015_CVPR}, SegNet~\cite{IEEEexample:badrinarayanan2017segnet}, Deeplab~\cite{IEEEexample:chen2016deeplab} and U-Net~\cite{IEEEexample:ronneberger2015u}.
+
+
+Moreover, for the HF-FCN itself, we expect to investigate which kind of information extracted from feature extractors and how the effects of extracted information on the final prediction.
+Thus, some up-sampled feature maps ${\left\{U_k\right\}}$ are presented.
 And several variants of HF-FCN which combine different up-sampling feature maps from Part 2 are proposed.
+%
 For dataset ${b)}$ and ${c)}$, multichannel information is provided.
 Hence, to explore the impact of other information on the results, a simple experiment is presented which concatenate different kinds of information as input of HF-FCN.
 In addition, different feature extractor networks are tried as our Part 1 network, including VGG16 Net and ResNet.
 The results and discussion of above mentioned experiments are shown below.
-\cxj{What about to change the backbone network?}
 
-\begin{figure}[t]
-\vspace{-0.2cm}
-\setlength{\abovecaptionskip}{-0cm}
-\setlength{\belowcaptionskip}{-1cm} 
-\begin{center}
+
+\begin{figure}[t] 
+\centering
 \includegraphics[width=7.8cm]{Figures/vairants.eps}
-\caption{FCN and HF-FCN variants. The feature maps generated from final group are fused into a coarse result, which is HF-FCN16s. The variant called HF-FCN8s concatenates the feature maps from the last 2 groups with the same fusion operation, and so on.}
+\caption{FCN and HF-FCN variants. The feature maps generated from final group are fused into a coarse result, which is HF-FCN16s. 
+The variant called HF-FCN8s concatenates the feature maps from the last 2 groups with the same fusion operation, and so on.}
 \label{fig:Variants}
-\end{center}
 \end{figure}
 
-\subsection{Massachusetts dataset}
+\subsection{Massachusetts Dataset}
 On the Massachusetts dataset, both the non-deep-learning algorithms and deep-learning based approaches are compared with our method. 
-Table~\ref{table:Mass-results}\cxj{4} presents the quantitative analysis with a standard and relaxed precision and recall as evaluation criterions.
-The best results of our methods and others' methods are marked in bold. 
-From the view of result, our method shows obvious superiority in terms of speed and precision. When comparing with Satio-multi-MA\&CIS~\cite{IEEEexample:saito2016multiple}, the standard and relaxed recall of our method are $5.5\%$ and $1.3\%$ higher than it. Meanwhile, the time cost is reduced from 67.84s to 1.07s and the speed is promoted about 63 times.
-These significant improvements demonstrate that HF-FCN achieves better performance in effectiveness and efficiency.
+Table~\ref{table:Mass-results} presents the quantitative analysis results with the standard and relaxed precisions, and recall as our evaluation criteria.
+%The best results of our methods and others' methods are marked in bold. 
+Our method shows obvious superiority in terms of speed and precision. 
+%
+Compared with Satio-multi-MA\&CIS~\cite{IEEEexample:saito2016multiple}, the best among the non-deep-learning algorithms, the VGG version of our HF-FCN achieves $5.5\%$ and $1.3\%$ higher standard and relaxed recall.
+%
+Meanwhile, our HF-FCN reduces the time cost from 67.84s to 1.07s, and gets a $63\times$ speedup.
+These significant improvements demonstrate that HF-FCN achieves better performance in both effectiveness and efficiency.
 
-Extensive comparisons are made between HF-FCN and other semantic segmentation methods. The quantitative and visual results are shown in Table~\ref{table:Mass-results} and Fig.~\ref{fig:Mass-visi-result}, respectively.
-Compared with U-Net~\cite{IEEEexample:ronneberger2015u}, the speed is promoted about 3 times and recall is a little higher. 
-From the visual results, our method preserve the details and integrity of the building better than others.
+While comparing our HF-FCN with recent semantic segmentation methods, as shown in Table~\ref{table:Mass-results} and Fig.~\ref{fig:Mass-visi-result}, we get about $3\times$ speedup without sacrificing the accuracy, compared with the most state-of-the art method U-Net~\cite{IEEEexample:ronneberger2015u}.
+From the visual results, our method preserves the details and integrity of the building better than others.
 \begin{table}
 \vspace{-0.2cm}
 \setlength{\belowcaptionskip}{-1cm} 
@@ -128,7 +131,7 @@ It also in accordance with our experimental results that middle layers provide m
 \setlength{\belowcaptionskip}{-1cm}  
 \centering
 \includegraphics[width=17cm,height = 7cm]{Figures/mass_visi_result.eps}
-\caption{(a) input images. (b) Results of Mnih-CNN+CRF. (c) Results of Satio\-multi\-MA\&CIS. (d) Results of FCN4s . (e) Results of SegNet. (f) Results of DeepLab\_V2. (g) Results of U-Net. (h) Our results. TP are shown in green, FP are shown in blue and FN are in red.}
+\caption{From left to right: (a) input images, results of (b) Mnih-CNN+CRF, (c) Satio\-multi\-MA\&CIS, (d) FCN4s, (e) SegNet, (f) DeepLab\_V2, (g) U-Net, and (h) Our HF-FCN. We show the true positives in green, false positives in blue, and false negatives in red.}
 \label{fig:Mass-visi-result}
 \end{figure*}
 
