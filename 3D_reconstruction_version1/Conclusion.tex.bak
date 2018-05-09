@@ -1,0 +1,10 @@
+\section{Conclusion}
+\label{Sec:Con}
+ In this paper, an efficient building detection approach is proposed and has a further application in building reconstruction.
+ Using proposed feature fusion operations, a novel CNN architecture is presented for building extraction, named HF-FCN.
+ Unlike previous shallow-CNNs algorithms, we provide an end-to-end network for building extraction.
+ And it is robust to the different scales of buildings and efficient for a large-scale remote sensing images.
+ On the other hand, distinct from the previous deep learning based methods, we utilize the multi-scale inherent information within the CNN and refine the details by a fusion manner stage by stage.
+ In addition, an application of 3D building reconstruction depend on the segmentation results is implemented.
+ Finally, our study suggests that even with the powerful semantic expressive ability of CNNs and their good robustness to scale, it is still critical to address multi-scale building extraction problem by utilizing hierarchical feature maps encoded in CNNs.
+

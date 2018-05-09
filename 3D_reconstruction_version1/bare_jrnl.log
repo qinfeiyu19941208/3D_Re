@@ -1,0 +1,890 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2018.3.12)  30 MAR 2018 16:43
+entering extended mode
+**./bare_jrnl.tex
+(bare_jrnl.tex
+LaTeX2e <2017-04-15>
+Babel <3.15> and hyphenation patterns for 75 language(s) loaded.
+(IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpdimenC=\dimen104
+\@IEEEtrantmpcountA=\count79
+\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmpcountC=\count81
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
+
+(D:\ctex\MiKTeX\tex\latex\psnfss\ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen105
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen106
+\CLASSINFOnormalsizeunitybaselineskip=\dimen107
+\IEEEnormaljot=\dimen108
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen109
+\IEEEquantizedlengthdiff=\dimen110
+\IEEEquantizedtextheightdiff=\dimen111
+\IEEEilabelindentA=\dimen112
+\IEEEilabelindentB=\dimen113
+\IEEEilabelindent=\dimen114
+\IEEEelabelindent=\dimen115
+\IEEEdlabelindent=\dimen116
+\IEEElabelindent=\dimen117
+\IEEEiednormlabelsep=\dimen118
+\IEEEiedmathlabelsep=\dimen119
+\IEEEiedtopsep=\skip41
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@IEEEsubequation=\count86
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count87
+\c@table=\count88
+\@IEEEeqnnumcols=\count89
+\@IEEEeqncolcnt=\count90
+\@IEEEsubeqnnumrollback=\count91
+\@IEEEquantizeheightA=\dimen120
+\@IEEEquantizeheightB=\dimen121
+\@IEEEquantizeheightC=\dimen122
+\@IEEEquantizeprevdepth=\dimen123
+\@IEEEquantizemultiple=\count92
+\@IEEEquantizeboxA=\box26
+\@IEEEtmpitemindent=\dimen124
+\IEEEPARstartletwidth=\dimen125
+\c@IEEEbiography=\count93
+\@IEEEtranrubishbin=\box27
+) (D:\ctex\MiKTeX\tex\latex\graphics\graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(D:\ctex\MiKTeX\tex\latex\graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(D:\ctex\MiKTeX\tex\latex\graphics\graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(D:\ctex\MiKTeX\tex\latex\graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(D:\ctex\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(D:\ctex\MiKTeX\tex\latex\graphics-def\pdftex.def
+File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen126
+\Gin@req@width=\dimen127
+)
+(D:\ctex\MiKTeX\tex\latex\oberdiek\epstopdf.sty
+Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
+
+(D:\ctex\MiKTeX\tex\latex\oberdiek\epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(D:\ctex\MiKTeX\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(D:\ctex\MiKTeX\tex\latex\oberdiek\grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(D:\ctex\MiKTeX\tex\generic\oberdiek\kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(D:\ctex\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(D:\ctex\MiKTeX\tex\latex\oberdiek\kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(D:\ctex\MiKTeX\tex\generic\oberdiek\kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(D:\ctex\MiKTeX\tex\generic\oberdiek\etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(D:\ctex\MiKTeX\tex\generic\oberdiek\ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(D:\ctex\MiKTeX\tex\generic\oberdiek\pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(D:\ctex\MiKTeX\tex\generic\oberdiek\ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+))
+(D:\ctex\MiKTeX\tex\latex\tools\indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+(D:\ctex\MiKTeX\tex\latex\cite\cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(D:\ctex\MiKTeX\tex\latex\tools\verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks16
+\verbatim@line=\toks17
+\verbatim@in@stream=\read1
+)
+(D:\ctex\MiKTeX\tex\latex\amsmath\amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+(D:\ctex\MiKTeX\tex\latex\amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(D:\ctex\MiKTeX\tex\latex\amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen128
+))
+(D:\ctex\MiKTeX\tex\latex\amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen129
+)
+(D:\ctex\MiKTeX\tex\latex\amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count94
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count95
+\leftroot@=\count96
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count97
+\DOTSCASE@=\count98
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen130
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count99
+\c@MaxMatrixCols=\count100
+\dotsspace@=\muskip10
+\c@parentequation=\count101
+\dspbrk@lvl=\count102
+\tag@help=\toks19
+\row@=\count103
+\column@=\count104
+\maxfields@=\count105
+\andhelp@=\toks20
+\eqnshift@=\dimen131
+\alignsep@=\dimen132
+\tagshift@=\dimen133
+\tagwidth@=\dimen134
+\totwidth@=\dimen135
+\lineht@=\dimen136
+\@envbody=\toks21
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(D:\ctex\MiKTeX\tex\latex\multirow\multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip47
+\multirow@cntb=\count106
+\multirow@dima=\skip48
+\bigstrutjot=\dimen137
+)
+(D:\ctex\MiKTeX\tex\latex\tools\bm.sty
+Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup4
+\symboldletters=\mathgroup5
+\symboldsymbols=\mathgroup6
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
+)
+(D:\ctex\MiKTeX\tex\latex\tools\array.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen138
+\extrarowheight=\dimen139
+\NC@list=\toks23
+\extratabsurround=\skip49
+\backup@length=\skip50
+)
+(D:\ctex\MiKTeX\tex\latex\subfigure\subfigure.sty
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip51
+\subfigcapskip=\skip52
+\subfigcaptopadj=\dimen140
+\subfigbottomskip=\skip53
+\subfigcapmargin=\dimen141
+\subfiglabelskip=\skip54
+\c@subfigure=\count107
+\c@lofdepth=\count108
+\c@subtable=\count109
+\c@lotdepth=\count110
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(D:\ctex\MiKTeX\tex\latex\subfigure\subfigure.cfg)
+\subfig@top=\skip55
+\subfig@bottom=\skip56
+)
+(D:\ctex\MiKTeX\tex\latex\hyperref\hyperref.sty
+Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
+
+(D:\ctex\MiKTeX\tex\generic\oberdiek\hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(D:\ctex\MiKTeX\tex\generic\oberdiek\hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package hobsub Info: Skipping package `etexcmds' (already loaded).
+Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
+Package hobsub Info: Skipping package `kvdefinekeys' (already loaded).
+Package hobsub Info: Skipping package `pdftexcmds' (already loaded).
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(D:\ctex\MiKTeX\tex\generic\ifxetex\ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(D:\ctex\MiKTeX\tex\latex\oberdiek\auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen142
+\Hy@linkcounter=\count111
+\Hy@pagecounter=\count112
+
+(D:\ctex\MiKTeX\tex\latex\hyperref\pd1enc.def
+File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count113
+
+(D:\ctex\MiKTeX\tex\latex\00miktex\hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4374.
+Package hyperref Info: Hyper figures OFF on input line 4498.
+Package hyperref Info: Link nesting OFF on input line 4503.
+Package hyperref Info: Hyper index ON on input line 4506.
+Package hyperref Info: Plain pages OFF on input line 4513.
+Package hyperref Info: Backreferencing OFF on input line 4518.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4751.
+\c@Hy@tempcnt=\count114
+
+(D:\ctex\MiKTeX\tex\latex\url\url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5104.
+\XeTeXLinkMargin=\dimen143
+\Fld@menulength=\count115
+\Field@Width=\dimen144
+\Fld@charsize=\dimen145
+Package hyperref Info: Hyper figures OFF on input line 6358.
+Package hyperref Info: Link nesting OFF on input line 6363.
+Package hyperref Info: Hyper index ON on input line 6366.
+Package hyperref Info: backreferencing OFF on input line 6373.
+Package hyperref Info: Link coloring ON on input line 6376.
+Package hyperref Info: Link coloring with OCG OFF on input line 6383.
+Package hyperref Info: PDF/A mode OFF on input line 6388.
+LaTeX Info: Redefining \ref on input line 6428.
+LaTeX Info: Redefining \pageref on input line 6432.
+\Hy@abspage=\count116
+\c@Item=\count117
+\c@Hfootnote=\count118
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(D:\ctex\MiKTeX\tex\latex\hyperref\hpdftex.def
+File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
+\Fld@listcount=\count119
+\c@bookmark@seq@number=\count120
+
+(D:\ctex\MiKTeX\tex\latex\oberdiek\rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip57
+) (bare_jrnl.aux)
+\openout1 = `bare_jrnl.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+
+-- Lines per column: 58 (exact).
+(D:\ctex\MiKTeX\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count121
+\scratchdimen=\dimen146
+\scratchbox=\box30
+\nofMPsegments=\count122
+\nofMParguments=\count123
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count124
+\MPscratchDim=\dimen147
+\MPnumerator=\count125
+\makeMPintoPDFobject=\count126
+\everyMPtoPDFconversion=\toks25
+)
+\AtBeginShipoutBox=\box31
+ (D:\ctex\MiKTeX\tex\latex\graphics\color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(D:\ctex\MiKTeX\tex\latex\graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+Package hyperref Info: Link coloring ON on input line 42.
+
+(D:\ctex\MiKTeX\tex\latex\hyperref\nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(D:\ctex\MiKTeX\tex\generic\oberdiek\gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count127
+)
+LaTeX Info: Redefining \ref on input line 42.
+LaTeX Info: Redefining \pageref on input line 42.
+LaTeX Info: Redefining \nameref on input line 42.
+ (bare_jrnl.out)
+(bare_jrnl.out)
+\@outlinefile=\write3
+\openout3 = `bare_jrnl.out'.
+
+ (Abstract.tex) (Intro.tex
+
+LaTeX Warning: File `Figures/challenge.eps' not found on input line 22.
+
+Package epstopdf Info: Source file: <Figures/challenge.eps>
+(epstopdf)             Output file: <Figures/challenge-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-03-26 10:10:29
+(epstopdf)                    size: 107227 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/challenge-eps-conve
+rted-to.pdf Figures/challenge.eps>
+(epstopdf)             \includegraphics on input line 22.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/challenge-eps-converted-to.pdf, id=64, pagebox=cropbox, 473.77pt x 132
+.495pt>
+File: Figures/challenge-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/challenge-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/challenge-eps-converted-to.pdf  used on input 
+line 22. on input line 22.
+Package pdftex.def Info: Requested size: 247.53888pt x 69.22733pt on input line
+ 22.
+[1{C:/CTEX/UserData/pdftex/config/pdftex.map}
+
+
+ <./Figures/challenge-eps-converted-to.pdf>]) (RelatedWork.tex [2]) (HF-FCN.tex
+Package epstopdf Info: Source file: <Figures/Fusion_Operation.eps>
+(epstopdf)                    date: 2018-03-29 16:19:52
+(epstopdf)                    size: 835502 bytes
+(epstopdf)             Output file: <Figures/Fusion_Operation-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2018-03-29 16:19:59
+(epstopdf)                    size: 37690 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/Fusion_Operation-ep
+s-converted-to.pdf Figures/Fusion_Operation.eps>
+(epstopdf)             \includegraphics on input line 15.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/Fusion_Operation-eps-converted-to.pdf, id=165, pagebox=cropbox, 320.19
+624pt x 366.36874pt>
+File: Figures/Fusion_Operation-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/Fusion_Operation-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/Fusion_Operation-eps-converted-to.pdf  used on
+ input line 15. on input line 15.
+Package pdftex.def Info: Requested size: 241.84842pt x 276.7269pt on input line
+ 15.
+ [3]) (Experiments.tex [4 <./Figures/Fusion_Operation-eps-converted-to.pdf>]
+
+LaTeX Warning: File `Figures/datasets.eps' not found on input line 57.
+
+Package epstopdf Info: Source file: <Figures/datasets.eps>
+(epstopdf)             Output file: <Figures/datasets-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-03-26 10:10:29
+(epstopdf)                    size: 87809 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/datasets-eps-conver
+ted-to.pdf Figures/datasets.eps>
+(epstopdf)             \includegraphics on input line 57.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/datasets-eps-converted-to.pdf, id=221, pagebox=cropbox, 394.47375pt x 
+150.5625pt>
+File: Figures/datasets-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/datasets-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/datasets-eps-converted-to.pdf  used on input l
+ine 57. on input line 57.
+Package pdftex.def Info: Requested size: 227.62204pt x 86.87831pt on input line
+ 57.
+) (Results.tex
+
+LaTeX Warning: File `Figures/vairants.eps' not found on input line 19.
+
+Package epstopdf Info: Source file: <Figures/vairants.eps>
+(epstopdf)             Output file: <Figures/vairants-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-03-26 10:10:29
+(epstopdf)                    size: 32272 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/vairants-eps-conver
+ted-to.pdf Figures/vairants.eps>
+(epstopdf)             \includegraphics on input line 19.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/vairants-eps-converted-to.pdf, id=231, pagebox=cropbox, 274.02374pt x 
+295.1025pt>
+File: Figures/vairants-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/vairants-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/vairants-eps-converted-to.pdf  used on input l
+ine 19. on input line 19.
+Package pdftex.def Info: Requested size: 221.93158pt x 239.00919pt on input lin
+e 19.
+[5 <./Figures/datasets-eps-converted-to.pdf>]
+Overfull \hbox (4.27174pt too wide) in paragraph at lines 45--68
+ [][] 
+ []
+
+
+LaTeX Warning: File `Figures/feature_maps.eps' not found on input line 95.
+
+Package epstopdf Info: Source file: <Figures/feature_maps.eps>
+(epstopdf)             Output file: <Figures/feature_maps-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2018-03-26 10:10:29
+(epstopdf)                    size: 109980 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/feature_maps-eps-co
+nverted-to.pdf Figures/feature_maps.eps>
+(epstopdf)             \includegraphics on input line 95.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/feature_maps-eps-converted-to.pdf, id=281, pagebox=cropbox, 562.1pt x 
+318.18875pt>
+File: Figures/feature_maps-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/feature_maps-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/feature_maps-eps-converted-to.pdf  used on inp
+ut line 95. on input line 95.
+Package pdftex.def Info: Requested size: 247.53888pt x 140.12485pt on input lin
+e 95.
+[6 <./Figures/vairants-eps-converted-to.pdf>]
+
+LaTeX Warning: File `Figures/HF-FCN-variant-PR.eps' not found on input line 116
+.
+
+Package epstopdf Info: Source file: <Figures/HF-FCN-variant-PR.eps>
+(epstopdf)             Output file: <Figures/HF-FCN-variant-PR-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2018-03-26 10:10:29
+(epstopdf)                    size: 167185 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/HF-FCN-variant-PR-e
+ps-converted-to.pdf Figures/HF-FCN-variant-PR.eps>
+(epstopdf)             \includegraphics on input line 116.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/HF-FCN-variant-PR-eps-converted-to.pdf, id=312, pagebox=cropbox, 598.2
+35pt x 247.92625pt>
+File: Figures/HF-FCN-variant-PR-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/HF-FCN-variant-PR-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/HF-FCN-variant-PR-eps-converted-to.pdf  used o
+n input line 116. on input line 116.
+Package pdftex.def Info: Requested size: 247.53888pt x 102.58861pt on input lin
+e 116.
+
+LaTeX Warning: File `Figures/HF-FCN_variants_result.eps' not found on input lin
+e 126.
+
+Package epstopdf Info: Source file: <Figures/HF-FCN_variants_result.eps>
+(epstopdf)             Output file: <Figures/HF-FCN_variants_result-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2018-03-26 10:10:29
+(epstopdf)                    size: 30413 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/HF-FCN_variants_res
+ult-eps-converted-to.pdf Figures/HF-FCN_variants_result.eps>
+(epstopdf)             \includegraphics on input line 126.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/HF-FCN_variants_result-eps-converted-to.pdf, id=313, pagebox=cropbox, 
+520.94624pt x 151.56625pt>
+File: Figures/HF-FCN_variants_result-eps-converted-to.pdf Graphic file (type pd
+f)
+<use Figures/HF-FCN_variants_result-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/HF-FCN_variants_result-eps-converted-to.pdf  u
+sed on input line 126. on input line 126.
+Package pdftex.def Info: Requested size: 247.53888pt x 72.02014pt on input line
+ 126.
+Package epstopdf Info: Source file: <Figures/mass_visi_result.eps>
+(epstopdf)                    date: 2018-03-30 13:49:29
+(epstopdf)                    size: 11560118 bytes
+(epstopdf)             Output file: <Figures/mass_visi_result-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2018-03-30 13:50:02
+(epstopdf)                    size: 912823 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/mass_visi_result-ep
+s-converted-to.pdf Figures/mass_visi_result.eps>
+(epstopdf)             \includegraphics on input line 136.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/mass_visi_result-eps-converted-to.pdf, id=314, pagebox=cropbox, 551.05
+875pt x 189.70876pt>
+File: Figures/mass_visi_result-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/mass_visi_result-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/mass_visi_result-eps-converted-to.pdf  used on
+ input line 136. on input line 136.
+Package pdftex.def Info: Requested size: 512.20184pt x 193.48299pt on input lin
+e 136.
+Package epstopdf Info: Source file: <Figures/weights.eps>
+(epstopdf)                    date: 2018-03-26 10:10:29
+(epstopdf)                    size: 1584950 bytes
+(epstopdf)             Output file: <Figures/weights-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-03-26 10:10:29
+(epstopdf)                    size: 238698 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/weights-eps-convert
+ed-to.pdf Figures/weights.eps>
+(epstopdf)             \includegraphics on input line 146.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/weights-eps-converted-to.pdf, id=315, pagebox=cropbox, 234.8775pt x 75
+.28125pt>
+File: Figures/weights-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/weights-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/weights-eps-converted-to.pdf  used on input li
+ne 146. on input line 146.
+Package pdftex.def Info: Requested size: 256.0748pt x 82.07559pt on input line 
+146.
+
+Overfull \hbox (4.0748pt too wide) in paragraph at lines 146--147
+ [][] 
+ []
+
+
+LaTeX Warning: File `Figures/vaihingen_variants.eps' not found on input line 19
+8.
+
+Package epstopdf Info: Source file: <Figures/vaihingen_variants.eps>
+(epstopdf)             Output file: <Figures/vaihingen_variants-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2018-03-26 10:10:29
+(epstopdf)                    size: 108480 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/vaihingen_variants-
+eps-converted-to.pdf Figures/vaihingen_variants.eps>
+(epstopdf)             \includegraphics on input line 198.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/vaihingen_variants-eps-converted-to.pdf, id=329, pagebox=cropbox, 597.
+23125pt x 227.85126pt>
+File: Figures/vaihingen_variants-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/vaihingen_variants-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/vaihingen_variants-eps-converted-to.pdf  used 
+on input line 198. on input line 198.
+Package pdftex.def Info: Requested size: 247.53888pt x 94.4383pt on input line 
+198.
+
+LaTeX Warning: File `Figures/Potsdam_variants.eps' not found on input line 208.
+
+
+Package epstopdf Info: Source file: <Figures/Potsdam_variants.eps>
+(epstopdf)             Output file: <Figures/Potsdam_variants-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2018-03-26 10:10:29
+(epstopdf)                    size: 109246 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/Potsdam_variants-ep
+s-converted-to.pdf Figures/Potsdam_variants.eps>
+(epstopdf)             \includegraphics on input line 208.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/Potsdam_variants-eps-converted-to.pdf, id=330, pagebox=cropbox, 592.21
+25pt x 245.91875pt>
+File: Figures/Potsdam_variants-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/Potsdam_variants-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/Potsdam_variants-eps-converted-to.pdf  used on
+ input line 208. on input line 208.
+Package pdftex.def Info: Requested size: 247.53888pt x 102.78984pt on input lin
+e 208.
+
+LaTeX Warning: File `Figures/Vaihingen3_4_5in.eps' not found on input line 218.
+
+
+Package epstopdf Info: Source file: <Figures/Vaihingen3_4_5in.eps>
+(epstopdf)             Output file: <Figures/Vaihingen3_4_5in-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2018-03-26 10:10:29
+(epstopdf)                    size: 2399574 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/Vaihingen3_4_5in-ep
+s-converted-to.pdf Figures/Vaihingen3_4_5in.eps>
+(epstopdf)             \includegraphics on input line 218.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/Vaihingen3_4_5in-eps-converted-to.pdf, id=331, pagebox=cropbox, 232.87
+pt x 208.78pt>
+File: Figures/Vaihingen3_4_5in-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/Vaihingen3_4_5in-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/Vaihingen3_4_5in-eps-converted-to.pdf  used on
+ input line 218. on input line 218.
+Package pdftex.def Info: Requested size: 247.53888pt x 221.93967pt on input lin
+e 218.
+
+LaTeX Warning: File `Figures/Vaihingen_compared_results.eps' not found on input
+ line 227.
+
+Package epstopdf Info: Source file: <Figures/Vaihingen_compared_results.eps>
+(epstopdf)             Output file: <Figures/Vaihingen_compared_results-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2018-03-26 10:10:29
+(epstopdf)                    size: 104635 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/Vaihingen_compared_
+results-eps-converted-to.pdf Figures/Vaihingen_compared_results.eps>
+(epstopdf)             \includegraphics on input line 227.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/Vaihingen_compared_results-eps-converted-to.pdf, id=332, pagebox=cropb
+ox, 385.44pt x 214.8025pt>
+File: Figures/Vaihingen_compared_results-eps-converted-to.pdf Graphic file (typ
+e pdf)
+<use Figures/Vaihingen_compared_results-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/Vaihingen_compared_results-eps-converted-to.pd
+f  used on input line 227. on input line 227.
+Package pdftex.def Info: Requested size: 247.53888pt x 137.95166pt on input lin
+e 227.
+[7 <./Figures/feature_maps-eps-converted-to.pdf> <./Figures/HF-FCN-variant-PR-e
+ps-converted-to.pdf> <./Figures/HF-FCN_variants_result-eps-converted-to.pdf>]
+[8 <./Figures/mass_visi_result-eps-converted-to.pdf> <./Figures/weights-eps-con
+verted-to.pdf> <./Figures/vaihingen_variants-eps-converted-to.pdf> <./Figures/P
+otsdam_variants-eps-converted-to.pdf> <./Figures/Vaihingen3_4_5in-eps-converted
+-to.pdf> <./Figures/Vaihingen_compared_results-eps-converted-to.pdf>]
+
+LaTeX Warning: File `Figures/Potsdam3_4_5in.eps' not found on input line 272.
+
+Package epstopdf Info: Source file: <Figures/Potsdam3_4_5in.eps>
+(epstopdf)             Output file: <Figures/Potsdam3_4_5in-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2018-03-26 10:10:29
+(epstopdf)                    size: 4083795 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/Potsdam3_4_5in-eps-
+converted-to.pdf Figures/Potsdam3_4_5in.eps>
+(epstopdf)             \includegraphics on input line 272.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/Potsdam3_4_5in-eps-converted-to.pdf, id=509, pagebox=cropbox, 511.9125
+pt x 364.36125pt>
+File: Figures/Potsdam3_4_5in-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/Potsdam3_4_5in-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/Potsdam3_4_5in-eps-converted-to.pdf  used on i
+nput line 272. on input line 272.
+Package pdftex.def Info: Requested size: 247.53888pt x 176.18681pt on input lin
+e 272.
+
+LaTeX Warning: File `Figures/Potsdam_compared_results.eps' not found on input l
+ine 280.
+
+Package epstopdf Info: Source file: <Figures/Potsdam_compared_results.eps>
+(epstopdf)             Output file: <Figures/Potsdam_compared_results-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2018-03-26 10:10:29
+(epstopdf)                    size: 135784 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/Potsdam_compared_re
+sults-eps-converted-to.pdf Figures/Potsdam_compared_results.eps>
+(epstopdf)             \includegraphics on input line 280.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/Potsdam_compared_results-eps-converted-to.pdf, id=510, pagebox=cropbox
+, 490.83376pt x 204.765pt>
+File: Figures/Potsdam_compared_results-eps-converted-to.pdf Graphic file (type 
+pdf)
+<use Figures/Potsdam_compared_results-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/Potsdam_compared_results-eps-converted-to.pdf 
+ used on input line 280. on input line 280.
+Package pdftex.def Info: Requested size: 247.53888pt x 103.26645pt on input lin
+e 280.
+) (Application.tex
+
+LaTeX Warning: File `Figures/Vaihigen_3Dmodelling.eps' not found on input line 
+11.
+
+Package epstopdf Info: Source file: <Figures/Vaihigen_3Dmodelling.eps>
+(epstopdf)             Output file: <Figures/Vaihigen_3Dmodelling-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2018-03-26 10:10:29
+(epstopdf)                    size: 256970 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/Vaihigen_3Dmodellin
+g-eps-converted-to.pdf Figures/Vaihigen_3Dmodelling.eps>
+(epstopdf)             \includegraphics on input line 11.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/Vaihigen_3Dmodelling-eps-converted-to.pdf, id=516, pagebox=cropbox, 49
+1.8375pt x 237.88875pt>
+File: Figures/Vaihigen_3Dmodelling-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Figures/Vaihigen_3Dmodelling-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/Vaihigen_3Dmodelling-eps-converted-to.pdf  use
+d on input line 11. on input line 11.
+Package pdftex.def Info: Requested size: 247.53888pt x 119.72812pt on input lin
+e 11.
+
+LaTeX Warning: File `Figures/potsdam_models.eps' not found on input line 20.
+
+Package epstopdf Info: Source file: <Figures/potsdam_models.eps>
+(epstopdf)             Output file: <Figures/potsdam_models-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2018-03-26 10:10:29
+(epstopdf)                    size: 330538 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/potsdam_models-eps-
+converted-to.pdf Figures/potsdam_models.eps>
+(epstopdf)             \includegraphics on input line 20.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/potsdam_models-eps-converted-to.pdf, id=517, pagebox=cropbox, 434.6237
+5pt x 187.70125pt>
+File: Figures/potsdam_models-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/potsdam_models-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/potsdam_models-eps-converted-to.pdf  used on i
+nput line 20. on input line 20.
+Package pdftex.def Info: Requested size: 247.53888pt x 106.90776pt on input lin
+e 20.
+) (Conclusion.tex [9 <./Figures/Potsdam3_4_5in-eps-converted-to.pdf> <./Figures
+/Potsdam_compared_results-eps-converted-to.pdf> <./Figures/Vaihigen_3Dmodelling
+-eps-converted-to.pdf> <./Figures/potsdam_models-eps-converted-to.pdf>])
+(bare_jrnl.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
+ [10]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
+ (bare_jrnl.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 79.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 79.
+
+
+Package rerunfilecheck Warning: File `bare_jrnl.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `bare_jrnl.out':
+(rerunfilecheck)             Before: 968C5F646C61333054AD3D9DB178CB41;2562
+(rerunfilecheck)             After:  1928154ED79FF44D36E4DB9E8C94F989;826.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 79.
+ ) 
+Here is how much of TeX's memory you used:
+ 7268 strings out of 493312
+ 112966 string characters out of 3144618
+ 214235 words of memory out of 3000000
+ 10568 multiletter control sequences out of 15000+200000
+ 50666 words of font info for 103 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 42i,11n,28p,1099b,342s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/ctex/MiKTeX/fonts/enc/dvips/base/8r.enc}<D:/ctex/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmbx8.pfb><D:/ctex/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.p
+fb><D:/ctex/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><D:/ctex/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/ctex/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmmi6.pfb><D:/ctex/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
+<D:/ctex/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/ctex/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmmi9.pfb><D:/ctex/MiKTeX/fonts/type1/public/amsfonts/
+cmextra/cmmib8.pfb><D:/ctex/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:
+/ctex/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/ctex/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmr7.pfb><D:/ctex/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+r8.pfb><D:/ctex/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/ctex/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/ctex/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmsy6.pfb><D:/ctex/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D
+:/ctex/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/ctex/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmsy9.pfb><D:/ctex/MiKTeX/fonts/type1/urw/times/utmb8a.p
+fb><D:/ctex/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><D:/ctex/MiKTeX/fonts/type
+1/urw/times/utmr8a.pfb><D:/ctex/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bare_jrnl.pdf (10 pages, 9252117 bytes).
+PDF statistics:
+ 695 PDF objects out of 1000 (max. 8388607)
+ 88 named destinations out of 1000 (max. 500000)
+ 198 words of extra memory for PDF output out of 10000 (max. 10000000)
+

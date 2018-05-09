@@ -4,28 +4,27 @@
 
 Building extraction is one of the most fundamental problems in the remote sensing area, which has been studied for nearly 30 years.
 As time goes by, many research achievements have sprung up.
-We roughly divide these methods into three groups: shape-prior-based, energy-based, and machine learning methods. 
+We roughly divide these methods into three groups: shape-prior-based, energy-based, and machine learning methods.
 %Meanwhile, the machine learning methods could be divide into two types: shallow networks and deep learning methods.
 %Here we briefly review some representative methods that have evolved in the past decades in the different groups respectively.
 Moreover, several related work which are popular in compute vision domain similar to our task are also introduced.
- 
- 
-\noindent\textbf{Methods Based on Shape Priors.} 
+
+
+\noindent\textbf{Methods Based on Shape Priors.}
 During early days, without plenty of data and efficient learning strategy, early methods are mainly based on prior knowledge that describes the roof shapes and appearances.
 %
 Assuming that buildings are typically composed of rectangular components,
 Huertas and Nevatia \cite{IEEEexample:huertas1988detecting} detected lines and corners, traced object boundaries and used shadows to verify building hypotheses.
 %
-Later, a system~\cite{IEEEexample:noronha2001detection} for building detection and modeling was proposed with the assumption that the roofs were flat or symmetric, and walls were vertical.
+Later, a system~\cite{IEEEexample:noronha2001detection} for building detection and modeling was proposed \fymd{using a hypothesize and verify approach. The approach presumed that the rectangular roof components were formed by lines and verified by finding evidence of visible walls and shadows.}
 With known ground height and detected rooftop, the reconstructed models could be soon obtained.
 Further, Noronha and Nosrati \cite{IEEEexample:nosrati2009novel} transformed the line and intersection points in remote sensing images into a graph presentation, and turned the problem of polygon detection into cycle detection in the graph.
-%It was still estimated on assumption that the buildings are polygonal.
-Later, Izadi and Saeedi\cite{IEEEexample:izadi2012three} presented a complete system for building detection and modeling. 
+Later, Izadi and Saeedi\cite{IEEEexample:izadi2012three} presented a complete system for building detection and modeling.
 \cxj{what is its relation with \cite{IEEEexample:noronha2001detection}? }
-In the stage of extracting buildings, a tree consisting of intersection points of lines was created and refined according to the found hypotheses.
+\fymd{Differ from the \cite{IEEEexample:noronha2001detection},} in the stage of extracting buildings, a tree consisting of intersection points of lines was created and refined according to the found hypotheses.
 The sun azimuth and elevation angles were used to estimate building heights with the shadow afterwards.
 In recent years, very high resolution (VHR) optical satellite imagery could be obtained easily.
-Wang et al~\cite{IEEEexample:wang2015efficient} proposed an efficient method for automatic rectangular building extraction by detecting line segments and grouping them based on path integrity and closed contour. Nevertheless, the method depends on the clear remote sensing images and accurate line segmentation heavily. 
+Wang et al~\cite{IEEEexample:wang2015efficient} proposed an efficient method for automatic rectangular building extraction by detecting line segments and grouping them based on path integrity and closed contour. Nevertheless, the method depends on the clear remote sensing images and accurate line segmentation heavily.
 
 
 The aforementioned prior-based methods achieves good performance in rural scenes with sparse buildings.
@@ -35,19 +34,17 @@ Second, they may fail to deal with complicated cases, for instance, buildings ar
 Third, the algorithms using shadows to verify corners and estimate height greatly rely on clear shadows and sparse building environment.
 
 
-\noindent\textbf{Energy-based Methods.} Energy-based methods have been applied to automatic extraction of rooftops in satellite images.
-Cote and Saeedi~\cite{IEEEexample:cote2013automatic} proposed a level set evolution method that employs detected corners as endpoints of the initial curves.
-Peng et al~\cite{IEEEexample:peng2005improved} used an improved snake model to refine the coarse segmentation results.
-Later, the urban-region-detection problems were casted as one of multiple subgraph matching by Sirmacek and Unsalan\cite{IEEEexample:sirmacek2009urban}.
+\noindent\textbf{Energy-based Methods.} \fymd{Meanwhile, several energy-based methods in image segmentation domain have been applied to automatic rooftop extraction. At first, Peng et al~\cite{IEEEexample:peng2005improved} used an improved snake model to refine the coarse segmentation results. The urban-region-detection problems were casted as one of multiple subgraph matching by Sirmacek and Unsalan\cite{IEEEexample:sirmacek2009urban}.
 They considered each SIFT keypoint as a vertex, neighborhood between vertexes as edges of the graph and converted the original image segmentation problem into a graph-cut optimization process.
+Later, a level set evolution method was proposed by Cote and Saeedi\cite{IEEEexample:cote2013automatic} which employed detected corners as endpoints of the initial curves and refined by level set evolution.}
 \cxj{what is the order of the related papers? year? method?}
 %
 The most crucial part of energy-based methods is a good initialization, which is very sensitive to image contents.
 Therefore, energy-based methods are not applicable to the high-altitude remote sensing images of intensive buildings with severe shadow occlusions and diverse building appearances.
-%It is generally known that energy-based methods are greatly influenced by the nature of the images. 
+%It is generally known that energy-based methods are greatly influenced by the nature of the images.
 
 
-\noindent\textbf{Shallow Networks.} 
+\noindent\textbf{Shallow Networks.}
 While machine learning have achieved great success in the field of computer vision, a large amount of effort has also been put on the building extraction task using machine learning technique.
 At first, Mnih \cite{IEEEexample:mnih2013machine} proposed a shallow patch-based network which has five layers with a $64\times 64$ aerial patch as input.
 The output of the network was processed by conditional random fields (CRFs) to constrain the segmentation continuity.
@@ -62,7 +59,7 @@ Unlike \cite{IEEEexample:paisitkriangkrai2015effective}, \cite{IEEEexample:he201
 Other appearance information, such as edges, are also harnessed to guide the shallow network to extract buildings~\cite{IEEEexample:zhao2017contextually}.
 
 
-Although these methods outperformed traditional methods, there are still several disadvantages. 
+Although these methods outperformed traditional methods, there are still several disadvantages.
 (a) The methods using shallow networks always cast the problem of building segmentation as a patch classification problem. It greatly reduces the segmentation accuracy.
 (b) Most of them are processed by at least one kind of post-processing, which is time-consuming.
 
@@ -70,26 +67,24 @@ Although these methods outperformed traditional methods, there are still several
 Hence, Liu et al.~\cite{IEEEexample:liu2017dense} conducted a further research on the formulation proposed by Paisitkriangkrai \cite{IEEEexample:paisitkriangkrai2015effective}, but with FCN instead of shallow networks.
 A higher-order CRF was applied as post-processing.
 %Unlike traditional CRFs, the label consistency for the pixels within the same segment were enforced by higher-order CRFs.
-In order to reduce the information loss in pooling layers and accelerate the decoding of FCN, SegNet~\cite{IEEEexample:badrinarayanan2017segnet} delivers pooling indices \cxj{indexes?} computed in the max-pooling to the decoder.
+In order to reduce the information loss in pooling layers and accelerate the decodeing of FCN, SegNet~\cite{IEEEexample:badrinarayanan2017segnet} delivers pooling \fymd{indices}\cxj{indexes?} computed in the max-pooling stage to the decoder.
 \cxj{Is it a common strategy?}
-It eliminated the need of learning during the up-sampling stage and retained partial information during pooling stage while preserving segmentation performance well. \cxj{unclear here.}
+\fymd{By using preserved pooling indices mask, it eliminated the need of learning and recovered lost information during unpooling stage.}\cxj{unclear here.}
 %
-Accordingly, Audebert et al. \cite{IEEEexample:audebert2017deep} applied SegNet \cxj{without any modifications?} to semantic labeling of remote sensing images and got better prediction results compared to traditional methods.
+Accordingly, \fymd{Audebert et al. \cite{IEEEexample:audebert2017deep} explored how the deep learning methods could be used in remote sensing. They} applied SegNet \cxj{without any modifications?} to semantic labeling of remote sensing images and got better prediction results compared to traditional methods.
 Later, Kampffmeyer at al. \cite{IEEEexample:kampffmeyer2017urban} proposed a novel idea that using CNN with missing data for urban land cover classification.
-The idea is came from a modality hallucination architecture proposed by Hoffman et al. \cite{IEEEexample:hoffman2016learning} which solved the problem that missing some kinds of data during test process.
+The idea came from a modality hallucination architecture proposed by Hoffman et al. \cite{IEEEexample:hoffman2016learning} which solved the problem that missing some kinds of data during test process.
 
 
 Above-mentioned deep learning models have exceeded the traditional methods significantly.
-However, most of them completely ignored important hierarchical features encoded in the CNNs. 
-\xjmd{Because the building size varies larges in different area, both low-level and high-level features are important to accurately extract building boundaries.}
-%
-%But for building extraction task, the lost low-level and middle-level information are critical to the final segmentation result.
+However, most of them completely ignored important hierarchical features encoded in the CNNs.
+\xjmd{Because the building size varies largely in different area, both low-level and high-level features are important to accurately extract building boundaries.}
 
 
-\noindent\textbf{Common Semantic Segmentation.} 
-In the pioneering FCN network~\cite{IEEEexample:Long_2015_CVPR}, the feature maps in deeper layers, after a series of downsampling, lose many fine structures.
+\noindent\textbf{Common Semantic Segmentation.}
+In the pioneering FCN network~\cite{IEEEexample:Long_2015_CVPR}, the feature maps in deeper layers, after a series of downsampling, lost many fine structures.
 In order to weaken the detail loss, many new networks have been proposed for semantic segmentations in computer vision.
-% 
+%
 Chen et al.\cite{IEEEexample:chen2016deeplab} proposed an atrous \cxj{Is this word right?} convolution which enlarged the receptive fields and reduced the number of pooling layers at the same time.
 Vemulapalli et al.~\cite{IEEEexample:vemulapalli2016gaussian} further extended the Deeplab~\cite{IEEEexample:chen2016deeplab} with a pairwise network and proposed a Gaussian Conditional Random Field Network for more continuous segmentation results.
  Afterwards, with the advent of the powerful networks such as ResNet\cite{IEEEexample:he2016deep}, GoogLeNet\cite{IEEEexample:szegedy2015going} and their variants \cite{IEEEexample:szegedy2016rethinking}\cite{IEEEexample:szegedy2017inception}\cite{IEEEexample:xie2017aggregated}, a large amount of literature made use of these networks as their main structure for semantic segmentation.
@@ -101,7 +96,7 @@ Vemulapalli et al.~\cite{IEEEexample:vemulapalli2016gaussian} further extended t
 
 The most related work are U-Net\cite{IEEEexample:ronneberger2015u} and FPN \cite{IEEEexample:lin2017feature}. They both exploited the information from different layers. Differ from the U-Net which simple concatenated the feature maps from encoder to decoder, we apply a fusion operation firstly to fuse the feature maps created in the same convolution layers in the path of encoder to get more richer features.
 The main idea of FPN was leveraging the encoder part as a feature pyramid, with predictions made independently at all levels. During the top-down path of FPN, it only exploited the feature maps which were came from the last residual block of each stage.
-In comparison, we take advantage of all the feature maps in our network. Moreover, we upsample the feature maps from each stage to the same resolution of the input and apply a hierarchical fusion operation to fuse the upsampled feature maps for the final prediction.%instead of directly predicting from each stage. 
+In comparison, we take advantage of all the feature maps in our network. Moreover, we upsample the feature maps from each stage to the same resolution of the input and apply a hierarchical fusion operation to fuse the upsampled feature maps for the final prediction.%instead of directly predicting from each stage.
 %That is to say, we only make a prediction rather than multiple predictions.
 
 
